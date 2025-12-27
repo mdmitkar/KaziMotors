@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-silver: #E5E4E2;
+  --color-dark: #050505;
+  --color-charcoal: #1a1a1a;
+  
+  --font-oswald: 'Oswald', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Custom Thin Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
