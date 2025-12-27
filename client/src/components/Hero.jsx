@@ -1,62 +1,87 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden bg-dark">
-            {/* Background Graphic/Placeholder for Video */}
-            <div className="absolute inset-0 opacity-40">
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-black/50" />
-                {/* Placeholder for video - using a pattern or gradient for now */}
-                <div className="h-full w-full bg-[url('/assets/Wheels/5CDClassicSingleDiscWheelFull.jpeg')] bg-cover bg-center animate-pulse-slow scale-110" />
+        <div className="relative h-screen w-full overflow-hidden bg-dark flex flex-col md:flex-row">
+            {/* LEFT VIDEO SECTION (50%) */}
+            <div className="relative w-full md:w-1/2 h-1/2 md:h-full border-b md:border-b-0 md:border-r border-gold/10 group overflow-hidden">
+                <div className="absolute inset-0 bg-black/40 z-10 transition-opacity duration-500 group-hover:opacity-20" />
+                {/* Placeholder: Video 1 */}
+                <div className="h-full w-full bg-[url('/assets/Wheels/5CDClassicSingleDiscWheelFull.jpeg')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105" />
+                <div className="absolute inset-0 flex items-center justify-center z-0 opacity-20 pointer-events-none">
+                    <span className="text-6xl font-oswald text-white/10 uppercase font-bold -rotate-12">Video 1</span>
+                </div>
             </div>
 
-            <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
-                <motion.h1
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="text-6xl md:text-8xl font-oswald font-bold text-white tracking-widest leading-none drop-shadow-lg"
-                >
-                    CRAFT YOUR <span className="text-gold">LEGACY</span>
-                </motion.h1>
+            {/* RIGHT VIDEO SECTION (50%) */}
+            <div className="relative w-full md:w-1/2 h-1/2 md:h-full border-t md:border-t-0 md:border-l border-gold/10 group overflow-hidden">
+                <div className="absolute inset-0 bg-black/60 z-10 transition-opacity duration-500 group-hover:opacity-30" />
+                {/* Placeholder: Video 2 */}
+                <div className="h-full w-full bg-[url('/assets/Exhausts/AkrapovicExhaustCollection.jpeg')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-transform duration-1000 scale-100 group-hover:scale-110" />
+                <div className="absolute inset-0 flex items-center justify-center z-0 opacity-20 pointer-events-none">
+                    <span className="text-6xl font-oswald text-white/10 uppercase font-bold rotate-12">Video 2</span>
+                </div>
+            </div>
 
-                <motion.p
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 1 }}
-                    className="mt-6 text-xl md:text-2xl text-silver font-light max-w-2xl font-inter"
-                >
-                    Premium Modifications & Accessories for Royal Enfield Enthusiasts.
-                </motion.p>
-
+            {/* CENTRAL OVERLAY CONTENT */}
+            <div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-4 pointer-events-none">
                 <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.5, type: "spring" }}
-                    className="mt-10 flex gap-6"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="bg-black/80 backdrop-blur-md p-8 md:p-12 border border-gold/30 shadow-[0_0_50px_rgba(0,0,0,0.8)] max-w-4xl pointer-events-auto"
                 >
-                    <Link
-                        to="/showcase"
-                        className="px-8 py-3 bg-gold text-dark font-oswald font-bold text-lg tracking-wider hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+                    <motion.h1
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                        className="text-5xl md:text-7xl font-oswald font-bold text-white tracking-widest leading-none mb-4"
                     >
-                        EXPLORE MODS
-                    </Link>
-                    <a
-                        href="https://wa.me/91XXXXXXXXXX"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="px-8 py-3 border border-silver text-silver font-oswald font-bold text-lg tracking-wider hover:border-gold hover:text-gold transition-colors duration-300"
+                        ROYAL <span className="text-gold">LEGACY</span>
+                    </motion.h1>
+
+                    <motion.p
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                        className="text-lg md:text-xl text-silver font-light font-inter mb-8 tracking-wide"
                     >
-                        CONTACT US
-                    </a>
+                        Premium Parts | Custom Modifications | Expert Craftsmanship
+                    </motion.p>
+
+                    <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.7 }}
+                        className="flex flex-col md:flex-row gap-4 justify-center items-center"
+                    >
+                        <a
+                            href="https://wa.me/918855989211"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-2 px-8 py-3 bg-gold text-dark font-oswald font-bold text-lg tracking-wider hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                        >
+                            <FaWhatsapp /> CONTACT US
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/kazi_auto_parts/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-2 px-8 py-3 bg-transparent border border-white/20 text-white font-oswald font-bold text-lg tracking-wider hover:border-gold hover:text-gold transition-all duration-300"
+                        >
+                            <FaInstagram /> INSTAGRAM
+                        </a>
+                    </motion.div>
                 </motion.div>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute bottom-10 left-0 w-full flex justify-center animate-bounce">
-                <div className="text-gold/50 text-sm font-inter tracking-[0.5em]">SCROLL</div>
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce pointer-events-none">
+                <div className="w-1 h-16 bg-gradient-to-b from-gold to-transparent opacity-50"></div>
             </div>
         </div>
     );

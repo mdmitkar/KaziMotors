@@ -12,7 +12,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/showcase" element={<Showcase />} />
-          <Route path="/videos" element={<div className="pt-24 text-center">Videos Page Coming Soon</div>} />
         </Routes>
       </div>
     </Router>

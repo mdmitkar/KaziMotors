@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
-import VideoSection from "../components/VideoSection";
+import Footer from "../components/Footer";
 
 const Home = () => {
     return (
@@ -41,8 +41,6 @@ const Home = () => {
                 </div>
             </section>
 
-            <VideoSection />
-
             {/* Workshop/Service Teaser */}
             <section className="py-24 bg-[url('/assets/Exhausts/AkrapovicExhaustCollection.jpeg')] bg-cover bg-fixed relative">
                 <div className="absolute inset-0 bg-black/80" />
@@ -56,6 +54,7 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };
