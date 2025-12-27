@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
@@ -8,22 +7,32 @@ const Hero = () => {
         <div className="relative h-screen w-full overflow-hidden bg-dark flex flex-col md:flex-row">
             {/* LEFT VIDEO SECTION (50%) */}
             <div className="relative w-full md:w-1/2 h-1/2 md:h-full border-b md:border-b-0 md:border-r border-gold/10 group overflow-hidden">
-                <div className="absolute inset-0 bg-black/40 z-10 transition-opacity duration-500 group-hover:opacity-20" />
-                {/* Placeholder: Video 1 */}
-                <div className="h-full w-full bg-[url('/assets/Wheels/5CDClassicSingleDiscWheelFull.jpeg')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out scale-105" />
-                <div className="absolute inset-0 flex items-center justify-center z-0 opacity-20 pointer-events-none">
-                    <span className="text-6xl font-oswald text-white/10 uppercase font-bold -rotate-12">Video 1</span>
-                </div>
+                <div className="absolute inset-0 bg-black/40 z-10 transition-opacity duration-500 group-hover:opacity-20 pointer-events-none" />
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="h-full w-full object-cover transition-transform duration-700 ease-in-out scale-105 group-hover:scale-110"
+                >
+                    <source src="/assets/videos/royal-enfield-1.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
 
             {/* RIGHT VIDEO SECTION (50%) */}
             <div className="relative w-full md:w-1/2 h-1/2 md:h-full border-t md:border-t-0 md:border-l border-gold/10 group overflow-hidden">
-                <div className="absolute inset-0 bg-black/60 z-10 transition-opacity duration-500 group-hover:opacity-30" />
-                {/* Placeholder: Video 2 */}
-                <div className="h-full w-full bg-[url('/assets/Exhausts/AkrapovicExhaustCollection.jpeg')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-transform duration-1000 scale-100 group-hover:scale-110" />
-                <div className="absolute inset-0 flex items-center justify-center z-0 opacity-20 pointer-events-none">
-                    <span className="text-6xl font-oswald text-white/10 uppercase font-bold rotate-12">Video 2</span>
-                </div>
+                <div className="absolute inset-0 bg-black/50 z-10 transition-opacity duration-500 group-hover:opacity-20 pointer-events-none" />
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="h-full w-full object-cover transition-transform duration-700 ease-in-out scale-105 group-hover:scale-110"
+                >
+                    <source src="/assets/videos/royal-enfield-2.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
 
             {/* CENTRAL OVERLAY CONTENT */}
