@@ -172,8 +172,8 @@ export function CollectionGrid() {
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 border-b border-white/10 pb-8 gap-8">
                     <div>
                         <span className="text-gold text-sm tracking-[0.5em] uppercase block mb-2">Exclusive</span>
-                        <h2 className="text-4xl md:text-6xl font-bold text-white uppercase">
-                            2025 <span className="text-white/20">Collection</span>
+                        <h2 className="text-4xl md:text-6xl font-bold text-red-500 uppercase">
+                            2025 <span className="text-gold">Collection</span>
                         </h2>
                     </div>
                 </div>
@@ -219,19 +219,19 @@ export function CollectionGrid() {
                                     }}
                                     className={`relative group ${isMiddleColumn ? "lg:translate-y-32" : ""}`}
                                 >
-                                    <div className="relative aspect-square bg-[#0A0A0A] rounded-[2.5rem] border border-white/10 transition-all duration-700 group-hover:border-gold/50 group-hover:bg-[#111] overflow-hidden">
+                                    <div className="relative aspect-square bg-[#0A0A0A] rounded-[2.1rem] transition-all duration-700 group-hover:border-gold/50 group-hover:bg-[#111] overflow-hidden border border-3 border-black">
 
                                         {/* Base Card Content */}
-                                        <div className="h-full w-full flex flex-col p-4">
-                                            <div className="flex-1 flex items-center justify-center p-4">
-                                                <motion.img
-                                                    src={item.image}
-                                                    alt={item.title}
-                                                    className="max-h-full w-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:scale-110"
-                                                />
-                                            </div>
+                                        <div className="absolute inset-0 h-full w-full">
+                                            <motion.img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="h-full w-full object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            {/* Gradient Overlay for Text Legibility */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-0" />
 
-                                            <div className="flex justify-between items-end px-4 pb-4 transition-opacity duration-300 group-hover:opacity-0">
+                                            <div className="absolute bottom-0 left-0 w-full flex justify-between items-end p-8 transition-opacity duration-300 group-hover:opacity-0">
                                                 <div>
                                                     <h3 className="text-xl font-bold text-red-500 uppercase tracking-tight">{item.title}</h3>
                                                     <p className="text-gold text-[10px] uppercase tracking-widest">{item.category}</p>
@@ -248,7 +248,7 @@ export function CollectionGrid() {
                                                 <img src={item.image} alt={item.title} className="max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300" />
                                             </div>
                                             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-400">
-                                                <h3 className="text-2xl font-bold text-white uppercase mb-2">{item.title}</h3>
+                                                <h3 className="text-2xl font-bold text-red-500 uppercase mb-2">{item.title}</h3>
                                                 <p className="text-white/50 text-xs font-roboto italic mb-6 leading-relaxed px-4">"{item.description}"</p>
                                                 <button className="bg-red-600 text-white text-sm px-10 py-3 rounded-xl uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all duration-300 transform active:scale-95 shadow-xl cursor-pointer">
                                                     Add to Cart
@@ -258,7 +258,7 @@ export function CollectionGrid() {
 
                                         {/* Bottom-Right Tab */}
                                         <div className="absolute bottom-0 right-0 z-10 transition-all duration-500 group-hover:translate-y-full group-hover:opacity-0">
-                                            <div className="bg-gold pt-4 pl-6 pr-8 pb-4 rounded-tl-[2rem] border-t border-l border-white/20">
+                                            <div className="bg-gold pt-3 pl-6 pr-8 pb-4 rounded-tl-[2rem] border-t border-l border-white/20">
                                                 <span className="text-black text-sm md:text-base uppercase tracking-widest whitespace-nowrap font-bold">
                                                     {item.title} <span className="text-red-600 ml-2">{item.year}</span>
                                                 </span>
@@ -266,9 +266,9 @@ export function CollectionGrid() {
                                         </div>
 
                                         {/* Top-Left Label */}
-                                        <div className="absolute top-8 left-8 flex items-center gap-2 z-10 group-hover:opacity-0 transition-opacity">
+                                        <div className="absolute top-0 left-0 flex items-center gap-2 z-10 group-hover:opacity-0 transition-opacity bg-black p-2 rounded ">
                                             <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                                            <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">
+                                            <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-gold ">
                                                 {item.category}
                                             </span>
                                         </div>
