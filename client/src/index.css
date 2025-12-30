@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 @theme {
   --color-gold: #D4AF37;
@@ -27,4 +34,28 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--color-gold);
   border-radius: 3px;
+}
+
+
+@layer components{
+  .royal-enfield{
+    color: #c10007;
+  }
+  .kazi-motors{
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .text-gradient {
+    margin-bottom: 22px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* text-base */
+  line-height: 1.75rem; /* leading-relaxed */
+  max-width: 36rem; /* max-w-xl */
+  margin-bottom: 2.5rem; /* mb-10 */
+  background: linear-gradient(to right, #FB923C, #EF4444); /* from-orange-400 to-red-600 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 }

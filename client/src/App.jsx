@@ -1,17 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Showcase from "./pages/Showcase";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { CollectionPage } from './pages/CollectionPage';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-dark text-white font-inter">
-        <Navbar />
+      <div className="min-h-screen bg-black text-white selection:bg-gold selection:text-black">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/showcase" element={<Showcase />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/collection" element={<CollectionPage />} />
         </Routes>
       </div>
     </Router>
