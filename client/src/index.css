@@ -1,6 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap');
-@tailwind utilities;
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
@@ -12,7 +11,7 @@ html {
   --color-silver: #E5E4E2;
   --color-dark: #050505;
   --color-charcoal: #1a1a1a;
-  
+
   --font-oswald: 'Oswald', sans-serif;
   --font-inter: 'Inter', sans-serif;
 }
@@ -28,34 +27,43 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-gold);
   border-radius: 3px;
 }
 
 
-@layer components{
-  .royal-enfield{
+@layer components {
+  .royal-enfield {
     color: #c10007;
   }
-  .kazi-motors{
+
+  .kazi-motors {
     color: #d4af37;
     font-size: 20px;
     font-weight: 700;
   }
+
   .text-gradient {
     margin-bottom: 22px;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem; /* text-base */
-  line-height: 1.75rem; /* leading-relaxed */
-  max-width: 36rem; /* max-w-xl */
-  margin-bottom: 2.5rem; /* mb-10 */
-  background: linear-gradient(to right, #FB923C, #EF4444); /* from-orange-400 to-red-600 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    /* text-base */
+    line-height: 1.75rem;
+    /* leading-relaxed */
+    max-width: 36rem;
+    /* max-w-xl */
+    margin-bottom: 2.5rem;
+    /* mb-10 */
+    background: linear-gradient(to right, #FB923C, #EF4444);
+    /* from-orange-400 to-red-600 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 }

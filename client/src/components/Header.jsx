@@ -20,15 +20,17 @@ export function Header() {
 
             {/* Navigation */}
             <nav className="hidden lg:flex items-center space-x-10 flex-1 justify-center">
-                {['Home', 'Collection', 'Brands', 'About'].map((item) => {
+                {['Home', 'Collection', 'Brands', 'Contact'].map((item) => {
                     const isHome = item === 'Home';
                     const isCollection = item === 'Collection';
                     const isBrands = item === 'Brands';
+                    const isContact = item === 'Contact';
 
                     // Determine the href/to path
                     let linkPath = '/';
                     if (isCollection) linkPath = '/collection';
-                    else if (isCollection) linkPath = '/brands';
+                    else if (isBrands) linkPath = '/brands';
+                    else if (isContact) linkPath = '/contact';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                     return (
