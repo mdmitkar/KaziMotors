@@ -19,7 +19,7 @@ const products = [
     { id: 17, title: "Green Exhaust", category: "Exhausts", image: "/assets/Exhausts/GreenExhaust.jpeg", nobg: "/nobgfolder/nobgGreenExhaust.png", color: "Green" },
     { id: 18, title: "Silver Akrapovic Exhaust", category: "Exhausts", image: "/assets/Exhausts/SilverAkrapovicExhaust.jpeg", nobg: "/nobgfolder/nobgSilverAkrapovicExhaust.png", color: "Silver" },
     { id: 19, title: "Silver Exhaust", category: "Exhausts", image: "/assets/Exhausts/SilverExhaust.jpeg", nobg: "/nobgfolder/nobgSilverExhaust.png", color: "Silver" },
-    { id: 20, title: "Silver Rainbow Carbon Akrapovic Exhaust", category: "Exhausts", image: "/assets/Exhausts/SilverRainbowCarbonAkrapovicExhaust.jpeg", nobg: "/nobgfolder/nobgSilverRainbowCarbonAkrapovicExhaust.png", color: "Rainbow" },
+
     { id: 21, title: "Silver Rainbow SC Exhaust", category: "Exhausts", image: "/assets/Exhausts/SilverRainbowSCExhaust.jpeg", nobg: "/nobgfolder/nobgSilverRainbowSCExhaust.png", color: "Rainbow" },
 
     // BodyParts (ID: 30-49)

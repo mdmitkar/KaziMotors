@@ -2,165 +2,22 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import products from '../data/products';
 
-const collectionItems = products
-// [
-//     {
-//         id: 1,
-//         title: "Carbon Rear Hugger",
-//         category: "Body Parts",
-//         tag: "PRO SERIES",
-//         year: "2025",
-//         image: "/assets/BodyParts/BlackRearHugger.jpeg",
-//         description: "Premium black rear hugger for superior splash protection and sleek aesthetics.",
-//         price: "$149"
-//     },
-//     {
-//         id: 2,
-//         title: "Aerodynamic Winglets",
-//         category: "Body Parts",
-//         tag: "STREET ELITE",
-//         year: "2025",
-//         image: "/assets/BodyParts/BlueFrontWinglet.jpeg",
-//         description: "High-performance blue front winglets designed for increased downforce.",
-//         price: "$89"
-//     },
-//     {
-//         id: 3,
-//         title: "Race Seat Cowl",
-//         category: "Body Parts",
-//         tag: "LIMITED EDITION",
-//         year: "2025",
-//         image: "/assets/BodyParts/BlackSeatCowl.jpeg",
-//         description: "Convert your ride to a single-seat racer with this aggressive black cowl.",
-//         price: "$119"
-//     },
-//     {
-//         id: 4,
-//         title: "SC Project Exhaust",
-//         category: "Exhausts",
-//         tag: "PRO SERIES",
-//         year: "2025",
-//         image: "/assets/Exhausts/BlackSCProjectExhaust.jpeg",
-//         description: "Authentic SC Project exhaust with a deep, aggressive roar and weight reduction.",
-//         price: "$699"
-//     },
-//     {
-//         id: 5,
-//         title: "Akrapovic 6-Cut",
-//         category: "Exhausts",
-//         tag: "ULTRA LIGHT",
-//         year: "2025",
-//         image: "/assets/Exhausts/Akrapovic6CutExhausts.jpeg",
-//         description: "Precision-engineered titanium exhaust for peak power gains and signature sound.",
-//         price: "$899"
-//     },
-//     {
-//         id: 6,
-//         title: "Arrow Blue Tip",
-//         category: "Exhausts",
-//         tag: "SPECIAL EDITION",
-//         year: "2025",
-//         image: "/assets/Exhausts/BlueArrowExhaust.jpeg",
-//         description: "Custom blue-tipped Arrow exhaust for distinct style and thermal efficiency.",
-//         price: "$749"
-//     },
-//     {
-//         id: 7,
-//         title: "Thor LED Headlight",
-//         category: "Lights",
-//         tag: "STREET ELITE",
-//         year: "2025",
-//         image: "/assets/Lights/C174ThorHeadlight.jpeg",
-//         description: "Ultra-bright LED headlight with Thor's signature daytime running light pattern.",
-//         price: "$199"
-//     },
-//     {
-//         id: 8,
-//         title: "Fog Light Bar",
-//         category: "Lights",
-//         tag: "PRO SERIES",
-//         year: "2025",
-//         image: "/assets/Lights/4LensFogLightBar.jpeg",
-//         description: "4-lens high-intensity fog light bar for maximum visibility in all conditions.",
-//         price: "$129"
-//     },
-//     {
-//         id: 9,
-//         title: "Square LED Spot",
-//         category: "Lights",
-//         tag: "HERITAGE",
-//         year: "2025",
-//         image: "/assets/Lights/HjgW09SquareFogLight.jpeg",
-//         description: "Compact 50W square fog light delivering a focused, long-range beam.",
-//         price: "$79"
-//     },
-//     {
-//         id: 10,
-//         title: "3-Spoke Alloys",
-//         category: "Wheels",
-//         tag: "PRO SERIES",
-//         year: "2025",
-//         image: "/assets/Wheels/3SpokeDoubleDiscAlloyWheels.jpeg",
-//         description: "Heavy-duty 3-spoke alloy wheels with double disc mounting support.",
-//         price: "$450"
-//     },
-//     {
-//         id: 11,
-//         title: "Multi-Spoke Rims",
-//         category: "Wheels",
-//         tag: "STREET ELITE",
-//         year: "2025",
-//         image: "/assets/Wheels/MultiSpokeSingleDiscAlloyWheels.jpeg",
-//         description: "Lightweight multi-spoke alloy rims for improved handling and response.",
-//         price: "$399"
-//     },
-//     {
-//         id: 12,
-//         title: "Anti-Theft System",
-//         category: "Accessories",
-//         tag: "SPECIAL EDITION",
-//         year: "2025",
-//         image: "/assets/Accessories/AntiTheftAlarmSystem.jpeg",
-//         description: "Advanced motion-sensing alarm system with remote start and engine kill.",
-//         price: "$120"
-//     },
-//     {
-//         id: 13,
-//         title: "GPS Mobile Holder",
-//         category: "Accessories",
-//         tag: "STREET ELITE",
-//         year: "2025",
-//         image: "/assets/Accessories/BlackMobileHolder.jpeg",
-//         description: "Vibration-damped metallic mobile holder for secure navigation.",
-//         price: "$45"
-//     },
-//     {
-//         id: 14,
-//         title: "Gold Swingarm Spools",
-//         category: "Accessories",
-//         tag: "PRO SERIES",
-//         year: "2025",
-//         image: "/assets/Accessories/GoldSwingarmSpools.jpeg",
-//         description: "Anodized gold swingarm spools for easy paddock stand lifting.",
-//         price: "$25"
-//     },
-//     {
-//         id: 15,
-//         title: "Chrome Super Horns",
-//         category: "Accessories",
-//         tag: "HERITAGE",
-//         year: "2025",
-//         image: "/assets/Accessories/ChromeSuperHornPair.jpeg",
-//         description: "Dual chrome-plated high-decibel horns for a commanding road presence.",
-//         price: "$65"
-//     }
-// ];
+// Filter out duplicates based on image path to ensure uniqueness
+const uniqueProducts = products.filter((item, index, self) =>
+    index === self.findIndex((t) => (
+        t.image === item.image
+    ))
+);
+
+// Sort products by category so they are grouped together in the "All" view
+const collectionItems = uniqueProducts.sort((a, b) => a.category.localeCompare(b.category));
 
 
 const categories = ["All", ...new Set(collectionItems.map(item => item.category))];
 
 export function CollectionGrid() {
     const [activeCategory, setActiveCategory] = useState("All");
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     const filteredItems = activeCategory === "All"
         ? collectionItems
@@ -219,7 +76,8 @@ export function CollectionGrid() {
                                         damping: 20,
                                         stiffness: 100
                                     }}
-                                    className={`relative group ${isMiddleColumn ? "lg:translate-y-32" : ""}`}
+                                    className={`relative group ${isMiddleColumn ? "lg:translate-y-32" : ""} cursor-pointer`}
+                                    onClick={() => setSelectedProduct(item)}
                                 >
                                     <div className="relative aspect-square bg-[#0A0A0A] rounded-[2.1rem] transition-all duration-700 
                                     group-hover:border-3 group-hover:border-gold/50 group-hover:bg-[#111] overflow-hidden border-black border-3">
@@ -239,20 +97,24 @@ export function CollectionGrid() {
                                                     <h3 className="text-xl font-bold text-red-500 uppercase tracking-tight">{item.title}</h3>
                                                     <p className="text-gold text-[10px] uppercase tracking-widest">{item.category}</p>
                                                 </div>
-                                                <div className="text-gold font-bold text-lg">
-                                                    {item.price}
-                                                </div>
+                                                {item.price && (
+                                                    <div className="text-gold font-bold text-lg">
+                                                        {item.price}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
 
                                         {/* Hover Overlay (Unrolling Effect) */}
                                         <div className="absolute inset-0 z-20 pointer-events-none group-hover:pointer-events-auto transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0 bg-black flex flex-col items-center justify-center p-6 text-center">
-                                            <div className="relative w-full h-1/2 flex items-center justify-center mb-4">
-                                                <img src={item.image} alt={item.title} className="max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300" />
+                                            <div className="relative w-full h-[65%] flex items-center justify-center mb-2">
+                                                <img src={item.nobg || item.image} alt={item.title} className="max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 drop-shadow-[0_10px_20px_rgba(255,215,0,0.2)]" />
                                             </div>
                                             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-400">
                                                 <h3 className="text-2xl font-bold text-red-500 uppercase mb-2">{item.title}</h3>
-                                                <p className="text-white/50 text-xs font-roboto italic mb-6 leading-relaxed px-4">"{item.description}"</p>
+                                                <p className="text-white/50 text-xs font-roboto italic mb-6 leading-relaxed px-4">
+                                                    "{item.description || `Premium ${item.color} finish from our ${item.category} collection.`}"
+                                                </p>
                                                 <button className="bg-red-600 text-white text-sm px-10 py-3 rounded-xl uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all duration-300 transform active:scale-95 shadow-xl cursor-pointer">
                                                     Add to Cart
                                                 </button>
@@ -263,7 +125,7 @@ export function CollectionGrid() {
                                         <div className="absolute bottom-0 right-0 z-10 transition-all duration-500 group-hover:translate-y-full group-hover:opacity-0">
                                             <div className="bg-gold pt-3 pl-6 pr-8 pb-4 rounded-tl-[2rem] border-t border-l border-white/20">
                                                 <span className="text-black text-sm md:text-base uppercase tracking-widest whitespace-nowrap font-bold">
-                                                    {item.title} <span className="text-red-600 ml-2">{item.year}</span>
+                                                    {item.title} <span className="text-red-600 ml-2">{item.year || '2025'}</span>
                                                 </span>
                                             </div>
                                         </div>
@@ -285,6 +147,78 @@ export function CollectionGrid() {
                     </AnimatePresence>
                 </div>
             </div>
+
+            {/* Product Modal */}
+            <AnimatePresence>
+                {selectedProduct && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/95 backdrop-blur-md"
+                        onClick={() => setSelectedProduct(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="relative w-full max-w-6xl h-[80vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 p-4 md:p-12 pointer-events-auto"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setSelectedProduct(null)}
+                                className="absolute top-4 right-4 md:top-0 md:right-0 text-white/50 hover:text-red-500 transition-colors z-50 p-2"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></svg>
+                            </button>
+
+                            {/* Image Section */}
+                            <div className="w-full md:w-2/3 h-1/2 md:h-full flex items-center justify-center relative group">
+                                <div className="absolute inset-0 bg-gold/5 blur-[100px] rounded-full" />
+                                <motion.img
+                                    src={selectedProduct.nobg || selectedProduct.image}
+                                    alt={selectedProduct.title}
+                                    className="relative max-w-full max-h-full object-contain drop-shadow-[0_0_50px_rgba(212,175,55,0.2)]"
+                                    layoutId={`product-image-${selectedProduct.id}`}
+                                />
+                            </div>
+
+                            {/* Info Section */}
+                            <div className="w-full md:w-1/3 flex flex-col justify-center text-left space-y-6">
+                                <div>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <span className="px-4 py-1 rounded-full border border-gold/30 text-gold text-xs uppercase tracking-[0.2em] bg-gold/5">
+                                            {selectedProduct.category}
+                                        </span>
+                                        {selectedProduct.year && (
+                                            <span className="text-white/40 text-xs font-mono">
+                                                {selectedProduct.year}
+                                            </span>
+                                        )}
+                                    </div>
+                                    <h2 className="text-4xl md:text-5xl font-bold text-white uppercase leading-none mb-2">
+                                        {selectedProduct.title}
+                                    </h2>
+                                    <p className="text-red-500 font-bold text-2xl">
+                                        {selectedProduct.price || "Contact for Price"}
+                                    </p>
+                                </div>
+
+                                <p className="text-gray-400 text-sm leading-relaxed border-l-2 border-white/10 pl-4">
+                                    {selectedProduct.description || `${selectedProduct.color} edition. Engineered for performance and style. Part of the exclusive 2025 Kazi Motors collection.`}
+                                </p>
+
+                                <div className="pt-6 border-t border-white/10">
+                                    <button className="w-full bg-red-600 text-white font-bold py-4 px-8 rounded-xl uppercase tracking-widest hover:bg-gold hover:text-black transition-all duration-300 shadow-[0_10px_30px_rgba(220,38,38,0.3)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)]">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
