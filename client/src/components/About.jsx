@@ -21,12 +21,10 @@ export function About() {
                         REDEFINING <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">AUTO ARTISTRY</span>
                     </h2>
-                    <p className="text-gradient 
-">
+                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-gradient-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
                         <span className="kazi-motors"><span className="kazi-motors">Kazi Motors</span></span> isn't just a modification shop; it's where passion meets precision. With over a decade of experience in high-end automotive enhancements, we've carved a niche in delivering bespoke experiences that push the boundaries of performance and style.
                     </p>
-                    <p className="text-gradient
-">
+                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-gradient-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
                         Our team combines deep technical expertise with an unwavering commitment to quality, ensuring that every vehicle that leaves our workshop is a masterpiece. From meticulous customizations to performance tuning, we transform each ride into a statement of individuality, innovation, and unmatched craftsmanship.
                     </p>
                     <div className="flex items-center space-x-8">
