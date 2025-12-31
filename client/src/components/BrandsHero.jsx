@@ -406,7 +406,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.11 PM (3).jpeg" alt="Bajaj Spares" className="w-full h-full object-cover" />
+                                <img src="/assets/bajaj-imgs/realistic_bajaj.png" alt="Bajaj Spares" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -549,7 +549,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/hero-imgs/hero_bike_nature.png" alt="Hero Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/hero-imgs/realistic_hero.png" alt="Hero Bike" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -641,7 +641,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.05 PM (1).jpeg" alt="Mahindra Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/mahindra-imgs/realistic_mahindra.png" alt="Mahindra Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
