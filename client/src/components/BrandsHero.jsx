@@ -569,9 +569,9 @@ export function BrandsHero() {
                                 GO THE DISTANCE, <br />
                                 <span className="text-white px-2">HERO GENUINE PARTS</span>
                             </h2>
-                            <div className="space-y-6 text-black/70 font-semibold">
+                            <div className="space-y-6 text-white font-medium">
                                 <p className="text-lg">Hero is the backbone of Indian mobility. We provide genuine Hero parts that ensure long-lasting performance and hassle-free maintenance for millions of riders.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                <ul className="space-y-2 list-disc list-inside hover:text-white transition-colors">
                                     <li>Durability you can count on</li>
                                     <li>Easy maintenance and wide compatibility</li>
                                     <li>Original quality for total confidence</li>

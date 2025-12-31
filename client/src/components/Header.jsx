@@ -100,10 +100,7 @@ export function Header() {
                 {/* Search Box */}
 
 
-                <button className="hover:text-gold transition-colors p-1 relative flex items-center justify-center">
-                    <FiHeart size={22} />
-                    <span className="absolute top-0 right-0 w-2 h-2 bg-gold rounded-full" />
-                </button>
+
                 <a href="/cart" className="hover:text-gold transition-colors p-1 relative flex items-center justify-center">
                     <FiShoppingBag size={22} />
                     {totalItems > 0 && (
