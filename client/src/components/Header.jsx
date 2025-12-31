@@ -33,6 +33,52 @@ export function Header() {
                     else if (isContact) linkPath = '/contact';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
+                    if (isBrands) {
+                        return (
+                            <div key={item} className="relative group">
+                                <a
+                                    href={linkPath}
+                                    className="text-sm font-inter font-semibold text-white hover:text-gold transition-colors relative flex items-center gap-1 no-underline pb- cursor-pointer"
+                                >
+                                    {item}
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
+                                    <svg
+                                        className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+
+                                {/* Dropdown Menu */}
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                    <div className="bg-black border border-gold/20 rounded-xl py-3 px-2 min-w-[200px] shadow-2xl backdrop-blur-xl">
+                                        {[
+                                            { name: 'Royal Enfield', id: 'royal-enfield' },
+                                            { name: 'Honda', id: 'honda' },
+                                            { name: 'Yamaha', id: 'yamaha' },
+                                            { name: 'Hero', id: 'hero' },
+                                            { name: 'Bajaj', id: 'bajaj' },
+                                            { name: 'KTM', id: 'ktm' },
+                                            { name: 'TVS', id: 'tvs' },
+                                            { name: 'Kawasaki', id: 'kawasaki' },
+                                        ].map((brand) => (
+                                            <a
+                                                key={brand.id}
+                                                href={`/brands#${brand.id}`}
+                                                className="block px-4 py-2 text-sm text-white/80 hover:text-gold hover:bg-gold/10 rounded-lg transition-all duration-200 no-underline"
+                                            >
+                                                {brand.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    }
+
                     return (
                         <a
                             key={item}
