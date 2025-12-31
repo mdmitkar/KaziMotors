@@ -103,14 +103,14 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            HONDA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">RELIABILITY</span>
+                        <h2 className="text-[#E60012] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold  uppercase tracking-wider mb-1">
+                            HONDA <span className="text-[#FFFFFF] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider"></span>
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">The Power of Dreams</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">The Power of Dreams</span>
+                        <div className="bg-[#E60012] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
-                    <div className="section-wrapper lg:flex-row-reverse">
+                    <div className="section-wrapper bg-white lg:flex-row-reverse">
 
 
                         <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
@@ -118,7 +118,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-red-600/20"
                             >
                                 <img src="/assets/reparts-imgs/part4.png" alt="Honda Parts" className="w-full h-full object-cover" />
                             </motion.div>
@@ -130,10 +130,10 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Premium Engineering</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-red-600 font-oswald text-sm md:text-base font-bold tracking-[0.5em] mb-4 block uppercase font-bold">Premium Engineering</span>
+                            <h2 className="text-[#E60012] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 UNMATCHED QUALITY, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">GENUINE HONDA PARTS</span>
+                                <span className="text-white bg-clp-text ">GENUINE HONDA PARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">Honda is synonymous with reliability. Our range of genuine Honda components ensures that your machine performs at its peak, providing you with peace of mind on every journey.</p>
@@ -175,11 +175,11 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            YAMAHA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">SPIRIT</span>
+                        <h2 className="text-[#0033A0] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
+                            YAMAHA
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Revs Your Heart</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Revs Your Heart</span>
+                        <div className="bg-white w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper">
@@ -190,14 +190,18 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Excellence</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
-                                UNLEASH THE PERFORMANCE, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">YAMAHA GENUINE ACCESSORIES</span>
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Excellence</span>
+                            <h2 className="text-[#0033A0] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
+                                UNLEASH THE {' '}
+                                <span className="text-white">PERFORMANCE,</span>
+                                <br />
+                                YAMAHA GENUINE
+                                {' '}<span className="text-white bg-clip-text ">
+                                    ACCESSORIES</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">Yamaha is built for those who crave excitement. Our curated selection of Yamaha parts delivers the performance and agility you need to dominate the road or the track.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                <ul className="space-y-2 list-disc list-inside hover:text-white transition-colors">
                                     <li>High-performance racing components</li>
                                     <li>Advanced technological integration</li>
                                     <li>Dynamic styling and durability</li>
@@ -246,11 +250,11 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            KTM <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">READY TO RACE</span>
+                        <h2 className="text-[#FF6600] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold  uppercase tracking-wider mb-1">
+                            KTM
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Engineering Fearless Performance</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">READY TO RACE</span>
+                        <div className="bg-[#FF6600] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper lg:flex-row-reverse">
@@ -261,7 +265,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-orange-600/20"
                             >
                                 <img src="/assets/ktm-imgs/ktm_bike_norider.png" alt="KTM Performance" className="w-full h-full object-cover" />
                             </motion.div>
@@ -273,14 +277,14 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Aggressive Performance</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Aggressive Performance</span>
+                            <h2 className="text-[#FF6600] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 DOMINATE EVERY TERRAIN, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">KTM GENUINE POWERPARTS</span>
+                                <span className="text-transparent bg-clip-text bg-white">KTM GENUINE POWERPARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">KTM is for the bold. We provide authentic KTM parts that enhance the raw power and sharp handling of your machine, ensuring you're always ready to race.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                <ul className="space-y-2 list-disc list-inside hover:text-orange-500 transition-colors">
                                     <li>Lightweight performance components</li>
                                     <li>Uncompromising durability for track & trail</li>
                                     <li>Iconic styling and precision engineering</li>
@@ -318,11 +322,11 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            KAWASAKI <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">LET THE GOOD TIMES ROLL</span>
+                        <h2 className="text-[#008435] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
+                            KAWASAKI
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Unleashing Ninja Power</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Unleashing Ninja Power</span>
+                        <div className="bg-[#008435] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper">
@@ -333,14 +337,14 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Superbike Mastery</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Superbike Mastery</span>
+                            <h2 className="text-[#008435] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 PRECISION MEETS POWER, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">KAWASAKI GENUINE PARTS</span>
+                                <span className="text-white px-2">KAWASAKI GENUINE PARTS</span>
                             </h2>
-                            <div className="space-y-6 text-white/70">
+                            <div className="space-y-6 text-white/90">
                                 <p className="text-lg">Experience the legendary performance of Kawasaki. Our range of Kawasaki parts ensures that your superbike or cruiser maintains its edge and reliability.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                <ul className="space-y-2 list-disc list-inside hover:text-black transition-colors">
                                     <li>Cutting-edge engineering solutions</li>
                                     <li>Optimized for speed and endurance</li>
                                     <li>Premium finish and perfect fitment</li>
@@ -353,7 +357,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
                                 <img src="/assets/kawasaki-imgs/kawasaki_bike_norider.png" alt="Kawasaki Parts" className="w-full h-full object-cover" />
                             </motion.div>
@@ -389,11 +393,11 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            BAJAJ <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">THE WORLD'S FAVOURITE INDIAN</span>
+                        <h2 className="text-[#004F9F] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
+                            BAJAJ
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Efficient & Powerful Commuting</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Efficient & Powerful Commuting</span>
+                        <div className="bg-[#004F9F] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper lg:flex-row-reverse">
@@ -404,7 +408,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
                                 <img src="/assets/bajaj-imgs/realistic_bajaj.png" alt="Bajaj Spares" className="w-full h-full object-cover" />
                             </motion.div>
@@ -416,10 +420,11 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Reliable Commuting</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Reliable Commuting</span>
+                            <h2 className="text-[#004F9F] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 SCALE NEW HEIGHTS, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">BAJAJ GENUINE SPARES</span>
+                                <span className="text-white
+                                 px-2">BAJAJ GENUINE SPARES</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">Bajaj provides the perfect balance of efficiency and power. We offer genuine Bajaj spares that keep your motorcycle running smoothly and economically.</p>
@@ -461,11 +466,11 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            TVS <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">TRACK TO ROAD</span>
+                        <h2 className="text-[#E41A23] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
+                            TVS
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Racing DNA in Every Ride</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Racing DNA in Every Ride</span>
+                        <div className="bg-[#E41A23] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper">
@@ -476,10 +481,10 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Heritage</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Heritage</span>
+                            <h2 className="text-[#E41A23] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 UNCOMPROMISING AGILITY, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">TVS GENUINE PARTS</span>
+                                <span className="text-white bg-clip-text ">TVS GENUINE PARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">TVS brings racing technology to the streets. Our genuine TVS parts ensure that your machine retains its sharp handling and punchy performance.</p>
@@ -496,7 +501,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
                                 <img src="/assets/tvs-imgs/tvs_bike_nature.png" alt="TVS Parts" className="w-full h-full object-cover" />
                             </motion.div>
@@ -532,11 +537,11 @@ export function BrandsHero() {
                                 className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            HERO <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">BE THE HERO</span>
+                        <h2 className="text-[#004080] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
+                            HERO
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">The Nation's Pride in Motion</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">The Nation's Pride in Motion</span>
+                        <div className="bg-[#004080] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper lg:flex-row-reverse">
@@ -547,7 +552,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-[#004080]/20"
                             >
                                 <img src="/assets/hero-imgs/realistic_hero.png" alt="Hero Bike" className="w-full h-full object-cover" />
                             </motion.div>
@@ -559,12 +564,12 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Trusted Mobility</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-white font-oswald text-sm md:text-base font-bold tracking-[0.5em] mb-4 block uppercase font-bold">Trusted Mobility</span>
+                            <h2 className="text-[#004080] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 GO THE DISTANCE, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">HERO GENUINE PARTS</span>
+                                <span className="text-white px-2">HERO GENUINE PARTS</span>
                             </h2>
-                            <div className="space-y-6 text-white/70">
+                            <div className="space-y-6 text-black/70 font-semibold">
                                 <p className="text-lg">Hero is the backbone of Indian mobility. We provide genuine Hero parts that ensure long-lasting performance and hassle-free maintenance for millions of riders.</p>
                                 <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
                                     <li>Durability you can count on</li>
@@ -607,8 +612,8 @@ export function BrandsHero() {
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
                             MAHINDRA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">RISE</span>
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Toughness Reimagined</span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Toughness Reimagined</span>
+                        <div className="bg-[#8B0000] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper">
@@ -619,14 +624,14 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Rugged Innovation</span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase font-bold">Rugged Innovation</span>
+                            <h2 className="text-white text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 BUILT TO LAST, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">MAHINDRA GENUINE COMPONENTS</span>
+                                <span className="text-black bg-white px-2">MAHINDRA GENUINE COMPONENTS</span>
                             </h2>
-                            <div className="space-y-6 text-white/70">
+                            <div className="space-y-6 text-white/90">
                                 <p className="text-lg">Mahindra stands for ruggedness and innovation. Our range of genuine Mahindra components is designed to withstand the toughest conditions while delivering peak performance.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                <ul className="space-y-2 list-disc list-inside hover:text-black transition-colors">
                                     <li>Robust construction for extreme durability</li>
                                     <li>Advanced engineering for reliable performance</li>
                                     <li>Original spares for long-term value</li>
@@ -639,7 +644,7 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
                                 <img src="/assets/mahindra-imgs/realistic_mahindra.png" alt="Mahindra Parts" className="w-full h-full object-cover" />
                             </motion.div>
