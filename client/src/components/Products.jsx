@@ -103,10 +103,10 @@ export function Products() {
         <div className="relative group/carousel">
           {/* Navigation Buttons */}
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 z-30 pointer-events-none">
-            <button onClick={prevSlide} className="w-12 h-12 rounded-full bg-black/80 border border-gold/30 flex items-center justify-center text-gold pointer-events-auto hover:bg-gold hover:text-black transition-all">
+            <button onClick={prevSlide} className="w-12 h-12 rounded-full bg-black/80 border border-gold/30 flex items-center justify-center text-gold pointer-events-auto hover:bg-gold hover:text-black transition-all cursor-pointer">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             </button>
-            <button onClick={nextSlide} className="w-12 h-12 rounded-full bg-black/80 border border-gold/30 flex items-center justify-center text-gold pointer-events-auto hover:bg-gold hover:text-black transition-all">
+            <button onClick={nextSlide} className="w-12 h-12 rounded-full bg-black/80 border border-gold/30 flex items-center justify-center text-gold pointer-events-auto hover:bg-gold hover:text-black transition-all cursor-pointer">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </button>
           </div>
@@ -159,7 +159,7 @@ export function Products() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-red-600 hover:bg-red-700 text-white font-oswald text-lg tracking-widest px-10 py-3 rounded-full uppercase transition-colors shadow-lg shadow-red-900/20"
+              className="bg-red-600 hover:bg-red-700 text-white font-oswald text-lg tracking-widest px-10 py-3 rounded-full uppercase transition-colors shadow-lg shadow-red-900/20 cursor-pointer"
             >
               Explore More Products
             </motion.button>
