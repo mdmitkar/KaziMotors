@@ -1,158 +1,160 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import products from '../data/products';
 
-const collectionItems = [
-    {
-        id: 1,
-        title: "Carbon Rear Hugger",
-        category: "Body Parts",
-        tag: "PRO SERIES",
-        year: "2025",
-        image: "/assets/BodyParts/BlackRearHugger.jpeg",
-        description: "Premium black rear hugger for superior splash protection and sleek aesthetics.",
-        price: "$149"
-    },
-    {
-        id: 2,
-        title: "Aerodynamic Winglets",
-        category: "Body Parts",
-        tag: "STREET ELITE",
-        year: "2025",
-        image: "/assets/BodyParts/BlueFrontWinglet.jpeg",
-        description: "High-performance blue front winglets designed for increased downforce.",
-        price: "$89"
-    },
-    {
-        id: 3,
-        title: "Race Seat Cowl",
-        category: "Body Parts",
-        tag: "LIMITED EDITION",
-        year: "2025",
-        image: "/assets/BodyParts/BlackSeatCowl.jpeg",
-        description: "Convert your ride to a single-seat racer with this aggressive black cowl.",
-        price: "$119"
-    },
-    {
-        id: 4,
-        title: "SC Project Exhaust",
-        category: "Exhausts",
-        tag: "PRO SERIES",
-        year: "2025",
-        image: "/assets/Exhausts/BlackSCProjectExhaust.jpeg",
-        description: "Authentic SC Project exhaust with a deep, aggressive roar and weight reduction.",
-        price: "$699"
-    },
-    {
-        id: 5,
-        title: "Akrapovic 6-Cut",
-        category: "Exhausts",
-        tag: "ULTRA LIGHT",
-        year: "2025",
-        image: "/assets/Exhausts/Akrapovic6CutExhausts.jpeg",
-        description: "Precision-engineered titanium exhaust for peak power gains and signature sound.",
-        price: "$899"
-    },
-    {
-        id: 6,
-        title: "Arrow Blue Tip",
-        category: "Exhausts",
-        tag: "SPECIAL EDITION",
-        year: "2025",
-        image: "/assets/Exhausts/BlueArrowExhaust.jpeg",
-        description: "Custom blue-tipped Arrow exhaust for distinct style and thermal efficiency.",
-        price: "$749"
-    },
-    {
-        id: 7,
-        title: "Thor LED Headlight",
-        category: "Lights",
-        tag: "STREET ELITE",
-        year: "2025",
-        image: "/assets/Lights/C174ThorHeadlight.jpeg",
-        description: "Ultra-bright LED headlight with Thor's signature daytime running light pattern.",
-        price: "$199"
-    },
-    {
-        id: 8,
-        title: "Fog Light Bar",
-        category: "Lights",
-        tag: "PRO SERIES",
-        year: "2025",
-        image: "/assets/Lights/4LensFogLightBar.jpeg",
-        description: "4-lens high-intensity fog light bar for maximum visibility in all conditions.",
-        price: "$129"
-    },
-    {
-        id: 9,
-        title: "Square LED Spot",
-        category: "Lights",
-        tag: "HERITAGE",
-        year: "2025",
-        image: "/assets/Lights/HjgW09SquareFogLight.jpeg",
-        description: "Compact 50W square fog light delivering a focused, long-range beam.",
-        price: "$79"
-    },
-    {
-        id: 10,
-        title: "3-Spoke Alloys",
-        category: "Wheels",
-        tag: "PRO SERIES",
-        year: "2025",
-        image: "/assets/Wheels/3SpokeDoubleDiscAlloyWheels.jpeg",
-        description: "Heavy-duty 3-spoke alloy wheels with double disc mounting support.",
-        price: "$450"
-    },
-    {
-        id: 11,
-        title: "Multi-Spoke Rims",
-        category: "Wheels",
-        tag: "STREET ELITE",
-        year: "2025",
-        image: "/assets/Wheels/MultiSpokeSingleDiscAlloyWheels.jpeg",
-        description: "Lightweight multi-spoke alloy rims for improved handling and response.",
-        price: "$399"
-    },
-    {
-        id: 12,
-        title: "Anti-Theft System",
-        category: "Accessories",
-        tag: "SPECIAL EDITION",
-        year: "2025",
-        image: "/assets/Accessories/AntiTheftAlarmSystem.jpeg",
-        description: "Advanced motion-sensing alarm system with remote start and engine kill.",
-        price: "$120"
-    },
-    {
-        id: 13,
-        title: "GPS Mobile Holder",
-        category: "Accessories",
-        tag: "STREET ELITE",
-        year: "2025",
-        image: "/assets/Accessories/BlackMobileHolder.jpeg",
-        description: "Vibration-damped metallic mobile holder for secure navigation.",
-        price: "$45"
-    },
-    {
-        id: 14,
-        title: "Gold Swingarm Spools",
-        category: "Accessories",
-        tag: "PRO SERIES",
-        year: "2025",
-        image: "/assets/Accessories/GoldSwingarmSpools.jpeg",
-        description: "Anodized gold swingarm spools for easy paddock stand lifting.",
-        price: "$25"
-    },
-    {
-        id: 15,
-        title: "Chrome Super Horns",
-        category: "Accessories",
-        tag: "HERITAGE",
-        year: "2025",
-        image: "/assets/Accessories/ChromeSuperHornPair.jpeg",
-        description: "Dual chrome-plated high-decibel horns for a commanding road presence.",
-        price: "$65"
-    }
-];
+const collectionItems = products
+// [
+//     {
+//         id: 1,
+//         title: "Carbon Rear Hugger",
+//         category: "Body Parts",
+//         tag: "PRO SERIES",
+//         year: "2025",
+//         image: "/assets/BodyParts/BlackRearHugger.jpeg",
+//         description: "Premium black rear hugger for superior splash protection and sleek aesthetics.",
+//         price: "$149"
+//     },
+//     {
+//         id: 2,
+//         title: "Aerodynamic Winglets",
+//         category: "Body Parts",
+//         tag: "STREET ELITE",
+//         year: "2025",
+//         image: "/assets/BodyParts/BlueFrontWinglet.jpeg",
+//         description: "High-performance blue front winglets designed for increased downforce.",
+//         price: "$89"
+//     },
+//     {
+//         id: 3,
+//         title: "Race Seat Cowl",
+//         category: "Body Parts",
+//         tag: "LIMITED EDITION",
+//         year: "2025",
+//         image: "/assets/BodyParts/BlackSeatCowl.jpeg",
+//         description: "Convert your ride to a single-seat racer with this aggressive black cowl.",
+//         price: "$119"
+//     },
+//     {
+//         id: 4,
+//         title: "SC Project Exhaust",
+//         category: "Exhausts",
+//         tag: "PRO SERIES",
+//         year: "2025",
+//         image: "/assets/Exhausts/BlackSCProjectExhaust.jpeg",
+//         description: "Authentic SC Project exhaust with a deep, aggressive roar and weight reduction.",
+//         price: "$699"
+//     },
+//     {
+//         id: 5,
+//         title: "Akrapovic 6-Cut",
+//         category: "Exhausts",
+//         tag: "ULTRA LIGHT",
+//         year: "2025",
+//         image: "/assets/Exhausts/Akrapovic6CutExhausts.jpeg",
+//         description: "Precision-engineered titanium exhaust for peak power gains and signature sound.",
+//         price: "$899"
+//     },
+//     {
+//         id: 6,
+//         title: "Arrow Blue Tip",
+//         category: "Exhausts",
+//         tag: "SPECIAL EDITION",
+//         year: "2025",
+//         image: "/assets/Exhausts/BlueArrowExhaust.jpeg",
+//         description: "Custom blue-tipped Arrow exhaust for distinct style and thermal efficiency.",
+//         price: "$749"
+//     },
+//     {
+//         id: 7,
+//         title: "Thor LED Headlight",
+//         category: "Lights",
+//         tag: "STREET ELITE",
+//         year: "2025",
+//         image: "/assets/Lights/C174ThorHeadlight.jpeg",
+//         description: "Ultra-bright LED headlight with Thor's signature daytime running light pattern.",
+//         price: "$199"
+//     },
+//     {
+//         id: 8,
+//         title: "Fog Light Bar",
+//         category: "Lights",
+//         tag: "PRO SERIES",
+//         year: "2025",
+//         image: "/assets/Lights/4LensFogLightBar.jpeg",
+//         description: "4-lens high-intensity fog light bar for maximum visibility in all conditions.",
+//         price: "$129"
+//     },
+//     {
+//         id: 9,
+//         title: "Square LED Spot",
+//         category: "Lights",
+//         tag: "HERITAGE",
+//         year: "2025",
+//         image: "/assets/Lights/HjgW09SquareFogLight.jpeg",
+//         description: "Compact 50W square fog light delivering a focused, long-range beam.",
+//         price: "$79"
+//     },
+//     {
+//         id: 10,
+//         title: "3-Spoke Alloys",
+//         category: "Wheels",
+//         tag: "PRO SERIES",
+//         year: "2025",
+//         image: "/assets/Wheels/3SpokeDoubleDiscAlloyWheels.jpeg",
+//         description: "Heavy-duty 3-spoke alloy wheels with double disc mounting support.",
+//         price: "$450"
+//     },
+//     {
+//         id: 11,
+//         title: "Multi-Spoke Rims",
+//         category: "Wheels",
+//         tag: "STREET ELITE",
+//         year: "2025",
+//         image: "/assets/Wheels/MultiSpokeSingleDiscAlloyWheels.jpeg",
+//         description: "Lightweight multi-spoke alloy rims for improved handling and response.",
+//         price: "$399"
+//     },
+//     {
+//         id: 12,
+//         title: "Anti-Theft System",
+//         category: "Accessories",
+//         tag: "SPECIAL EDITION",
+//         year: "2025",
+//         image: "/assets/Accessories/AntiTheftAlarmSystem.jpeg",
+//         description: "Advanced motion-sensing alarm system with remote start and engine kill.",
+//         price: "$120"
+//     },
+//     {
+//         id: 13,
+//         title: "GPS Mobile Holder",
+//         category: "Accessories",
+//         tag: "STREET ELITE",
+//         year: "2025",
+//         image: "/assets/Accessories/BlackMobileHolder.jpeg",
+//         description: "Vibration-damped metallic mobile holder for secure navigation.",
+//         price: "$45"
+//     },
+//     {
+//         id: 14,
+//         title: "Gold Swingarm Spools",
+//         category: "Accessories",
+//         tag: "PRO SERIES",
+//         year: "2025",
+//         image: "/assets/Accessories/GoldSwingarmSpools.jpeg",
+//         description: "Anodized gold swingarm spools for easy paddock stand lifting.",
+//         price: "$25"
+//     },
+//     {
+//         id: 15,
+//         title: "Chrome Super Horns",
+//         category: "Accessories",
+//         tag: "HERITAGE",
+//         year: "2025",
+//         image: "/assets/Accessories/ChromeSuperHornPair.jpeg",
+//         description: "Dual chrome-plated high-decibel horns for a commanding road presence.",
+//         price: "$65"
+//     }
+// ];
 
 
 const categories = ["All", ...new Set(collectionItems.map(item => item.category))];
