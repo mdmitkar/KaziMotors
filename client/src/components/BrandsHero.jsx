@@ -3,9 +3,10 @@ import { motion } from "framer-motion"
 export function BrandsHero() {
     return (
         <>
+            {/* Royal Enfield Section */}
             <section
                 id="royal-enfield"
-                className="relative  overflow-hidden border-b border-gold/10"
+                className="relative overflow-hidden border-b border-gold/10"
                 style={{
                     backgroundImage: 'url("/assets/rebike-imgs/rebikemain.png")',
                     backgroundAttachment: 'fixed',
@@ -13,240 +14,50 @@ export function BrandsHero() {
                     backgroundSize: 'cover'
                 }}
             >
-                {/* Overlay for better readability */}
-                <div className="absolute inset-0 bg-black/70 z-0"></div>
-                <div className="relative z-10 flex flex-col justify-center ">
-                    <div className="">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, amount: 0.3 }}
-                            transition={{ duration: 0.8 }}
-                            className="text-center mb-16 flex flex-col justify-center items-center py-10"
-                        >
-                            <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px]">
-                                <img
-                                    src="/assets/brand-imgs/royalenfieldclrfull.png"
-                                    alt="Royal Enfield"
-                                    className="h-12 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
-                                />
-                            </div>
-
-                            <h2 className=" text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                                ROYAL <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">ENFIELD</span>
-                            </h2>
-                            <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">
-                                Meet The Royalty
-                            </span>
-                            <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl">
-                                {""}
-                            </div>
-                        </motion.div>
-                    </div>
-                    <div className="section-wrapper">
-
-
-                        {/* Text Content */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="flex-1 z-10 text-left "
-                        >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">
-                                Our Top Partner
-                            </span>
-                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide bg-whie">
-                                A LEGACY OF TRUST, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">THE ROYAL ENFIELD WAY</span>
-                            </h2>
-                            <div className="space-y-10 max-w-2xl">
-
-                                {/* Section 1 */}
-                                <div className="space-y-3  border-l-2 border-gold/50 pl-2">
-                                    <h3 className="text-gold text-xl md:text-2xl font-semibold">
-                                        <span className="text-gradient text-2xl">Royal Enfield</span>{" "}
-                                        Legacy in Bhiwandi
-                                    </h3>
-                                    <ul className="space-y-2 text-white/70 list-disc list-inside hover:text-gold">
-                                        <li>Among the first in Bhiwandi to begin supplying Royal Enfield auto parts</li>
-                                        <li>Started with a clear understanding of local rider needs</li>
-                                        <li>Built our presence through consistency, service, and rider trust</li>
-                                        <li>Grown alongside the Royal Enfield riding community</li>
-                                    </ul>
-                                </div>
-
-                                {/* Section 2 */}
-                                <div className="flex justify-end bg-whit ">
-
-                                    <div className="space-y-3 border-l-2 border-gold/50 pl-2">
-                                        <h3 className="text-gold text-xl md:text-2xl font-semibold">
-                                            Pioneers of <span className="text-gradient text-2xl">Royal Enfield</span>{" "} Authenticity
-                                        </h3>
-                                        <ul className="space-y-2 text-white/70 list-disc list-inside hover:text-gold">
-                                            <li>Exclusive focus on genuine Royal Enfield parts</li>
-                                            <li>Strict quality checks for durability and performance</li>
-                                            <li>Trusted by riders who value authenticity and reliability</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                                {/* Section 3 */}
-                                <div className="flex justify-between">
-
-                                    <div className="space-y-3 border-l-2 border-gold/50 pl-4">
-                                        <h3 className="text-gold text-xl md:text-2xl font-semibold">
-                                            Trusted by Riders
-                                        </h3>
-                                        <ul className="space-y-2 text-white/70 italic list-disc list-inside hover:text-gold">
-                                            <li>Built on years of industry experience</li>
-                                            <li>Preferred choice of passionate motorcycle riders</li>
-                                            <li>A commitment to reliability in every mile</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-
-
-                            {/* <div className="space-y-6">
-                            <p className="text-white/70 text-lg md:text-xl leading-relaxed max-w-2xl">
-                                At <span className="text-gold font-bold">Kazi Motors</span>, we believe in giving you the freedom to choose. Whether you're a fan of Royal Enfield's classic charm, Honda's reliability, or Yamaha's sporty edge, we've got you covered.
-                            </p>
-                            <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-                                From powerful engines and precision components to essential accessories, we ensure quality that enhances your ride. No matter your style or machine, our range is built to deliver confidence on the road and satisfaction in every mile.
-                            </p>
-                            <p className="text-white/70 text-lg leading-relaxed max-w-2xl italic border-l-2 border-gold/50 pl-4">
-                                Driven by passion and powered by expertise, Kazi Motors is your trusted destination for elite motorcycle solutions.
-                            </p>
-                        </div> */}
-                        </motion.div>
-                        {/* Visual Content - Overlapping Cards */}
-                        <div className="flex-1 relative h-[500px] md:h-[600px] w-full mt-10 lg:mt-0">
-
-                            {/* Background Card */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 100, rotate: 5 }}
-                                whileInView={{ opacity: 1, x: 0, rotate: -5 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 1.2, ease: "easeOut" }}
-                                whileHover={{ scale: 1.05, rotate: 0, zIndex: 30 }}
-                                className="absolute top-10 right-0 w-[75%] h-[350px] md:h-[400px] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-8 border-white/5 z-10 cursor-pointer transition-all duration-500"
-                            >
-                                <img
-                                    src="/assets/rebike-imgs/rebike1.png"
-                                    alt="Premium Motorcycle Parts"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                                <div className="absolute bottom-8 left-8">
-                                    <h3 className="text-2xl font-bold text-white font-oswald uppercase tracking-tight">Precision Parts</h3>
-                                    <p className="text-gold text-sm font-medium tracking-[0.2em] uppercase">Engineering Excellence</p>
-                                </div>
-                            </motion.div>
-
-                            {/* Foreground Card */}
-                            <motion.div
-                                initial={{ opacity: 0, x: -100, rotate: -10 }}
-                                whileInView={{ opacity: 1, x: 0, rotate: 5 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-                                whileHover={{ scale: 1.05, rotate: 0, zIndex: 30 }}
-                                className="absolute bottom-0 left-0 w-[75%] h-[350px] md:h-[400px] rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.9)] border-8 border-gold/20 z-20 cursor-pointer transition-all duration-500"
-                            >
-                                <img
-                                    src="/assets/rebike-imgs/rebike3.png"
-                                    alt="Custom Alloy Wheels"
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                                <div className="absolute bottom-8 left-8">
-                                    <h3 className="text-2xl font-bold text-white font-oswald uppercase tracking-tight">Custom Alloys</h3>
-                                    <p className="text-gold text-sm font-medium tracking-[0.2em] uppercase">Luxury Performance</p>
-                                </div>
-                            </motion.div>
-
-                            {/* Decorative Element */}
-                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gold/10 blur-[80px] rounded-full" />
-                            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/5 blur-[80px] rounded-full" />
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-            {/* Honda Section */}
-            <section
-                id="honda"
-                className="relative  px-4 overflow-hidden border-b border-gold/10"
-                style={{
-                    backgroundImage: 'url("/assets/bikefix-imgs/fix1.png")',
-                    backgroundAttachment: 'fixed',
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover'
-                }}
-            >
-                {/* Overlay for better readability */}
-                <div className="absolute inset-0 bg-black/80 z-0"></div>
-                <div className="container mx-auto relative z-10">
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, amount: 0.3 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-16 flex flex-col justify-center items-center py-10"
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
                     >
-                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px]">
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/honda2.png"
-                                alt="Honda"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                src="/assets/brand-imgs/royalenfieldclrfull.png"
+                                alt="Royal Enfield"
+                                className="h-12 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            HONDA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">RELIABILITY</span>
+                            ROYAL <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">ENFIELD</span>
                         </h2>
                         <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">
-                            The Power of Dreams
+                            Meet The Royalty
                         </span>
                         <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
-                    <div className="section-wrapper  flex flex-col lg:flex-row-reverse ">
+                    <div className="section-wrapper">
                         <motion.div
-                            initial={{ opacity: 0, x: 50 }}
+                            initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">
-                                Premium Performance
-                            </span>
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Our Top Partner</span>
                             <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
-                                ENGINEERING PERFECTION, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">WITH HONDA GENUINE PARTS</span>
+                                A LEGACY OF TRUST, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">THE ROYAL ENFIELD WAY</span>
                             </h2>
-                            <div className="space-y-6 text-white/70">
-                                <p className="text-lg">We provide a comprehensive range of genuine Honda parts designed to maintain the peak performance of your machine. From essential engine components to sleek accessories, ensure your Honda stays true to its legacy.</p>
-                                <ul className="space-y-4 list-none">
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-gold rounded-full"></div>
-                                        <span>Optimum performance for all Honda models</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-gold rounded-full"></div>
-                                        <span>Precision-engineered for durability</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-gold rounded-full"></div>
-                                        <span>Guaranteed authenticity and fitment</span>
-                                    </li>
+                            <div className="space-y-6 max-w-2xl text-white/70">
+                                <p className="text-lg">Experience the timeless elegance and robust performance of Royal Enfield. We provide genuine parts and accessories that maintain the classic soul of your machine while ensuring modern reliability.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Authentic components for every model</li>
+                                    <li>Built for the long road ahead</li>
+                                    <li>Trusted by the global riding community</li>
                                 </ul>
                             </div>
                         </motion.div>
@@ -258,9 +69,81 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
+                                <img src="/assets/rebike-imgs/rebike1.png" alt="Royal Enfield Parts" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Honda Section */}
+            <section
+                id="honda"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/bikefix-imgs/fix1.png")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/honda2.png"
+                                alt="Honda"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            HONDA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">RELIABILITY</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">The Power of Dreams</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper lg:flex-row-reverse">
+
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
                                 <img src="/assets/reparts-imgs/part4.png" alt="Honda Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Premium Engineering</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                UNMATCHED QUALITY, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">GENUINE HONDA PARTS</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">Honda is synonymous with reliability. Our range of genuine Honda components ensures that your machine performs at its peak, providing you with peace of mind on every journey.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Precision engineered for exact fit</li>
+                                    <li>Enhanced durability and performance</li>
+                                    <li>Factory-certified quality standards</li>
+                                </ul>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -268,7 +151,7 @@ export function BrandsHero() {
             {/* Yamaha Section */}
             <section
                 id="yamaha"
-                className="relative  px-4 overflow-hidden"
+                className="relative overflow-hidden border-b border-gold/10"
                 style={{
                     backgroundImage: 'url("/assets/bikefix-imgs/fix2.png")',
                     backgroundAttachment: 'fixed',
@@ -276,17 +159,16 @@ export function BrandsHero() {
                     backgroundSize: 'cover'
                 }}
             >
-                {/* Overlay for better readability */}
-                <div className="absolute inset-0 bg-black/80 z-0"></div>
-                <div className="container mx-auto relative z-10">
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, amount: 0.3 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-16 flex flex-col justify-center items-center py-10"
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
                     >
-                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px]">
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
                                 src="/assets/brand-imgs/yamaha2.png"
                                 alt="Yamaha"
@@ -296,13 +178,11 @@ export function BrandsHero() {
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
                             YAMAHA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">SPIRIT</span>
                         </h2>
-                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">
-                            Revs Your Heart
-                        </span>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Revs Your Heart</span>
                         <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
-                    <div className="section-wrapper flex flex-col lg:fl">
+                    <div className="section-wrapper">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -310,36 +190,458 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">
-                                Sport Performance
-                            </span>
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Excellence</span>
                             <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
-                                UNLEASH THE POWER, <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">YAMAHA PERFORMANCE PARTS</span>
+                                UNLEASH THE PERFORMANCE, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">YAMAHA GENUINE ACCESSORIES</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
-                                <p className="text-lg">Experience the thrill of speed and precision with our curated selection of Yamaha parts. Built for those who demand more from their machines, our Yamaha range ensures every ride is an adventure.</p>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="p-4 border border-gold/20 rounded-xl bg-white/5">
-                                        <h4 className="text-gold font-bold mb-1 uppercase text-sm">Racing Tech</h4>
-                                        <p className="text-xs">Advanced engineering for the track.</p>
-                                    </div>
-                                    <div className="p-4 border border-gold/20 rounded-xl bg-white/5">
-                                        <h4 className="text-gold font-bold mb-1 uppercase text-sm">Durability</h4>
-                                        <p className="text-xs">Reliability you can trust.</p>
-                                    </div>
-                                </div>
+                                <p className="text-lg">Yamaha is built for those who crave excitement. Our curated selection of Yamaha parts delivers the performance and agility you need to dominate the road or the track.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>High-performance racing components</li>
+                                    <li>Advanced technological integration</li>
+                                    <li>Dynamic styling and durability</li>
+                                </ul>
                             </div>
                         </motion.div>
 
                         <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
                             <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
                                 <img src="/assets/reparts-imgs/part5.png" alt="Yamaha Parts" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* KTM Section */}
+            <section
+                id="ktm"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.38.56 PM (2).jpeg")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/ktm2.png"
+                                alt="KTM"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            KTM <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">READY TO RACE</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Engineering Fearless Performance</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper lg:flex-row-reverse">
+
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
+                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.38.56 PM (3).jpeg" alt="KTM Performance" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Aggressive Performance</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                DOMINATE EVERY TERRAIN, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">KTM GENUINE POWERPARTS</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">KTM is for the bold. We provide authentic KTM parts that enhance the raw power and sharp handling of your machine, ensuring you're always ready to race.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Lightweight performance components</li>
+                                    <li>Uncompromising durability for track & trail</li>
+                                    <li>Iconic styling and precision engineering</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Kawasaki Section */}
+            <section
+                id="kawasaki"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.38.57 PM.jpeg")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/kawasaki2.png"
+                                alt="Kawasaki"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            KAWASAKI <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">LET THE GOOD TIMES ROLL</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Unleashing Ninja Power</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Superbike Mastery</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                PRECISION MEETS POWER, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">KAWASAKI GENUINE PARTS</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">Experience the legendary performance of Kawasaki. Our range of Kawasaki parts ensures that your superbike or cruiser maintains its edge and reliability.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Cutting-edge engineering solutions</li>
+                                    <li>Optimized for speed and endurance</li>
+                                    <li>Premium finish and perfect fitment</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
+                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.05 PM (3).jpeg" alt="Kawasaki Parts" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Bajaj Section */}
+            <section
+                id="bajaj"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.03 PM (3).jpeg")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/bajaj2.png"
+                                alt="Bajaj"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            BAJAJ <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">THE WORLD'S FAVOURITE INDIAN</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Efficient & Powerful Commuting</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper lg:flex-row-reverse">
+
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
+                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.11 PM (3).jpeg" alt="Bajaj Spares" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Reliable Commuting</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                SCALE NEW HEIGHTS, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">BAJAJ GENUINE SPARES</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">Bajaj provides the perfect balance of efficiency and power. We offer genuine Bajaj spares that keep your motorcycle running smoothly and economically.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Enhanced fuel efficiency components</li>
+                                    <li>Durable and long-lasting parts</li>
+                                    <li>Wide availability and trusted quality</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* TVS Section */}
+            <section
+                id="tvs"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.00 PM.jpeg")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/tvs2.png"
+                                alt="TVS"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            TVS <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">TRACK TO ROAD</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Racing DNA in Every Ride</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Heritage</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                UNCOMPROMISING AGILITY, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">TVS GENUINE PARTS</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">TVS brings racing technology to the streets. Our genuine TVS parts ensure that your machine retains its sharp handling and punchy performance.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Precision parts with racing DNA</li>
+                                    <li>Enhanced reliability for daily commutes</li>
+                                    <li>Factory-backed quality and performance</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
+                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.01 PM.jpeg" alt="TVS Parts" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Hero Section */}
+            <section
+                id="hero-moto"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.12 PM.jpeg")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/hero2.png"
+                                alt="Hero"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            HERO <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">BE THE HERO</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">The Nation's Pride in Motion</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper lg:flex-row-reverse">
+                        
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
+                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.00 PM (4).jpeg" alt="Hero Parts" className="w-full h-full object-cover" />
+                            </motion.div>
+                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Trusted Mobility</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                GO THE DISTANCE, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">HERO GENUINE PARTS</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">Hero is the backbone of Indian mobility. We provide genuine Hero parts that ensure long-lasting performance and hassle-free maintenance for millions of riders.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Durability you can count on</li>
+                                    <li>Easy maintenance and wide compatibility</li>
+                                    <li>Original quality for total confidence</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mahindra Section */}
+            <section
+                id="mahindra"
+                className="relative overflow-hidden border-b border-gold/10"
+                style={{
+                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.04 PM.jpeg")',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                }}
+            >
+                <div className="absolute inset-0 bg-black/60 z-0"></div>
+                <div className="relative z-10 flex flex-col justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
+                    >
+                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
+                            <img
+                                src="/assets/brand-imgs/mahindra2.png"
+                                alt="Mahindra"
+                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
+                            MAHINDRA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">RISE</span>
+                        </h2>
+                        <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Toughness Reimagined</span>
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl"></div>
+                    </motion.div>
+
+                    <div className="section-wrapper">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="flex-1 z-10 text-left"
+                        >
+                            <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Rugged Innovation</span>
+                            <h2 className="text-gold text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
+                                BUILT TO LAST, <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">MAHINDRA GENUINE COMPONENTS</span>
+                            </h2>
+                            <div className="space-y-6 text-white/70">
+                                <p className="text-lg">Mahindra stands for ruggedness and innovation. Our range of genuine Mahindra components is designed to withstand the toughest conditions while delivering peak performance.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-gold transition-colors">
+                                    <li>Robust construction for extreme durability</li>
+                                    <li>Advanced engineering for reliable performance</li>
+                                    <li>Original spares for long-term value</li>
+                                </ul>
+                            </div>
+                        </motion.div>
+
+                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
+                            >
+                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.05 PM (1).jpeg" alt="Mahindra Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
