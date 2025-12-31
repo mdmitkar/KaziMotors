@@ -50,7 +50,7 @@ export function Contact() {
                         </div>
 
                         {/* Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 group-hover:bg-black/70 transition-colors duration-500" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/30 group-hover:bg-black/70 transition-colors duration-500" />
 
                         {/* Content Container - Centered */}
                         <div className="absolute inset-0 flex flex-col justify-between items-center text-center p-8 md:p-12 z-10">

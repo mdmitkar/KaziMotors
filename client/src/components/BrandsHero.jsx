@@ -26,7 +26,7 @@ export function BrandsHero() {
                         <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">
                             Meet The Royalty
                         </span>
-                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl">
+                        <div className="bg-linear-to-r from-gold to-red-400 w-[100px] h-[5px] rounded-2xl">
                             {""}
                         </div>
                     </motion.div>
@@ -47,7 +47,7 @@ export function BrandsHero() {
                         </span>
                         <h2 className="text-gradient text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide bg-whie">
                             A LEGACY OF TRUST, <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">THE ROYAL ENFIELD WAY</span>
+                            <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-white/70">THE ROYAL ENFIELD WAY</span>
                         </h2>
                         <div className="space-y-10 max-w-2xl">
 
@@ -128,7 +128,7 @@ export function BrandsHero() {
                                 alt="Premium Motorcycle Parts"
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
                             <div className="absolute bottom-8 left-8">
                                 <h3 className="text-2xl font-bold text-white font-oswald uppercase tracking-tight">Precision Parts</h3>
                                 <p className="text-gold text-sm font-medium tracking-[0.2em] uppercase">Engineering Excellence</p>
@@ -149,7 +149,7 @@ export function BrandsHero() {
                                 alt="Custom Alloy Wheels"
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
                             <div className="absolute bottom-8 left-8">
                                 <h3 className="text-2xl font-bold text-white font-oswald uppercase tracking-tight">Custom Alloys</h3>
                                 <p className="text-gold text-sm font-medium tracking-[0.2em] uppercase">Luxury Performance</p>

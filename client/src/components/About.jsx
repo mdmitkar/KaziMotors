@@ -14,17 +14,17 @@ export function About() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="order-2 lg:order-1"
                 >
-                    <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase font-inter">
+                    <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">
                         Legacy of Excellence
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
                         REDEFINING <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">AUTO ARTISTRY</span>
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-white/70">AUTO ARTISTRY</span>
                     </h2>
-                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-gradient-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
+                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
                         <span className="kazi-motors"><span className="kazi-motors">Kazi Motors</span></span> isn't just a modification shop; it's where passion meets precision. With over a decade of experience in high-end automotive enhancements, we've carved a niche in delivering bespoke experiences that push the boundaries of performance and style.
                     </p>
-                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-gradient-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
+                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
                         Our team combines deep technical expertise with an unwavering commitment to quality, ensuring that every vehicle that leaves our workshop is a masterpiece. From meticulous customizations to performance tuning, we transform each ride into a statement of individuality, innovation, and unmatched craftsmanship.
                     </p>
                     <div className="flex items-center space-x-8">
@@ -53,13 +53,13 @@ export function About() {
                         <div className="absolute -inset-4 border border-gold/20 rounded-2xl group-hover:border-gold/40 transition-colors duration-500" />
 
                         {/* Image Div */}
-                        <div className="aspect-[4/5] md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden rounded-2xl relative shadow-2xl">
+                        <div className="aspect-4/5 md:aspect-video lg:aspect-4/5 overflow-hidden rounded-2xl relative shadow-2xl">
                             <img
                                 src="/assets/bikefix-imgs/fix2.png"
                                 alt="Automotive Workshop"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-60" />
                         </div>
 
                         {/* Floating Decorative Element */}

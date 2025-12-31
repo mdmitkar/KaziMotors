@@ -84,7 +84,7 @@ export function CollectionHero() {
             </AnimatePresence>
 
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-400" />
+            <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent opacity-400" />
 
             {/* Navigation Buttons */}
             <div className="absolute inset-0 flex justify-between items-center px-4 md:px-8 pointer-events-none">
@@ -117,7 +117,7 @@ export function CollectionHero() {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className="text-5xl md:text-7xl lg:text-8xl font-oswald font-bold text-white uppercase tracking-wider mb-4 drop-shadow-lg"
                         >
-                            {slides[currentSlide].title.split(" ")[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-gold">{slides[currentSlide].title.split(" ").slice(1).join(" ")}</span>
+                            {slides[currentSlide].title.split(" ")[0]} <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-gold">{slides[currentSlide].title.split(" ").slice(1).join(" ")}</span>
                         </motion.h1>
 
                         <motion.p
@@ -135,7 +135,7 @@ export function CollectionHero() {
                             transition={{ duration: 0.3 }}
                             className="bg-red-600 text-white font-oswald text-lg md:text-xl px-12 py-4 uppercase tracking-widest hover:bg-gold hover:text-black transition-all rounded-none skew-x-[-10deg] pointer-events-auto shadow-lg"
                         >
-                            <span className="block skew-x-[10deg]">{slides[currentSlide].buttonText}</span>
+                            <span className="block skew-x-10">{slides[currentSlide].buttonText}</span>
                         </motion.button>
                     </motion.div>
                 </AnimatePresence>
@@ -151,8 +151,8 @@ export function CollectionHero() {
                             setCurrentSlide(index);
                         }}
                         className={`transition-all duration-300 rounded-full ${index === currentSlide
-                                ? "w-12 h-1.5 bg-red-600"
-                                : "w-1.5 h-1.5 bg-white/50 hover:bg-white"
+                            ? "w-12 h-1.5 bg-red-600"
+                            : "w-1.5 h-1.5 bg-white/50 hover:bg-white"
                             }`}
                     />
                 ))}

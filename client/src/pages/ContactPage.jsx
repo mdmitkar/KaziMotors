@@ -126,7 +126,7 @@ export function ContactPage() {
                                 </span>
                             </div>
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-oswald font-bold uppercase tracking-tighter text-white mb-6 leading-none">
-                                REACH <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">KAZI</span><br />
+                                REACH <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-white/70">KAZI</span><br />
                                 <span className="text-white">AUTO PARTS.</span>
                             </h1>
                             <p className="text-gray-400 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
