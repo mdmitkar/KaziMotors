@@ -120,7 +120,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/reparts-imgs/part4.png" alt="Honda Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/honda-imgs/honda_bike_norider.png" alt="Honda Bike" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -212,7 +212,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/reparts-imgs/part5.png" alt="Yamaha Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/yamaha-imgs/yamaha_bike_norider.png" alt="Yamaha Bike" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -263,7 +263,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.38.56 PM (3).jpeg" alt="KTM Performance" className="w-full h-full object-cover" />
+                                <img src="/assets/ktm-imgs/ktm_bike_norider.png" alt="KTM Performance" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -355,7 +355,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.05 PM (3).jpeg" alt="Kawasaki Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/kawasaki-imgs/kawasaki_bike_norider.png" alt="Kawasaki Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -498,7 +498,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.01 PM.jpeg" alt="TVS Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/tvs-imgs/tvs_bike_nature.png" alt="TVS Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -540,7 +540,7 @@ export function BrandsHero() {
                     </motion.div>
 
                     <div className="section-wrapper lg:flex-row-reverse">
-                        
+
 
                         <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
                             <motion.div
@@ -549,7 +549,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/ws/WhatsApp Image 2025-12-27 at 5.39.00 PM (4).jpeg" alt="Hero Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/hero-imgs/hero_bike_nature.png" alt="Hero Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
