@@ -219,7 +219,8 @@ export function CollectionGrid() {
                                     }}
                                     className={`relative group ${isMiddleColumn ? "lg:translate-y-32" : ""}`}
                                 >
-                                    <div className="relative aspect-square bg-[#0A0A0A] rounded-[2.1rem] transition-all duration-700 group-hover:border-gold/50 group-hover:bg-[#111] overflow-hidden border border-3 border-black">
+                                    <div className="relative aspect-square bg-[#0A0A0A] rounded-[2.1rem] transition-all duration-700 
+                                    group-hover:border-3 group-hover:border-gold/50 group-hover:bg-[#111] overflow-hidden border-black border-3">
 
                                         {/* Base Card Content */}
                                         <div className="absolute inset-0 h-full w-full">
@@ -266,7 +267,7 @@ export function CollectionGrid() {
                                         </div>
 
                                         {/* Top-Left Label */}
-                                        <div className="absolute top-0 left-0 flex items-center gap-2 z-10 group-hover:opacity-0 transition-opacity bg-black p-2 rounded ">
+                                        <div className="absolute top-0 left-0 flex items-center gap-2 z-10 group-hover:opacity-0 transition-opacity bg-black p-2  ">
                                             <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
                                             <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-gold ">
                                                 {item.category}

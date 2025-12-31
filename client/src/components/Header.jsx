@@ -23,10 +23,12 @@ export function Header() {
                 {['Home', 'Collection', 'Brands', 'About'].map((item) => {
                     const isHome = item === 'Home';
                     const isCollection = item === 'Collection';
+                    const isBrands = item === 'Brands';
 
                     // Determine the href/to path
                     let linkPath = '/';
                     if (isCollection) linkPath = '/collection';
+                    else if (isCollection) linkPath = '/brands';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                     return (

@@ -76,10 +76,10 @@ export function HomeHero() {
                             transition={{ delay: 1.1 }}
                             className="flex flex-wrap gap-6"
                         >
-                            <button className="px-8 py-3 bg-white text-black font-oswald font-bold text-xs hover:bg-gold hover:text-white transition-all duration-500 uppercase tracking-[0.2em] rounded-full">
+                            <button className="px-8 py-3 bg-gold text-black font-oswald font-bold text-xs hover:bg-white hover:text-white transition-all duration-500 uppercase tracking-[0.2em] rounded-full cursor-pointer">
                                 View Collection
                             </button>
-                            <button className="px-8 py-3 border border-white/30 text-white font-oswald font-bold text-xs hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-[0.2em] rounded-full backdrop-blur-md">
+                            <button className="px-8 py-3 border border-white/30 text-white font-oswald font-bold text-xs hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-[0.2em] rounded-full backdrop-blur-md cursor-pointer">
                                 Our Services
                             </button>
                         </motion.div>
@@ -92,7 +92,7 @@ export function HomeHero() {
                         <button
                             key={index}
                             onClick={() => setCurrentVideo(index)}
-                            className={`w-1.5 transition-all duration-500 rounded-full ${currentVideo === index ? 'h-8 bg-gold' : 'h-3 bg-white/20 hover:bg-white/40'
+                            className={`w-1.5 transition-all duration-500 rounded-full cursor-pointer ${currentVideo === index ? 'h-8 bg-gold' : 'h-3 bg-white/20 hover:bg-white/40'
                                 }`}
                         />
                     ))}
