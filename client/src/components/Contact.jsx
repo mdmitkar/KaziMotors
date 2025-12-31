@@ -66,9 +66,15 @@ export function Contact() {
 
                             {/* Bottom Content (Button) */}
                             <div className="transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                                <button className="bg-red-600 text-white font-oswald text-lg px-8 py-3 uppercase tracking-widest hover:bg-gold hover:text-black transition-colors duration-300 clip-path-slant cursor-pointer">
-                                    {item.buttonText}
-                                </button>
+                                {item.buttonText === "GET DIRECTIONS" ? (
+                                    <a href="/contact#map" className="bg-red-600 text-white font-oswald text-lg px-8 py-3 uppercase tracking-widest hover:bg-gold hover:text-black transition-colors duration-300 clip-path-slant cursor-pointer inline-block">
+                                        {item.buttonText}
+                                    </a>
+                                ) : (
+                                    <button className="bg-red-600 text-white font-oswald text-lg px-8 py-3 uppercase tracking-widest hover:bg-gold hover:text-black transition-colors duration-300 clip-path-slant cursor-pointer">
+                                        {item.buttonText}
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </motion.div>

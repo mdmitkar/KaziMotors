@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,6 +13,7 @@ export function ContactPage() {
     const formRef = useRef(null);
     const infoRefs = useRef([]);
     const mapRef = useRef(null);
+    const location = useLocation();
 
     useEffect(() => {
         // Title Animation
@@ -63,6 +65,20 @@ export function ContactPage() {
         );
 
     }, []);
+
+    // Scroll to hash handling
+    useEffect(() => {
+        if (location.hash === '#map') {
+            const element = document.getElementById('map');
+            if (element) {
+                // Determine if we need to wait for animations or if immediate scroll is fine.
+                // A small timeout helps with layout shifts from animations.
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 1000); // 1-second delay to allow GSAP intro animations to play/start
+            }
+        }
+    }, [location]);
 
     const addToInfoRefs = (el) => {
         if (el && !infoRefs.current.includes(el)) {
@@ -219,7 +235,7 @@ export function ContactPage() {
                 </div>
 
                 {/* Map Section */}
-                <div ref={mapRef} className="mt-24 w-full h-[450px] bg-transparent rounded-sm relative border border-white/10 overflow-hidden">
+                <div id="map" ref={mapRef} className="mt-24 w-full h-[450px] bg-transparent rounded-sm relative border border-white/10 overflow-hidden">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.33993977813782!2d73.06201001124626!3d19.306746091637013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd5eaf4622bb%3A0x8071cac652bf773c!2sKazi%20Auto%20Parts!5e0!3m2!1sen!2sin!4v1767169560738!5m2!1sen!2sin"
                         width="100%"
