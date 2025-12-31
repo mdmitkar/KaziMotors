@@ -28,7 +28,7 @@ export function Header() {
                     // Determine the href/to path
                     let linkPath = '/';
                     if (isCollection) linkPath = '/collection';
-                    else if (isCollection) linkPath = '/brands';
+                    else if (isBrands) linkPath = '/brands';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                     return (
