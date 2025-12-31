@@ -102,6 +102,7 @@ export function CollectionGrid() {
 
                                             <div className="absolute bottom-0 left-0 w-full flex justify-between items-end px-6 pt-6 pb-24 transition-opacity duration-300 group-hover:opacity-0">
                                                 <div className="max-w-[70%]">
+                                                    <h3 className="text-xl font-bold text-red-500 uppercase tracking-tight leading-none mb-1">{item.title}</h3>
                                                     <p className="text-gold text-[10px] uppercase tracking-widest">{item.category}</p>
                                                 </div>
                                                 {item.price && (
