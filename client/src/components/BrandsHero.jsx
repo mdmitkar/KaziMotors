@@ -624,14 +624,14 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase font-bold">Rugged Innovation</span>
+                            <span className="text-[] font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase font-bold">Rugged Innovation</span>
                             <h2 className="text-white text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 BUILT TO LAST, <br />
-                                <span className="text-black bg-white px-2">MAHINDRA GENUINE COMPONENTS</span>
+                                <span className="text-white px-2">MAHINDRA GENUINE COMPONENTS</span>
                             </h2>
                             <div className="space-y-6 text-white/90">
                                 <p className="text-lg">Mahindra stands for ruggedness and innovation. Our range of genuine Mahindra components is designed to withstand the toughest conditions while delivering peak performance.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-black transition-colors">
+                                <ul className="space-y-2 list-disc list-inside hover:text-white transition-colors">
                                     <li>Robust construction for extreme durability</li>
                                     <li>Advanced engineering for reliable performance</li>
                                     <li>Original spares for long-term value</li>

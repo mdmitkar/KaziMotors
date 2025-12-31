@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaInstagram, FaFacebookF, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { FiMapPin, FiMail, FiPhone } from "react-icons/fi";
 
 export function Footer() {
@@ -54,6 +54,43 @@ export function Footer() {
                         </p>
 
                     </motion.div>
+                    {/* Column 3: Support */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="space-y-6"
+                    >
+                        <h4 className="text-lg font-oswald font-bold text-gold border-b border-gold/50 pb-2 inline-block uppercase tracking-wider">
+                            Support & Legal
+                        </h4>
+                        {/* <ul className="space-y-3">
+                            {footerLinks.policies.map((link) => (
+                                <li key={link.name}>
+                                    <a href={link.href} className="text-sm text-white/70 hover:text-gold transition-colors flex items-center gap-2 group cursor-pointer font-roboto">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-gold transition-colors" />
+                                        {link.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul> */}
+                        <div className="flex gap-4 mt-6">
+                            {[
+                                { name: "Instagram", icon: <FaInstagram size={18} /> },
+                                { name: "Facebook", icon: <FaFacebookF size={18} /> },
+                                { name: "Whatsapp", icon: <FaWhatsapp size={18} /> }
+                            ].map((social) => (
+                                <a
+                                    key={social.name}
+                                    href="#"
+                                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-black transition-all duration-300 group cursor-pointer text-white/60 shadow-inner"
+                                >
+                                    <span className="sr-only">{social.name}</span>
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </motion.div>
 
                     {/* Column 2: Explore */}
                     <motion.div
@@ -77,44 +114,7 @@ export function Footer() {
                         </ul>
                     </motion.div>
 
-                    {/* Column 3: Support */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="space-y-6"
-                    >
-                        <h4 className="text-lg font-oswald font-bold text-gold border-b border-gold/50 pb-2 inline-block uppercase tracking-wider">
-                            Support & Legal
-                        </h4>
-                        <ul className="space-y-3">
-                            {footerLinks.policies.map((link) => (
-                                <li key={link.name}>
-                                    <a href={link.href} className="text-sm text-white/70 hover:text-gold transition-colors flex items-center gap-2 group cursor-pointer font-roboto">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-gold transition-colors" />
-                                        {link.name}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="flex gap-4 mt-6">
-                            {[
-                                { name: "Instagram", icon: <FaInstagram size={18} /> },
-                                { name: "Facebook", icon: <FaFacebookF size={18} /> },
-                                { name: "Youtube", icon: <FaYoutube size={18} /> },
-                                { name: "Twitter", icon: <FaTwitter size={18} /> }
-                            ].map((social) => (
-                                <a
-                                    key={social.name}
-                                    href="#"
-                                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-black transition-all duration-300 group cursor-pointer text-white/60 shadow-inner"
-                                >
-                                    <span className="sr-only">{social.name}</span>
-                                    {social.icon}
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
+
 
                     {/* Column 4: Contact Us */}
                     <motion.div
