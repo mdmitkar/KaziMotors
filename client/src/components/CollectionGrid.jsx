@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import products from '../data/products';
+import { useCart } from '../context/CartContext';
 
 // Filter out duplicates based on image path to ensure uniqueness
 const uniqueProducts = products.filter((item, index, self) =>
@@ -18,10 +19,17 @@ const categories = ["All", ...new Set(collectionItems.map(item => item.category)
 export function CollectionGrid() {
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const { addToCart } = useCart();
 
     const filteredItems = activeCategory === "All"
         ? collectionItems
         : collectionItems.filter(item => item.category === activeCategory);
+
+    const handleAddToCart = (product) => {
+        addToCart(product);
+        // Optional: You could show a toast notification here
+        // alert(`${product.title} added to cart!`); 
+    };
 
     return (
         <section className="py-24 lg:pb-56 bg-black overflow-hidden font-oswald">
@@ -115,7 +123,13 @@ export function CollectionGrid() {
                                                 <p className="text-white/50 text-xs font-roboto italic mb-6 leading-relaxed px-4">
                                                     "{item.description || `Premium ${item.color} finish from our ${item.category} collection.`}"
                                                 </p>
-                                                <button className="bg-red-600 text-white text-sm px-10 py-3 rounded-xl uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all duration-300 transform active:scale-95 shadow-xl cursor-pointer">
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleAddToCart(item);
+                                                    }}
+                                                    className="bg-red-600 text-white text-sm px-10 py-3 rounded-xl uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all duration-300 transform active:scale-95 shadow-xl cursor-pointer"
+                                                >
                                                     Add to Cart
                                                 </button>
                                             </div>
@@ -210,7 +224,10 @@ export function CollectionGrid() {
                                 </p>
 
                                 <div className="pt-6 border-t border-white/10">
-                                    <button className="w-full bg-red-600 text-white font-bold py-4 px-8 rounded-xl uppercase tracking-widest hover:bg-gold hover:text-black transition-all duration-300 shadow-[0_10px_30px_rgba(220,38,38,0.3)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)]">
+                                    <button
+                                        onClick={() => handleAddToCart(selectedProduct)}
+                                        className="w-full bg-red-600 text-white font-bold py-4 px-8 rounded-xl uppercase tracking-widest hover:bg-gold hover:text-black transition-all duration-300 shadow-[0_10px_30px_rgba(220,38,38,0.3)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)]"
+                                    >
                                         Add to Cart
                                     </button>
                                 </div>

@@ -84,7 +84,7 @@ const products = [
     { id: 103, title: "C31 Thor Headlight", category: "Lights", image: "/assets/Lights/C31ThorHeadlight.jpeg", nobg: "/nobgfolder/nobgC31ThorHeadlight.png", color: "White" },
     { id: 104, title: "C86 Mercedes Thor Headlight", category: "Lights", image: "/assets/Lights/C86MercedesThorHeadlight.jpeg", nobg: "/nobgfolder/nobgC86MercedesThorHeadlight.png", color: "White" },
     { id: 105, title: "Fog Light Wire Harness", category: "Lights", image: "/assets/Lights/FogLightWireHarness.jpeg", nobg: "/nobgfolder/nobgFogLightWireHarness.png", color: "Black" },
-    { id: 106, title: "Fog Light Wire Harness 2", category: "Lights", image: "/assets/Lights/FogLightWireHarness2.jpeg", nobg: "/nobgfolder/nobgFogLightWireHarness2.png", color: "Black" },
+
     { id: 107, title: "Fog Light Wire Harness Remote", category: "Lights", image: "/assets/Lights/FogLightWireHarnessRemote.jpeg", nobg: "/nobgfolder/nobgFogLightWireHarnessRemote.png", color: "Black" },
     { id: 108, title: "Fog Light Wire Harness With Switch", category: "Lights", image: "/assets/Lights/FogLightWireHarnessWithSwitch.jpeg", nobg: "/nobgfolder/nobgFogLightWireHarnessWithSwitch.png", color: "Black" },
     { id: 109, title: "Haxxal 2 Mode Spotlight", category: "Lights", image: "/assets/Lights/Haxxal2ModeSpotlight.jpeg", nobg: "/nobgfolder/nobgHaxxal2ModeSpotlight.png", color: "White" },

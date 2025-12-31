@@ -2,8 +2,11 @@ import React from 'react';
 import { FiHeart, FiShoppingBag } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
-export function Header() {
+import { useCart } from '../context/CartContext';
 
+export function Header() {
+    const { cartItems } = useCart();
+    const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-[#eabd56] py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300 shadow-sm">
@@ -101,12 +104,14 @@ export function Header() {
                     <FiHeart size={22} />
                     <span className="absolute top-0 right-0 w-2 h-2 bg-gold rounded-full" />
                 </button>
-                <button className="hover:text-gold transition-colors p-1 relative flex items-center justify-center">
+                <a href="/cart" className="hover:text-gold transition-colors p-1 relative flex items-center justify-center">
                     <FiShoppingBag size={22} />
-                    <span className="absolute -top-1 -right-1 bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                        0
-                    </span>
-                </button>
+                    {totalItems > 0 && (
+                        <span className="absolute -top-1 -right-1 bg-gold text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[1.2rem] text-center">
+                            {totalItems}
+                        </span>
+                    )}
+                </a>
             </div>
         </header>
     );
