@@ -120,7 +120,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/reparts-imgs/part4.png" alt="Honda Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/reparts-imgs/cinematic_honda.png" alt="Honda Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -540,7 +540,7 @@ export function BrandsHero() {
                     </motion.div>
 
                     <div className="section-wrapper lg:flex-row-reverse">
-                        
+
 
                         <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
                             <motion.div
