@@ -62,7 +62,7 @@ export function Header() {
                                             { name: 'Royal Enfield', id: 'royal-enfield' },
                                             { name: 'Honda', id: 'honda' },
                                             { name: 'Yamaha', id: 'yamaha' },
-                                            { name: 'Hero', id: 'hero' },
+                                            { name: 'Hero', id: 'hero-moto' },
                                             { name: 'Bajaj', id: 'bajaj' },
                                             { name: 'KTM', id: 'ktm' },
                                             { name: 'TVS', id: 'tvs' },
