@@ -21,11 +21,14 @@ export function About() {
                         REDEFINING <br />
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-white/70">AUTO ARTISTRY</span>
                     </h2>
-                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
-                        <span className="kazi-motors"><span className="kazi-motors">Kazi Motors</span></span> isn't just a modification shop; it's where passion meets precision. With over a decade of experience in high-end automotive enhancements, we've carved a niche in delivering bespoke experiences that push the boundaries of performance and style.
+                    <p className="font-inter text-base leading-relaxed max-w-lg mb-8 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
+                        At <span className="text-gold font-bold">Kazi Motors</span>, we believe in giving you the freedom to choose. Whether you are a fan of Royal Enfield's classic charm, Honda's reliability, or Yamaha's sporty edge, we have got you covered with our curated selection for every rider.
                     </p>
-                    <p className="font-inter text-base leading-relaxed max-w-xl mb-10 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
-                        Our team combines deep technical expertise with an unwavering commitment to quality, ensuring that every vehicle that leaves our workshop is a masterpiece. From meticulous customizations to performance tuning, we transform each ride into a statement of individuality, innovation, and unmatched craftsmanship.
+                    <p className="font-inter text-base leading-relaxed max-w-lg mb-8 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
+                        From powerful engines and precision components to essential accessories, we ensure quality that enhances your ride. No matter your style or machine, our range is built to deliver confidence on the road and satisfaction in every single mile you ride.
+                    </p>
+                    <p className="font-inter text-base leading-relaxed max-w-lg mb-8 bg-linear-to-r from-white via-gold via-50% to-gold bg-clip-text text-transparent text-justify">
+                        Driven by passion and powered by expertise, Kazi Motors is your trusted destination for motorcycle solutions. We blend craftsmanship with modern engineering to deliver products that perform exceptionally and stand the test of time, ensuring every ride feels refined and dependable.
                     </p>
                     <div className="flex items-center space-x-8">
                         <div className="flex flex-col">

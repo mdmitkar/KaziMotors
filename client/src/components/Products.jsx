@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const brands = [
@@ -127,7 +128,7 @@ export function Products() {
               {displayBrands.map((brand, index) => {
                 const isCenter = index === currentIndex + centerOffset;
                 return (
-                  <div key={`${brand.name}-${index}`} className="flex-shrink-0 px-4" style={{ width: `${100 / itemsPerView}%` }}>
+                  <div key={`${brand.name}-${index}`} className="shrink-0 px-4" style={{ width: `${100 / itemsPerView}%` }}>
                     <motion.div
                       animate={{
                         scale: isCenter ? 1.2 : 0.8,
@@ -136,14 +137,14 @@ export function Products() {
                         y: isCenter ? -10 : 0
                       }}
                       transition={{ duration: 0.3 }}
-                      className={`relative group/item bg-gradient-to-br from-white/10 to-transparent border ${isCenter ? 'border-gold/50' : 'border-white/5'} rounded-2xl p-3 flex flex-col items-center justify-center aspect-square transition-all duration-300`}
+                      className={`relative group/item bg-linear-to-br from-white/10 to-transparent border ${isCenter ? 'border-gold/50' : 'border-white/5'} rounded-2xl p-3 flex flex-col items-center justify-center aspect-square transition-all duration-300`}
                     >
                       {/* Glow Effect for Center Item */}
                       {isCenter && (
                         <div className="absolute inset-0 bg-gold/10 blur-xl -z-10 rounded-2xl" />
                       )}
 
-                      <img src={brand.logo} alt={brand.name} className="h-[100%] w-auto mb-4 object-contain" />
+                      <img src={brand.logo} alt={brand.name} className="h-full w-auto mb-4 object-contain" />
                       <h3 className={`font-oswald text-center font-medium text-xs uppercase tracking-[0.3em] ${isCenter ? 'text-red-500' : 'text-white'}`}>
                         {brand.name}
                       </h3>
@@ -156,13 +157,15 @@ export function Products() {
 
           {/* Explore More Button */}
           <div className="text-center mt-12">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-red-600 hover:bg-red-700 text-white font-oswald text-lg tracking-widest px-10 py-3 rounded-full uppercase transition-colors shadow-lg shadow-red-900/20 cursor-pointer"
-            >
-              Explore More Products
-            </motion.button>
+            <Link to="/collection">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-red-600 hover:bg-red-700 text-white font-oswald text-lg tracking-widest px-10 py-3 rounded-full uppercase transition-colors shadow-lg shadow-red-900/20 cursor-pointer inline-block"
+              >
+                Explore More Products
+              </motion.div>
+            </Link>
           </div>
         </div>
       </div>

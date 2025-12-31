@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
@@ -71,9 +72,9 @@ export function Contact() {
                                         {item.buttonText}
                                     </a>
                                 ) : (
-                                    <button className="bg-red-600 text-white font-oswald text-lg px-8 py-3 uppercase tracking-widest hover:bg-gold hover:text-black transition-colors duration-300 clip-path-slant cursor-pointer">
+                                    <Link to="/collection" className="bg-red-600 text-white font-oswald text-lg px-8 py-3 uppercase tracking-widest hover:bg-gold hover:text-black transition-colors duration-300 clip-path-slant cursor-pointer inline-block">
                                         {item.buttonText}
-                                    </button>
+                                    </Link>
                                 )}
                             </div>
                         </div>

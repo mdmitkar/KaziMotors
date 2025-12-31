@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const videos = [
@@ -19,7 +20,7 @@ export function HomeHero() {
 
     return (
         <section className="relative px-6 md:px-12 py-6 bg-black">
-            <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden rounded-[2rem] shadow-2xl border border-white/5">
+            <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden rounded-4xl shadow-2xl border border-white/5">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentVideo}
@@ -43,11 +44,14 @@ export function HomeHero() {
                 </AnimatePresence>
 
                 {/* Sophisticated Dark Gradient Overlay - Made Lighter */}
-                <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 z-10 bg-linear-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute inset-0 z-10 bg-black/10" />
 
                 <div className="container mx-auto px-10 md:px-20 relative z-20 h-full flex flex-col justify-end pb-16 md:pb-24">
                     <div className="max-w-2xl">
+
+
+
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +60,7 @@ export function HomeHero() {
                         >
                             <div className="w-10 h-px bg-gold" />
                             <span className="text-gold font-oswald text-xs md:text-sm font-medium tracking-[0.6em] uppercase">
-                                Est. 2024
+                                Est. 2015
                             </span>
                         </motion.div>
 
@@ -67,7 +71,7 @@ export function HomeHero() {
                             className="text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide"
                         >
                             CRAFTING THE <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/80">ULTIMATE DRIVE</span>
+                            <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-white/80">ULTIMATE DRIVE</span>
                         </motion.h1>
 
                         <motion.div
@@ -76,12 +80,9 @@ export function HomeHero() {
                             transition={{ delay: 1.1 }}
                             className="flex flex-wrap gap-6"
                         >
-                            <button className="px-8 py-3 bg-gold text-black font-oswald font-bold text-xs hover:bg-white hover:text-white transition-all duration-500 uppercase tracking-[0.2em] rounded-full cursor-pointer">
+                            <Link to="/collection" className="px-8 py-3 bg-gold text-black font-oswald font-bold text-xs hover:bg-white hover:text-white transition-all duration-500 uppercase tracking-[0.2em] rounded-full cursor-pointer inline-block">
                                 View Collection
-                            </button>
-                            <button className="px-8 py-3 border border-white/30 text-white font-oswald font-bold text-xs hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-[0.2em] rounded-full backdrop-blur-md cursor-pointer">
-                                Our Services
-                            </button>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>
