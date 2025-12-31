@@ -100,9 +100,8 @@ export function CollectionGrid() {
                                             {/* Gradient Overlay for Text Legibility */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-0" />
 
-                                            <div className="absolute bottom-0 left-0 w-full flex justify-between items-end p-8 transition-opacity duration-300 group-hover:opacity-0">
-                                                <div>
-                                                    <h3 className="text-xl font-bold text-red-500 uppercase tracking-tight">{item.title}</h3>
+                                            <div className="absolute bottom-0 left-0 w-full flex justify-between items-end px-6 pt-6 pb-24 transition-opacity duration-300 group-hover:opacity-0">
+                                                <div className="max-w-[70%]">
                                                     <p className="text-gold text-[10px] uppercase tracking-widest">{item.category}</p>
                                                 </div>
                                                 {item.price && (
@@ -116,10 +115,10 @@ export function CollectionGrid() {
                                         {/* Hover Overlay (Unrolling Effect) */}
                                         <div className="absolute inset-0 z-20 pointer-events-none group-hover:pointer-events-auto transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0 bg-black flex flex-col items-center justify-center p-6 text-center">
                                             <div className="relative w-full h-[65%] flex items-center justify-center mb-2">
-                                                <img src={item.nobg || item.image} alt={item.title} className="max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 drop-shadow-[0_10px_20px_rgba(255,215,0,0.2)]" />
+                                                <img src={item.image} alt={item.title} className="max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 drop-shadow-[0_10px_20px_rgba(255,215,0,0.2)]" />
                                             </div>
                                             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-400">
-                                                <h3 className="text-2xl font-bold text-red-500 uppercase mb-2">{item.title}</h3>
+                                                <h3 className="text-2xl font-bold text-red-500 uppercase mb-2 leading-none">{item.title}</h3>
                                                 <p className="text-white/50 text-xs font-roboto italic mb-6 leading-relaxed px-4">
                                                     "{item.description || `Premium ${item.color} finish from our ${item.category} collection.`}"
                                                 </p>
@@ -136,11 +135,11 @@ export function CollectionGrid() {
                                         </div>
 
                                         {/* Bottom-Right Tab */}
-                                        <div className="absolute bottom-0 right-0 z-10 transition-all duration-500 group-hover:translate-y-full group-hover:opacity-0">
-                                            <div className="bg-gold pt-3 pl-6 pr-8 pb-4 rounded-tl-[2rem] border-t border-l border-white/20">
-                                                <span className="text-black text-sm md:text-base uppercase tracking-widest whitespace-nowrap font-bold">
-                                                    {item.title} <span className="text-red-600 ml-2">{item.year || '2025'}</span>
-                                                </span>
+                                        <div className="absolute bottom-0 right-0 z-10 transition-all duration-500 group-hover:translate-y-full group-hover:opacity-0 max-w-[90%] pointer-events-none">
+                                            <div className="bg-gold pt-3 pl-12 pr-8 pb-4 rounded-tl-[2rem] border-t border-l border-white/20 pointer-events-auto">
+                                                <h4 className="text-black text-xs md:text-sm uppercase tracking-widest font-bold leading-tight text-right block">
+                                                    {item.title} <span className="text-red-600 ml-1 inline-block">{item.year || '2025'}</span>
+                                                </h4>
                                             </div>
                                         </div>
 
