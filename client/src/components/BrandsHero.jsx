@@ -120,7 +120,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/honda-imgs/honda_bike_norider.png" alt="Honda Bike" className="w-full h-full object-cover" />
+                                <img src="/assets/reparts-imgs/part4.png" alt="Honda Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
