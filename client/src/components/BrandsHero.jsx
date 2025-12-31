@@ -13,25 +13,25 @@ export function BrandsHero() {
                         className="text-center mb-16 flex flex-col justify-center items-center"
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px]">
-                                            <img
-                                                src="/assets/brand-imgs/royalenfieldclrfull.png"
-                                                alt="Royal Enfield"
-                                                className="h-12 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
-                                            />
-                                        </div>
-                        
+                            <img
+                                src="/assets/brand-imgs/royalenfieldclrfull.png"
+                                alt="Royal Enfield"
+                                className="h-12 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
+
                         <h2 className=" text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
                             ROYAL <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">ENFIELD</span>
                         </h2>
                         <span className="text-gradient font-oswald text-sm tracking-[0.5em] uppercase block mb-2">
                             Meet The Royalty
                         </span>
-                        <div className = "bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl">
+                        <div className="bg-gradient-to-r from-[#D4AF37] to-red-400 w-[100px] h-[5px] rounded-2xl">
                             {""}
                         </div>
                     </motion.div>
                 </div>
-                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ">
 
 
                     {/* Text Content */}
@@ -43,14 +43,63 @@ export function BrandsHero() {
                         className="flex-1 z-10 text-left"
                     >
                         <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">
-                            Our Partners
+                            Our Top Partner
                         </span>
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide">
-                            YOUR CHOICE, <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">OUR EXPERTISE</span>
+                        <h2 className="text-gradient text-2xl md:text-3xl lg:text-5xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wide bg-whie">
+                            A LEGACY OF TRUST, <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white/70">THE ROYAL ENFIELD WAY</span>
                         </h2>
+                        <div className="space-y-10 max-w-2xl">
 
-                        <div className="space-y-6">
+                            {/* Section 1 */}
+                            <div className="space-y-3  border-l-2 border-gold/50 pl-2">
+                                <h3 className="text-gold text-xl md:text-2xl font-semibold">
+                                    Freedom of Choice
+                                </h3>
+                                <ul className="space-y-2 text-white/70 list-disc list-inside">
+                                    <li>Access to iconic brands like Royal Enfield, Honda, and Yamaha</li>
+                                    <li>Options tailored for classic, commuter, and performance riders</li>
+                                    <li>Freedom to choose parts that match your riding style</li>
+                                </ul>
+                            </div>
+
+                            {/* Section 2 */}
+                            <div className="flex justify-end bg-whit ">
+
+                                <div className="space-y-3 border-l-2 border-gold/50 pl-2">
+                                    <h3 className="text-gold text-xl md:text-2xl font-semibold">
+                                        Uncompromised Quality
+                                    </h3>
+                                    <ul className="space-y-2 text-white/70 list-disc list-inside">
+                                        <li>Genuine and precision-engineered components</li>
+                                        <li>Strict quality checks for durability and performance</li>
+                                        <li>Parts designed to enhance safety and riding confidence</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            {/* Section 3 */}
+                            <div className="flex justify-between">
+
+                                <div className="space-y-3 border-l-2 border-gold/50 pl-4">
+                                    <h3 className="text-gold text-xl md:text-2xl font-semibold">
+                                        Trusted by Riders
+                                    </h3>
+                                    <ul className="space-y-2 text-white/70 italic list-disc list-inside">
+                                        <li>Built on years of industry experience</li>
+                                        <li>Preferred choice of passionate motorcycle riders</li>
+                                        <li>A commitment to reliability in every mile</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        {/* <div className="space-y-6">
                             <p className="text-white/70 text-lg md:text-xl leading-relaxed max-w-2xl">
                                 At <span className="text-gold font-bold">Kazi Motors</span>, we believe in giving you the freedom to choose. Whether you're a fan of Royal Enfield's classic charm, Honda's reliability, or Yamaha's sporty edge, we've got you covered.
                             </p>
@@ -60,7 +109,7 @@ export function BrandsHero() {
                             <p className="text-white/70 text-lg leading-relaxed max-w-2xl italic border-l-2 border-gold/50 pl-4">
                                 Driven by passion and powered by expertise, Kazi Motors is your trusted destination for elite motorcycle solutions.
                             </p>
-                        </div>
+                        </div> */}
                     </motion.div>
                     {/* Visual Content - Overlapping Cards */}
                     <div className="flex-1 relative h-[500px] md:h-[600px] w-full mt-10 lg:mt-0">
