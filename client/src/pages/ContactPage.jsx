@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -84,6 +84,28 @@ export function ContactPage() {
         if (el && !infoRefs.current.includes(el)) {
             infoRefs.current.push(el);
         }
+    };
+
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, phone, email, message } = formData;
+
+        const whatsappMessage = `*New Inquiry from Website* %0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Message:* ${message}`;
+
+        const whatsappUrl = `https://wa.me/918855989211?text=${whatsappMessage}`;
+
+        window.open(whatsappUrl, '_blank');
     };
 
     return (
@@ -189,13 +211,17 @@ export function ContactPage() {
                         <h2 className="text-3xl font-oswald font-bold mb-8 text-white flex items-center gap-2">
                             INQUIRY FORM <span className="text-gold text-4xl">.</span>
                         </h2>
-                        <form className="space-y-6 relative z-10">
+                        <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-gold text-xs font-bold tracking-[0.2em] uppercase ml-1">Name</label>
                                     <input
                                         type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         placeholder="ENTER FULL NAME"
+                                        required
                                         className="w-full bg-black/50 border border-white/10 text-white p-4 focus:outline-none focus:border-gold transition-all duration-300 rounded-sm placeholder-white/20 text-sm font-medium tracking-wide"
                                     />
                                 </div>
@@ -203,7 +229,11 @@ export function ContactPage() {
                                     <label className="text-gold text-xs font-bold tracking-[0.2em] uppercase ml-1">Phone</label>
                                     <input
                                         type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         placeholder="+91-00000-00000"
+                                        required
                                         className="w-full bg-black/50 border border-white/10 text-white p-4 focus:outline-none focus:border-gold transition-all duration-300 rounded-sm placeholder-white/20 text-sm font-medium tracking-wide"
                                     />
                                 </div>
@@ -213,6 +243,9 @@ export function ContactPage() {
                                 <label className="text-gold text-xs font-bold tracking-[0.2em] uppercase ml-1">Email</label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="YOUR@EMAIL.COM"
                                     className="w-full bg-black/50 border border-white/10 text-white p-4 focus:outline-none focus:border-gold transition-all duration-300 rounded-sm placeholder-white/20 text-sm font-medium tracking-wide"
                                 />
@@ -221,6 +254,9 @@ export function ContactPage() {
                             <div className="space-y-2">
                                 <label className="text-gold text-xs font-bold tracking-[0.2em] uppercase ml-1">Message</label>
                                 <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     rows="5"
                                     placeholder="TELL US ABOUT YOUR VISION..."
                                     className="w-full bg-black/50 border border-white/10 text-white p-4 focus:outline-none focus:border-gold transition-all duration-300 rounded-sm placeholder-white/20 resize-none text-sm font-medium tracking-wide"
