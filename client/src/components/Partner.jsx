@@ -2,25 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const brands = [
-<<<<<<< Updated upstream
     { name: "Honda", logo: "/assets/brand-imgs/honda2.webp" },
     { name: "YAMAHA", logo: "/assets/brand-imgs/yamaha2.webp" },
     { name: "Hero", logo: "/assets/brand-imgs/hero2.webp" },
     { name: "Bajaj", logo: "/assets/brand-imgs/bajaj2.webp" },
     { name: "KTM", logo: "/assets/brand-imgs/ktm2.webp" },
     { name: "tvs", logo: "/assets/brand-imgs/tvs2.webp" },
-    { name: "Kawasaki", logo: "/assets/brand-imgs/kawasaki2.webp" },
-    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield2.webp" },
-=======
-    { name: "Honda", logo: "/assets/brand-imgs/honda2.png" },
-    { name: "YAMAHA", logo: "/assets/brand-imgs/yamaha1.png" },
-    { name: "Hero", logo: "/assets/brand-imgs/hero2.png" },
-    { name: "Bajaj", logo: "/assets/brand-imgs/bajaj2.png" },
-    { name: "KTM", logo: "/assets/brand-imgs/ktm2.png" },
-    { name: "tvs", logo: "/assets/brand-imgs/tvs2.png" },
     { name: "Suzuki", logo: "/assets/brand-imgs/suzuki2.png" },
-    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield1.png" },
->>>>>>> Stashed changes
+    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield2.webp" },
 ];
 
 export function Partner() {

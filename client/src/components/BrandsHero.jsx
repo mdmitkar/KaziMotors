@@ -300,11 +300,7 @@ export function BrandsHero() {
                 id="suzuki"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-<<<<<<< Updated upstream
-                    backgroundImage: 'url("/assets/rebike-imgs/kawasakimain.webp")',
-=======
                     backgroundImage: 'url("/assets/rebike-imgs/suzukimain.png")',
->>>>>>> Stashed changes
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -321,13 +317,8 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-<<<<<<< Updated upstream
-                                src="/assets/brand-imgs/kawasaki2.webp"
-                                alt="Kawasaki"
-=======
                                 src="/assets/brand-imgs/suzuki2.png"
                                 alt="Suzuki"
->>>>>>> Stashed changes
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
@@ -368,11 +359,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-blue-600/20"
                             >
-<<<<<<< Updated upstream
-                                <img src="/assets/kawasaki-imgs/kawasaki_bike_norider.webp" alt="Kawasaki Parts" className="w-full h-full object-cover" />
-=======
                                 <img src="/assets/suzuki-imgs/suzuki_bike_norider.png" alt="Suzuki Bike" className="w-full h-full object-cover" />
->>>>>>> Stashed changes
                             </motion.div>
                         </div>
                     </div>
@@ -594,8 +581,6 @@ export function BrandsHero() {
                     </div>
                 </div>
             </section>
-<<<<<<< Updated upstream
-
             {/* Mahindra Section */}
             <section
                 id="mahindra"
@@ -666,8 +651,6 @@ export function BrandsHero() {
                     </div>
                 </div>
             </section>
-=======
->>>>>>> Stashed changes
         </>
     )
 }
