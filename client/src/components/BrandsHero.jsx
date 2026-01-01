@@ -610,7 +610,7 @@ export function BrandsHero() {
                             />
                         </div>
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            MAHINDRA 
+                            MAHINDRA
                         </h2>
                         <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Toughness Reimagined</span>
                         <div className="bg-[#8B0000] w-[100px] h-[5px] rounded-2xl"></div>
