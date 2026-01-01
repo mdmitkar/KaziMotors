@@ -22,7 +22,7 @@ This project is configured to be deployment-ready on Vercel. Follow these steps 
     - **Framework Preset:** Vite
     - **Build Command:** `npm run build` (or `vite build`)
     - **Output Directory:** `dist`
-    - **Install Command:** `npm install`
+    - **Install Command:** `npm install` (The included `.npmrc` file will automatically handle dependency resolution).
 
 4.  **Deploy**
     - Click **Deploy**. Vercel will install dependencies, build your site, and deploy it.
