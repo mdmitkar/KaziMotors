@@ -160,7 +160,18 @@ export function Footer() {
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-white/40 font-roboto">
                         &copy; {new Date().getFullYear()} Kazi Motors. All rights reserved.
-                    </p>
+                    </p> 
+                    <p className="text-sm text-gray-400">
+  Website designed & developed by{" "}
+  <a
+    href="https://datamatex.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-red-400 hover:underline font-bold"
+  >
+    Datamatex
+  </a>
+</p>
                     <p className="text-xs text-white/40 flex items-center gap-1 group font-roboto">
                         Driven by <span className="text-gold group-hover:scale-110 transition-transform duration-300">Passion</span> & Performance
                     </p>

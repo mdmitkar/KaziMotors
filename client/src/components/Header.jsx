@@ -75,7 +75,7 @@ export function Header() {
                                             { name: 'Bajaj', id: 'bajaj' },
                                             { name: 'KTM', id: 'ktm' },
                                             { name: 'TVS', id: 'tvs' },
-                                            { name: 'Kawasaki', id: 'kawasaki' },
+                                            { name: 'Suzuki', id: 'suzuki' },
                                         ].map((brand) => (
                                             <a
                                                 key={brand.id}
