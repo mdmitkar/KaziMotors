@@ -295,12 +295,16 @@ export function BrandsHero() {
                 </div>
             </section>
 
-            {/* Kawasaki Section */}
+            {/* Suzuki Section */}
             <section
-                id="kawasaki"
+                id="suzuki"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
+<<<<<<< Updated upstream
                     backgroundImage: 'url("/assets/rebike-imgs/kawasakimain.webp")',
+=======
+                    backgroundImage: 'url("/assets/rebike-imgs/suzukimain.png")',
+>>>>>>> Stashed changes
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -317,16 +321,21 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
+<<<<<<< Updated upstream
                                 src="/assets/brand-imgs/kawasaki2.webp"
                                 alt="Kawasaki"
+=======
+                                src="/assets/brand-imgs/suzuki2.png"
+                                alt="Suzuki"
+>>>>>>> Stashed changes
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h2 className="text-[#008435] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
-                            KAWASAKI
+                        <h2 className="text-[#003399] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
+                            SUZUKI
                         </h2>
-                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Unleashing Ninja Power</span>
-                        <div className="bg-[#008435] w-[100px] h-[5px] rounded-2xl"></div>
+                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Japanese Performance Excellence</span>
+                        <div className="bg-[#003399] w-[100px] h-[5px] rounded-2xl"></div>
                     </motion.div>
 
                     <div className="section-wrapper">
@@ -337,17 +346,17 @@ export function BrandsHero() {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="flex-1 z-10 text-left"
                         >
-                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Superbike Mastery</span>
-                            <h2 className="text-[#008435] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
-                                PRECISION MEETS POWER, <br />
-                                <span className="text-white px-2">KAWASAKI GENUINE PARTS</span>
+                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Way of Life</span>
+                            <h2 className="text-[#003399] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
+                                PRECISION ENGINEERED, <br />
+                                <span className="text-white px-2">SUZUKI GENUINE PARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/90">
-                                <p className="text-lg">Experience the legendary performance of Kawasaki. Our range of Kawasaki parts ensures that your superbike or cruiser maintains its edge and reliability.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-black transition-colors">
-                                    <li>Cutting-edge engineering solutions</li>
-                                    <li>Optimized for speed and endurance</li>
-                                    <li>Premium finish and perfect fitment</li>
+                                <p className="text-lg">Discover the power of Suzuki engineering. We provide authentic Suzuki parts and accessories designed to keep your machine performing at its absolute peak, from the track to the street.</p>
+                                <ul className="space-y-2 list-disc list-inside hover:text-[#003399] transition-colors">
+                                    <li>Unmatched reliability and durability</li>
+                                    <li>Optimized for peak engine performance</li>
+                                    <li>Factory-certified quality standards</li>
                                 </ul>
                             </div>
                         </motion.div>
@@ -357,9 +366,13 @@ export function BrandsHero() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
+                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-blue-600/20"
                             >
+<<<<<<< Updated upstream
                                 <img src="/assets/kawasaki-imgs/kawasaki_bike_norider.webp" alt="Kawasaki Parts" className="w-full h-full object-cover" />
+=======
+                                <img src="/assets/suzuki-imgs/suzuki_bike_norider.png" alt="Suzuki Bike" className="w-full h-full object-cover" />
+>>>>>>> Stashed changes
                             </motion.div>
                         </div>
                     </div>
@@ -581,6 +594,7 @@ export function BrandsHero() {
                     </div>
                 </div>
             </section>
+<<<<<<< Updated upstream
 
             {/* Mahindra Section */}
             <section
@@ -652,6 +666,8 @@ export function BrandsHero() {
                     </div>
                 </div>
             </section>
+=======
+>>>>>>> Stashed changes
         </>
     )
 }
