@@ -166,7 +166,7 @@ export function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-oswald font-bold uppercase mb-1 text-white group-hover:text-gold transition-colors">Email</h3>
-                                        <a href="mailto:kazimotors@gmail.com" className="text-lg font-bold text-gray-300 hover:text-white transition-colors break-all">kazimotors@gmail.com</a>
+                                        <a href="mailto:kaziautopart@gmail.com" className="text-lg font-bold text-gray-300 hover:text-white transition-colors break-all">kaziautopart@gmail.com</a>
                                     </div>
                                 </div>
                             </div>

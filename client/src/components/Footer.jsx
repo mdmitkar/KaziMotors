@@ -7,9 +7,9 @@ export function Footer() {
     const footerLinks = {
         explore: [
             { name: "Collection", href: "/collection" },
-            { name: "Our Brands", href: "/#brands" },
-            { name: "About Us", href: "/#about" },
-            { name: "Contact", href: "/#contact" }
+            { name: "Our Brands", href: "/brands" },
+            { name: "About Us", href: "/about" },
+            { name: "Contact", href: "/contact" }
         ],
         policies: [
             { name: "Shipping Policy", href: "#" },
@@ -136,12 +136,20 @@ export function Footer() {
                                     352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
                                 </p>
                             </div>
+                            <div className="flex gap-4 items-start">
+                                <div className="mt-1 text-gold">
+                                    <FiMapPin size={18} />
+                                </div>
+                                <p className="text-sm text-white/70 font-roboto leading-relaxed">
+                                    352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
+                                </p>
+                            </div>
                             <div className="flex gap-4 items-center">
                                 <div className="text-gold">
                                     <FiMail size={18} />
                                 </div>
                                 <p className="text-sm text-white/70 font-roboto">
-                                    support@kazimotors.com
+                                    kaziautopart@gmail.com
                                 </p>
                             </div>
                             <div className="flex gap-4 items-center">
@@ -160,18 +168,18 @@ export function Footer() {
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-white/40 font-roboto">
                         &copy; {new Date().getFullYear()} Kazi Motors. All rights reserved.
-                    </p> 
+                    </p>
                     <p className="text-sm text-gray-400">
-  Website designed & developed by{" "}
-  <a
-    href="https://datamatex.in"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-red-400 hover:underline font-bold"
-  >
-    Datamatex
-  </a>
-</p>
+                        Website designed & developed by{" "}
+                        <a
+                            href="https://datamatex.in"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-red-400 hover:underline font-bold"
+                        >
+                            Datamatex
+                        </a>
+                    </p>
                     <p className="text-xs text-white/40 flex items-center gap-1 group font-roboto">
                         Driven by <span className="text-gold group-hover:scale-110 transition-transform duration-300">Passion</span> & Performance
                     </p>

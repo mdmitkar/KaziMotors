@@ -28,7 +28,7 @@ export function Partner() {
                         <div className="absolute -inset-4 border border-gold/20 rounded-2xl group-hover:border-gold/40 transition-colors duration-500" />
                         <div className="aspect-square md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden rounded-2xl relative shadow-2xl">
                             <img
-                                src="/assets/reparts-imgs/part6.webp"
+                                src="/assets/bikefix-imgs/fix3.webp"
                                 alt="Multiple Motorcycle Brands"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
