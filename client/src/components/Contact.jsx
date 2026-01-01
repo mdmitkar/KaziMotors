@@ -7,7 +7,7 @@ const items = [
     {
         title: "PREMIUM SERVICE",
         description: "Hard to find? We’ll source it for you. Get access to exclusive and discontinued parts that aren’t easily available anywhere else.From rare components to special-fit parts, we help you get what others can’t — authentic, reliable, and original.",
-        image: "/assets/bikefix-imgs/fix1.png",
+        image: "/assets/bikefix-imgs/fix6.png",
         buttonText: "Order Now",
         delay: 0.1,
     },
@@ -21,7 +21,7 @@ const items = [
     {
         title: "VISIT SHOWROOM",
         description: "Experience our collection in person,Step inside and explore our range of genuine parts, accessories, and expert support — up close and personal.See, feel, and choose from our collection in-store. Because some things are best experienced, not scrolled.",
-        image: "/assets/WhatsApp Image 2025-12-27 at 1.30.01 PM.jpeg",
+        image: "/assets/bikefix-imgs/fix3.png",
         buttonText: "GET DIRECTIONS",
         delay: 0.3,
     },
@@ -46,7 +46,7 @@ export function Contact() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
                             />
                         </div>
 

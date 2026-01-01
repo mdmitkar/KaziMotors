@@ -58,9 +58,9 @@ export function About() {
                         {/* Image Div */}
                         <div className="aspect-4/5 md:aspect-video lg:aspect-4/5 overflow-hidden rounded-2xl relative shadow-2xl">
                             <img
-                                src="/assets/bikefix-imgs/fix2.png"
+                                src="/assets/bikefix-imgs/fix5.png"
                                 alt="Automotive Workshop"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-60" />
                         </div>

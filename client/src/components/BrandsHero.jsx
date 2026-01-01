@@ -81,7 +81,7 @@ export function BrandsHero() {
                 id="honda"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/bikefix-imgs/fix1.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/hondamain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -153,7 +153,7 @@ export function BrandsHero() {
                 id="yamaha"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/bikefix-imgs/fix2.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/yamahamain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -228,7 +228,7 @@ export function BrandsHero() {
                 id="ktm"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.38.56 PM (2).jpeg")',
+                    backgroundImage: 'url("/assets/rebike-imgs/ktmmain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -300,7 +300,7 @@ export function BrandsHero() {
                 id="kawasaki"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.38.57 PM.jpeg")',
+                    backgroundImage: 'url("/assets/rebike-imgs/kawasakimain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -371,7 +371,7 @@ export function BrandsHero() {
                 id="bajaj"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.03 PM (3).jpeg")',
+                    backgroundImage: 'url("/assets/rebike-imgs/bajajmain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -444,7 +444,7 @@ export function BrandsHero() {
                 id="tvs"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.00 PM.jpeg")',
+                    backgroundImage: 'url("/assets/rebike-imgs/tvsmain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -515,7 +515,7 @@ export function BrandsHero() {
                 id="hero-moto"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.12 PM.jpeg")',
+                    backgroundImage: 'url("/assets/rebike-imgs/heromain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -587,7 +587,7 @@ export function BrandsHero() {
                 id="mahindra"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/ws/WhatsApp Image 2025-12-27 at 5.39.04 PM.jpeg")',
+                    backgroundImage: 'url("/assets/rebike-imgs/mahindramain.png")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -610,7 +610,7 @@ export function BrandsHero() {
                             />
                         </div>
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            MAHINDRA <span className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-wider">RISE</span>
+                            MAHINDRA 
                         </h2>
                         <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Toughness Reimagined</span>
                         <div className="bg-[#8B0000] w-[100px] h-[5px] rounded-2xl"></div>
