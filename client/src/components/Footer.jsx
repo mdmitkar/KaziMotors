@@ -141,7 +141,7 @@ export function Footer() {
                                     <FiMapPin size={18} />
                                 </div>
                                 <p className="text-sm text-white/70 font-roboto leading-relaxed">
-                                    352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
+                                    Below Ekta Hospital, Near Payal Talkies,Dhamankar Naka, Bhiwandi 421302
                                 </p>
                             </div>
                             <div className="flex gap-4 items-center">
