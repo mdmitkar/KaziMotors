@@ -25,9 +25,9 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/royalenfieldclrfull.png"
+                                src="/assets/brand-imgs/royalenfield2.png"
                                 alt="Royal Enfield"
-                                className="h-12 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
@@ -100,7 +100,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/honda2.png"
                                 alt="Honda"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#E60012] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold  uppercase tracking-wider mb-1">
@@ -172,7 +172,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/yamaha2.png"
                                 alt="Yamaha"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#0033A0] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
@@ -247,7 +247,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/ktm2.png"
                                 alt="KTM"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#FF6600] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold  uppercase tracking-wider mb-1">
@@ -319,7 +319,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/kawasaki2.png"
                                 alt="Kawasaki"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#008435] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
@@ -390,7 +390,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/bajaj2.png"
                                 alt="Bajaj"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#004F9F] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
@@ -463,7 +463,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/tvs2.png"
                                 alt="TVS"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#E41A23] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
@@ -534,7 +534,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/hero2.png"
                                 alt="Hero"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-[#004080] text-4xl md:text-5xl lg:text-6xl font-oswald font-bold uppercase tracking-wider mb-1">
@@ -606,7 +606,7 @@ export function BrandsHero() {
                             <img
                                 src="/assets/brand-imgs/mahindra2.png"
                                 alt="Mahindra"
-                                className="h-12 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:scale-110 transition-transform duration-300"
+                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                         <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
