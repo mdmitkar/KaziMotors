@@ -57,13 +57,13 @@ export function AboutPage() {
             <Header />
 
             {/* 1. Hero Section */}
-            <section ref={heroRef} className="relative h-screen flex flex-col justify-start items-start px-6 pt-32 md:pt-48 overflow-hidden">
+            <section ref={heroRef} className="relative h-screen flex flex-col justify-start items-start px-6 pt-36 md:pt-48 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black/50 z-10" /> {/* Overlay for readability */}
                     <img
                         src="/assets/owners/owner.png"
                         alt="Background"
-                        className="absolute inset-0 w-full h-full object-cover object-top opacity-60"
+                        className="absolute inset-0 w-full h-full object-cover object-[65%_top] md:object-top opacity-60 translate-y-12"
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay z-20"></div>
                 </div>
@@ -79,8 +79,9 @@ export function AboutPage() {
                             Legends
                         </h1>
                     </div>
-                    <p className="hero-subtitle text-zinc-300 font-inter text-lg md:text-xl max-w-2xl tracking-wide">
-                        More than just a workshop. We are the architects of automotive perfection.
+                    <p className="hero-subtitle text-zinc-300 font-inter text-lg md:text-xl max-w-2xl tracking-wide text-justify">
+                        We are more than a workshop. We are the architects of automotive perfection, driven by passion and perfected through precision. From subtle refinements to complete transformations, every detail is engineered to reflect excellence, individuality, and performance.
+                        Beyond tools and techniques lies a deeper philosophy. We are more than a workshop, we are the architects of automotive perfection, crafting machines that reflect personality, passion, and purpose through flawless execution.
                     </p>
                 </div>
 
@@ -119,7 +120,7 @@ export function AboutPage() {
             </section>
 
             {/* 3. Core Values Section */}
-            <section className="py-24 bg-black relative">
+            <section className="pt-24 pb-0 bg-black relative">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
                         <span className="text-gold font-oswald text-sm tracking-[0.3em] uppercase block mb-4">Why Choose Us</span>
@@ -155,7 +156,7 @@ export function AboutPage() {
             </section>
 
             {/* 4. Awards / Hall of Fame Section */}
-            <section ref={awardsRef} className="py-32 bg-zinc-950 relative overflow-hidden">
+            <section ref={awardsRef} className="pt-20 pb-32 bg-zinc-950 relative overflow-hidden">
                 {/* Background Glow */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gold/5 blur-[150px] rounded-full pointer-events-none"></div>
 
@@ -170,59 +171,103 @@ export function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                        {/* Award 1 */}
+                    <div className="flex flex-col gap-16 max-w-6xl mx-auto">
+                        {/* Award 1: Excellence Award */}
                         <div
-                            className="award-card group relative cursor-pointer"
+                            className="group relative w-full bg-zinc-900/50 border border-zinc-800 rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 hover:border-gold/50 hover:shadow-[0_0_50px_rgba(234,179,8,0.1)]"
                             onClick={() => setSelectedImage('/nobgfolder/award-nobg.webp')}
                         >
-                            <div className="absolute -inset-1 bg-linear-to-b from-gold/20 to-transparent rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                            <div className="relative bg-black/50 border border-zinc-800 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-center hover:border-gold/30 transition duration-500 h-full">
-                                <div className="h-80 w-full flex items-center justify-center mb-8 relative">
-                                    <img
-                                        src="/nobgfolder/award-nobg.webp"
-                                        alt="Award Recognition"
-                                        className="h-full w-auto object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.2)] group-hover:scale-110 transition-transform duration-700 ease-in-out"
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="bg-black/80 text-gold p-3 rounded-full backdrop-blur-md">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-                                            </svg>
-                                        </div>
+                            {/* Creative Background Element */}
+                            <div className="absolute top-0 right-0 w-[60%] h-full opacity-10 group-hover:opacity-20 transition-opacity duration-700 mix-blend-luminosity">
+                                <img
+                                    src="/nobgfolder/award-nobg.webp"
+                                    alt="Background Award"
+                                    className="w-full h-full object-cover object-center"
+                                />
+                            </div>
+                            <div className="absolute inset-0 bg-linear-to-r from-black via-zinc-950/80 to-transparent z-10"></div>
+
+                            {/* Content */}
+                            <div className="relative z-20 p-8 md:p-12 lg:p-16 grid md:grid-cols-2 gap-12 items-center">
+                                {/* Text Side */}
+                                <div>
+                                    <div className="mb-6 inline-flex items-center gap-2 text-gold/80 border border-gold/30 rounded-full px-4 py-1.5 w-fit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                        </svg>
+                                        <span className="text-xs uppercase tracking-widest font-oswald">Highest Honor</span>
+                                    </div>
+                                    <h3 className="text-4xl lg:text-5xl font-oswald text-white uppercase font-bold mb-6 leading-none">
+                                        Excellence <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-yellow-700">Award</span>
+                                    </h3>
+                                    <p className="text-zinc-400 font-inter text-base lg:text-lg leading-relaxed mb-8">
+                                        This prestigious accolade recognizes our unwavering commitment to quality. It is a testament to the countless hours spent perfecting every tune and the dedication that goes into every service. A symbol of trust and superior craftsmanship.
+                                    </p>
+                                    <div className="flex items-center gap-4 text-white group-hover:text-gold transition-colors">
+                                        <span className="font-oswald uppercase tracking-wider text-sm">View Certificate</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-2 transition-transform">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                        </svg>
                                     </div>
                                 </div>
-                                <div className="text-center mt-auto">
-                                    <h3 className="text-white font-oswald text-xl uppercase tracking-wide mb-2">Excellence Award</h3>
-                                    <p className="text-zinc-500 font-inter text-sm">Recognized for outstanding service quality.</p>
+                                {/* Image Side */}
+                                <div className="flex justify-center md:justify-end">
+                                    <img
+                                        src="/nobgfolder/award-nobg.webp"
+                                        alt="Excellence Award"
+                                        className="h-64 lg:h-80 w-auto object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.3)] group-hover:scale-105 transition-transform duration-500"
+                                    />
                                 </div>
                             </div>
                         </div>
 
-                        {/* Award 2 */}
+                        {/* Award 2: Best Performance */}
                         <div
-                            className="award-card group relative cursor-pointer"
+                            className="group relative w-full bg-zinc-900/50 border border-zinc-800 rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 hover:border-gold/50 hover:shadow-[0_0_50px_rgba(234,179,8,0.1)]"
                             onClick={() => setSelectedImage('/nobgfolder/award-2-nobg.webp')}
                         >
-                            <div className="absolute -inset-1 bg-linear-to-b from-gold/20 to-transparent rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                            <div className="relative bg-black/50 border border-zinc-800 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-center hover:border-gold/30 transition duration-500 h-full">
-                                <div className="h-80 w-full flex items-center justify-center mb-8 relative">
+                            {/* Creative Background Element */}
+                            <div className="absolute top-0 left-0 w-[60%] h-full opacity-10 group-hover:opacity-20 transition-opacity duration-700 mix-blend-luminosity">
+                                <img
+                                    src="/nobgfolder/award-2-nobg.webp"
+                                    alt="Background Award"
+                                    className="w-full h-full object-cover object-center"
+                                />
+                            </div>
+                            {/* Inverted Gradient for Right-Side Content */}
+                            <div className="absolute inset-0 bg-linear-to-l from-black via-zinc-950/80 to-transparent z-10"></div>
+
+                            {/* Content */}
+                            <div className="relative z-20 p-8 md:p-12 lg:p-16 grid md:grid-cols-2 gap-12 items-center">
+                                {/* Image Side (Left for this card) */}
+                                <div className="flex justify-center md:justify-start order-2 md:order-1">
                                     <img
                                         src="/nobgfolder/award-2-nobg.webp"
-                                        alt="Achievement Award"
-                                        className="h-full w-auto object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.2)] group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                                        alt="Best Performance Award"
+                                        className="h-64 lg:h-80 w-auto object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.3)] group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="bg-black/80 text-gold p-3 rounded-full backdrop-blur-md">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-                                            </svg>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div className="text-center mt-auto">
-                                    <h3 className="text-white font-oswald text-xl uppercase tracking-wide mb-2">Best Performance</h3>
-                                    <p className="text-zinc-500 font-inter text-sm">Awarded for highest customer satisfaction.</p>
+
+                                {/* Text Side */}
+                                <div className="order-1 md:order-2 text-left md:text-right">
+                                    <div className="mb-6 inline-flex items-center gap-2 text-gold/80 border border-gold/30 rounded-full px-4 py-1.5 w-fit ml-auto">
+                                        <span className="text-xs uppercase tracking-widest font-oswald">Customer Choice</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-4xl lg:text-5xl font-oswald text-white uppercase font-bold mb-6 leading-none">
+                                        Best <span className="text-transparent bg-clip-text bg-linear-to-r from-gold to-yellow-700">Performance</span>
+                                    </h3>
+                                    <p className="text-zinc-400 font-inter text-base lg:text-lg leading-relaxed mb-8">
+                                        Awarded for consistently delivering the highest customer satisfaction and mechanical performance. This award reflects our promise: when we touch a bike, it leaves better than new. The true gold standard of service.
+                                    </p>
+                                    <div className="flex items-center gap-4 text-white group-hover:text-gold transition-colors justify-end">
+                                        <span className="font-oswald uppercase tracking-wider text-sm">View Certificate</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-2 transition-transform">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
