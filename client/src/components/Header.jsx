@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiHeart, FiShoppingBag, FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 import { useCart } from '../context/CartContext';
 
@@ -8,11 +9,12 @@ export function Header() {
     const { cartItems } = useCart();
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     const navItems = ['Home', 'Collection', 'Brands', 'About Us', 'Contact'];
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-[#eabd56] py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300 shadow-sm">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-[#eabd56] py-3 px-6 md:px-12 flex justify-between items-center transition-all duration-300 shadow-sm">
             {/* Logo */}
             <div className="flex-1 z-50">
                 <a href="/" className="inline-block no-underline">
@@ -41,17 +43,19 @@ export function Header() {
                     else if (isAbout) linkPath = '/about';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
+                    const isActive = location.pathname === linkPath;
+
                     if (isBrands) {
                         return (
                             <div key={item} className="relative group">
                                 <a
                                     href={linkPath}
-                                    className="text-sm font-inter font-semibold text-white hover:text-gold transition-colors relative flex items-center gap-1 no-underline pb- cursor-pointer"
+                                    className={`text-sm font-inter font-semibold transition-colors relative flex items-center gap-1 no-underline pb- cursor-pointer ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                                 >
                                     {item}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                                     <svg
-                                        className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                                        className={`w-4 h-4 transition-transform duration-300 group-hover:rotate-180 ${isActive ? 'text-gold' : ''}`}
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
@@ -91,10 +95,10 @@ export function Header() {
                         <a
                             key={item}
                             href={linkPath}
-                            className="text-sm font-inter font-semibold text-white hover:text-gold transition-colors relative group no-underline"
+                            className={`text-sm font-inter font-semibold transition-colors relative group no-underline ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                         >
                             {item}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
+                            <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                         </a>
                     );
                 })}
@@ -144,12 +148,14 @@ export function Header() {
                             else if (isAbout) linkPath = '/about';
                             else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
+                            const isActive = location.pathname === linkPath;
+
                             return (
                                 <a
                                     key={item}
                                     href={linkPath}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-2xl font-oswald font-medium text-white hover:text-gold transition-colors"
+                                    className={`text-2xl font-oswald font-medium transition-colors ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                                 >
                                     {item}
                                 </a>
