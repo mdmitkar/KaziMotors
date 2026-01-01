@@ -1,4 +1,5 @@
 import React, { useRef, useLayoutEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import gsap from 'gsap';
@@ -61,6 +62,11 @@ export function AboutPage() {
 
     return (
         <main ref={containerRef} className="bg-black min-h-screen selection:bg-gold selection:text-black overflow-hidden relative">
+            <Helmet>
+                <title>About Us | Kazi Motors</title>
+                <meta name="description" content="Learn about the minds behind Kazi Motors - Arif, Sameer, and Rafiq. We craft legends with passion and expertise." />
+                <link rel="canonical" href="https://kazimotors.com/about" />
+            </Helmet>
             <Header />
 
             {/* 1. Hero Section */}
