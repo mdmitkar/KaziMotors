@@ -76,7 +76,7 @@ export function CartPage() {
                                             <div className="flex justify-between items-start mb-2">
                                                 <div>
                                                     <p className="text-gold text-[10px] uppercase tracking-widest mb-1">{item.category}</p>
-                                                    <h3 className="text-xl font-bold uppercase truncate pr-4">{item.title}</h3>
+                                                    <h3 className="text-xl font-bold uppercase truncate pr-12">{item.title}</h3>
                                                 </div>
                                             </div>
 
@@ -107,7 +107,7 @@ export function CartPage() {
                                         {/* Remove Button */}
                                         <button
                                             onClick={() => removeFromCart(item.id)}
-                                            className="absolute top-4 right-4 text-white/20 hover:text-red-500 transition-colors p-2"
+                                            className="absolute top-2 right-4 text-red-600 hover:text-red-500 transition-colors z-10 p-2"
                                         >
                                             <FiTrash2 size={20} />
                                         </button>
