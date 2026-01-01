@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 const brands = [
     { name: "Honda", logo: "/assets/brand-imgs/honda2.webp" },
-    { name: "YAMAHA", logo: "/assets/brand-imgs/yamaha2.webp" },
+    { name: "YAMAHA", logo: "/assets/brand-imgs/yamaha1.png" },
     { name: "Hero", logo: "/assets/brand-imgs/hero2.webp" },
     { name: "Bajaj", logo: "/assets/brand-imgs/bajaj2.webp" },
     { name: "KTM", logo: "/assets/brand-imgs/ktm2.webp" },
     { name: "tvs", logo: "/assets/brand-imgs/tvs2.webp" },
-    { name: "Suzuki", logo: "/assets/brand-imgs/suzuki2.png" },
-    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield2.webp" },
+    { name: "Suzuki", logo: "/assets/brand-imgs/suzuki1.png" },
+    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield1.png" },
 ];
 
 export function Partner() {

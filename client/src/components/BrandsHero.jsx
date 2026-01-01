@@ -133,7 +133,7 @@ export function BrandsHero() {
                             <span className="text-red-600 font-oswald text-sm md:text-base font-bold tracking-[0.5em] mb-4 block uppercase font-bold">Premium Engineering</span>
                             <h2 className="text-[#E60012] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 UNMATCHED QUALITY, <br />
-                                <span className="text-white bg-clp-text ">GENUINE HONDA PARTS</span>
+                                <span className="text-white bg-clip-text ">GENUINE HONDA PARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">Honda is synonymous with reliability. Our range of genuine Honda components ensures that your machine performs at its peak, providing you with peace of mind on every journey.</p>
@@ -196,7 +196,7 @@ export function BrandsHero() {
                                 <span className="text-white">PERFORMANCE,</span>
                                 <br />
                                 YAMAHA GENUINE
-                                {' '}<span className="text-white bg-clip-text ">
+                                {' '}<span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">
                                     ACCESSORIES</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
@@ -280,7 +280,7 @@ export function BrandsHero() {
                             <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Aggressive Performance</span>
                             <h2 className="text-[#FF6600] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 DOMINATE EVERY TERRAIN, <br />
-                                <span className="text-transparent bg-clip-text bg-white">KTM GENUINE POWERPARTS</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">KTM GENUINE POWERPARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">KTM is for the bold. We provide authentic KTM parts that enhance the raw power and sharp handling of your machine, ensuring you're always ready to race.</p>
@@ -317,7 +317,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/suzuki2.png"
+                                src="/assets/brand-imgs/suzuki1.png"
                                 alt="Suzuki"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -423,8 +423,7 @@ export function BrandsHero() {
                             <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Reliable Commuting</span>
                             <h2 className="text-[#004F9F] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 SCALE NEW HEIGHTS, <br />
-                                <span className="text-white
-                                 px-2">BAJAJ GENUINE SPARES</span>
+                                <span className="text-white px-2">BAJAJ GENUINE SPARES</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">Bajaj provides the perfect balance of efficiency and power. We offer genuine Bajaj spares that keep your motorcycle running smoothly and economically.</p>
@@ -484,7 +483,7 @@ export function BrandsHero() {
                             <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Racing Heritage</span>
                             <h2 className="text-[#E41A23] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
                                 UNCOMPROMISING AGILITY, <br />
-                                <span className="text-white bg-clip-text ">TVS GENUINE PARTS</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">TVS GENUINE PARTS</span>
                             </h2>
                             <div className="space-y-6 text-white/70">
                                 <p className="text-lg">TVS brings racing technology to the streets. Our genuine TVS parts ensure that your machine retains its sharp handling and punchy performance.</p>
@@ -578,76 +577,6 @@ export function BrandsHero() {
                                 </ul>
                             </div>
                         </motion.div>
-                    </div>
-                </div>
-            </section>
-            {/* Mahindra Section */}
-            <section
-                id="mahindra"
-                className="relative overflow-hidden border-b border-gold/10"
-                style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/mahindramain.webp")',
-                    backgroundAttachment: 'fixed',
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover'
-                }}
-            >
-                <div className="absolute inset-0 bg-black/60 z-0"></div>
-                <div className="relative z-10 flex flex-col justify-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center mb-0 flex flex-col justify-center items-center py-20"
-                    >
-                        <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
-                            <img
-                                src="/assets/brand-imgs/mahindra2.webp"
-                                alt="Mahindra"
-                                className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
-                            />
-                        </div>
-                        <h2 className="text-gradient text-4xl md:text-5xl lg:text-6xl font-oswald font-bold text-gold uppercase tracking-wider mb-1">
-                            MAHINDRA
-                        </h2>
-                        <span className="text-white font-oswald text-sm tracking-[0.5em] uppercase block mb-2">Toughness Reimagined</span>
-                        <div className="bg-[#8B0000] w-[100px] h-[5px] rounded-2xl"></div>
-                    </motion.div>
-
-                    <div className="section-wrapper">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="flex-1 z-10 text-left"
-                        >
-                            <span className="text-[] font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase font-bold">Rugged Innovation</span>
-                            <h2 className="text-white text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
-                                BUILT TO LAST, <br />
-                                <span className="text-white px-2">MAHINDRA GENUINE COMPONENTS</span>
-                            </h2>
-                            <div className="space-y-6 text-white/90">
-                                <p className="text-lg">Mahindra stands for ruggedness and innovation. Our range of genuine Mahindra components is designed to withstand the toughest conditions while delivering peak performance.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-white transition-colors">
-                                    <li>Robust construction for extreme durability</li>
-                                    <li>Advanced engineering for reliable performance</li>
-                                    <li>Original spares for long-term value</li>
-                                </ul>
-                            </div>
-                        </motion.div>
-
-                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
-                            >
-                                <img src="/assets/mahindra-imgs/realistic_mahindra.webp" alt="Mahindra Parts" className="w-full h-full object-cover" />
-                            </motion.div>
-                        </div>
                     </div>
                 </div>
             </section>
