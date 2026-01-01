@@ -1,17 +1,20 @@
-import React from 'react';
-import { FiHeart, FiShoppingBag } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { FiHeart, FiShoppingBag, FiMenu, FiX } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { useCart } from '../context/CartContext';
 
 export function Header() {
     const { cartItems } = useCart();
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const navItems = ['Home', 'Collection', 'Brands', 'About Us', 'Contact'];
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-[#eabd56] py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300 shadow-sm">
             {/* Logo */}
-            <div className="flex-1">
+            <div className="flex-1 z-50">
                 <a href="/" className="inline-block no-underline">
                     <img
                         src="/assets/logo/final-kazi-logo.png"
@@ -21,19 +24,21 @@ export function Header() {
                 </a>
             </div>
 
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-10 flex-1 justify-center">
-                {['Home', 'Collection', 'Brands', 'Contact'].map((item) => {
+                {navItems.map((item) => {
                     const isHome = item === 'Home';
                     const isCollection = item === 'Collection';
                     const isBrands = item === 'Brands';
                     const isContact = item === 'Contact';
+                    const isAbout = item === 'About Us';
 
                     // Determine the href/to path
                     let linkPath = '/';
                     if (isCollection) linkPath = '/collection';
                     else if (isBrands) linkPath = '/brands';
                     else if (isContact) linkPath = '/contact';
+                    else if (isAbout) linkPath = '/about';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                     if (isBrands) {
@@ -95,12 +100,8 @@ export function Header() {
                 })}
             </nav>
 
-            {/* Icons & Search */}
-            <div className="flex-1 flex justify-end items-center space-x-6 text-white">
-                {/* Search Box */}
-
-
-
+            {/* Icons & Mobile Toggle */}
+            <div className="flex-1 flex justify-end items-center space-x-6 text-white z-50">
                 <a href="/cart" className="hover:text-gold transition-colors p-1 relative flex items-center justify-center">
                     <FiShoppingBag size={22} />
                     {totalItems > 0 && (
@@ -109,7 +110,54 @@ export function Header() {
                         </span>
                     )}
                 </a>
+
+                {/* Mobile Menu Button */}
+                <button
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    className="lg:hidden text-white hover:text-gold transition-colors focus:outline-none"
+                >
+                    {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                </button>
             </div>
+
+            {/* Mobile Navigation Overlay */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed inset-0 bg-black/95 backdrop-blur-lg pt-24 px-6 flex flex-col items-center gap-8 lg:hidden z-40"
+                    >
+                        {navItems.map((item) => {
+                            const isHome = item === 'Home';
+                            const isCollection = item === 'Collection';
+                            const isBrands = item === 'Brands';
+                            const isContact = item === 'Contact';
+                            const isAbout = item === 'About Us';
+
+                            let linkPath = '/';
+                            if (isCollection) linkPath = '/collection';
+                            else if (isBrands) linkPath = '/brands';
+                            else if (isContact) linkPath = '/contact';
+                            else if (isAbout) linkPath = '/about';
+                            else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
+
+                            return (
+                                <a
+                                    key={item}
+                                    href={linkPath}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="text-2xl font-oswald font-medium text-white hover:text-gold transition-colors"
+                                >
+                                    {item}
+                                </a>
+                            );
+                        })}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }

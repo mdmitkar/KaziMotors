@@ -5,6 +5,7 @@ import { CollectionPage } from './pages/CollectionPage';
 import { BrandsPage } from './pages/BrandsPage';
 import { ContactPage } from './pages/ContactPage';
 import { CartPage } from './pages/CartPage';
+import { AboutPage } from './pages/AboutPage';
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/collection" element={<CollectionPage />} />
             <Route path="/brands" element={<BrandsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/cart" element={<CartPage />} />
           </Routes>
         </div>
