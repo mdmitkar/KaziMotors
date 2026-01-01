@@ -88,19 +88,33 @@ export function CollectionGrid() {
                                     onClick={() => setSelectedProduct(item)}
                                 >
                                     <div className="relative aspect-square bg-[#0A0A0A] rounded-[2.1rem] transition-all duration-700 
-                                    group-hover:border-3 group-hover:border-gold/50 group-hover:bg-[#111] overflow-hidden border-black border-3">
+                                    lg:group-hover:border-3 lg:group-hover:border-gold/50 lg:group-hover:bg-[#111] overflow-hidden border-black border-3">
 
                                         {/* Base Card Content */}
                                         <div className="absolute inset-0 h-full w-full">
                                             <motion.img
                                                 src={item.image}
                                                 alt={item.title}
-                                                className="h-full w-full object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:scale-110"
+                                                className="h-full w-full object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-transform duration-700 lg:group-hover:scale-110"
                                             />
                                             {/* Gradient Overlay for Text Legibility */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-0" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 lg:group-hover:opacity-0" />
 
-                                            <div className="absolute bottom-0 left-0 w-full flex justify-between items-end px-6 pt-6 pb-24 transition-opacity duration-300 group-hover:opacity-0">
+                                            {/* Mobile Add to Cart Button - Top Right */}
+                                            <button
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleAddToCart(item);
+                                                }}
+                                                className="absolute top-4 right-4 z-30 lg:hidden bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-gold transition-colors active:scale-95 flex items-center justify-center border border-white/10"
+                                                aria-label="Add to cart"
+                                            >
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                                </svg>
+                                            </button>
+
+                                            <div className="absolute bottom-0 left-0 w-full flex justify-between items-end px-6 pt-6 pb-6 lg:pb-24 transition-opacity duration-300 lg:group-hover:opacity-0 z-20">
                                                 <div className="max-w-[70%]">
                                                     <h3 className="text-xl font-bold text-red-500 uppercase tracking-tight leading-none mb-1">{item.title}</h3>
                                                     <p className="text-gold text-[10px] uppercase tracking-widest">{item.category}</p>
@@ -114,7 +128,7 @@ export function CollectionGrid() {
                                         </div>
 
                                         {/* Hover Overlay (Unrolling Effect) */}
-                                        <div className="absolute inset-0 z-20 pointer-events-none group-hover:pointer-events-auto transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0 bg-black flex flex-col items-center justify-center p-6 text-center">
+                                        <div className="absolute inset-0 z-20 pointer-events-none lg:group-hover:pointer-events-auto transition-transform duration-700 ease-in-out transform translate-y-full lg:group-hover:translate-y-0 bg-black flex flex-col items-center justify-center p-6 text-center">
                                             <div className="relative w-full h-[65%] flex items-center justify-center mb-2">
                                                 <img src={item.image} alt={item.title} className="max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300 drop-shadow-[0_10px_20px_rgba(255,215,0,0.2)]" />
                                             </div>
@@ -136,7 +150,7 @@ export function CollectionGrid() {
                                         </div>
 
                                         {/* Bottom-Right Tab */}
-                                        <div className="absolute bottom-0 right-0 z-10 transition-all duration-500 group-hover:translate-y-full group-hover:opacity-0 max-w-[90%] pointer-events-none">
+                                        <div className="absolute bottom-0 right-0 z-10 transition-all duration-500 lg:group-hover:translate-y-full lg:group-hover:opacity-0 max-w-[90%] pointer-events-none">
                                             <div className="bg-gold pt-3 pl-12 pr-8 pb-4 rounded-tl-[2rem] border-t border-l border-white/20 pointer-events-auto">
                                                 <h4 className="text-black text-xs md:text-sm uppercase tracking-widest font-bold leading-tight text-right block">
                                                     {item.title} <span className="text-red-600 ml-1 inline-block">{item.year || '2025'}</span>
@@ -145,7 +159,7 @@ export function CollectionGrid() {
                                         </div>
 
                                         {/* Top-Left Label */}
-                                        <div className="absolute top-0 left-0 flex items-center gap-2 z-10 group-hover:opacity-0 transition-opacity bg-black p-2  ">
+                                        <div className="absolute top-0 left-0 flex items-center gap-2 z-10 lg:group-hover:opacity-0 transition-opacity bg-black p-2  ">
                                             <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
                                             <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-gold ">
                                                 {item.category}
@@ -154,7 +168,7 @@ export function CollectionGrid() {
                                     </div>
 
                                     {/* Background Glow */}
-                                    <div className="absolute inset-0 bg-gold/5 blur-[100px] opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10" />
+                                    <div className="absolute inset-0 bg-gold/5 blur-[100px] opacity-0 lg:group-hover:opacity-100 transition-all duration-700 -z-10" />
                                 </motion.div>
                             );
                         })}
