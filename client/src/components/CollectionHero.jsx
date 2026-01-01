@@ -3,19 +3,19 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
     {
-        image: "/assets/ws/WhatsApp Image 2025-12-27 at 5.38.50 PM.jpeg",
+        image: "/assets/ws/WhatsApp Image 2025-12-27 at 5.38.50 PM.webp",
         title: "Racing Spirit",
         subtitle: "Unleash the power within. Premium gear for the track.",
         buttonText: "Shop Racing"
     },
     {
-        image: "/assets/ws/WhatsApp Image 2025-12-27 at 5.38.51 PM.jpeg",
+        image: "/assets/ws/WhatsApp Image 2025-12-27 at 5.38.51 PM.webp",
         title: "Urban Legend",
         subtitle: "Style meets substance. Dominate the city streets.",
         buttonText: "Explore Urban"
     },
     {
-        image: "/assets/ws/WhatsApp Image 2025-12-27 at 5.38.52 PM.jpeg",
+        image: "/assets/ws/WhatsApp Image 2025-12-27 at 5.38.52 PM.webp",
         title: "Touring Master",
         subtitle: "Adventure awaits. Comfort and durability for the long haul.",
         buttonText: "View Touring"

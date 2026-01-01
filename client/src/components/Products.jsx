@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const brands = [
-  { name: "Royal Enfield Engine", logo: "/assets/reparts-imgs/royalengine.png" },
-  { name: "Akra Provic Collection", logo: "/assets/Exhausts/removedbackground/akraprovicexhaustcollection.png" },
-  { name: "4Lens Fog Light", logo: "/assets/reparts-imgs/4LensFogLightBar.png" },
-  { name: "Hero", logo: "/assets/reparts-imgs/part1.png" },
-  { name: "Bajaj", logo: "/assets/reparts-imgs/part2.png" },
-  { name: "KTM", logo: "/assets/reparts-imgs/part6.png" },
-  { name: "Suzuki", logo: "/assets/reparts-imgs/part4.png" },
-  { name: "TVS", logo: "/assets/reparts-imgs/part3.png" },
-  { name: "Kawasaki", logo: "/assets/reparts-imgs/part1.png" },
-  { name: "Harley", logo: "/assets/reparts-imgs/part2.png" },
-  { name: "Ducati", logo: "/assets/reparts-imgs/part6.png" },
-  { name: "Disc", logo: "/assets/reparts-imgs/disc.png" },
+  { name: "Royal Enfield Engine", logo: "/assets/reparts-imgs/royalengine.webp" },
+  { name: "Akra Provic Collection", logo: "/assets/Exhausts/removedbackground/akraprovicexhaustcollection.webp" },
+  { name: "4Lens Fog Light", logo: "/assets/reparts-imgs/4LensFogLightBar.webp" },
+  { name: "Hero", logo: "/assets/reparts-imgs/part1.webp" },
+  { name: "Bajaj", logo: "/assets/reparts-imgs/part2.webp" },
+  { name: "KTM", logo: "/assets/reparts-imgs/part6.webp" },
+  { name: "Suzuki", logo: "/assets/reparts-imgs/part4.webp" },
+  { name: "TVS", logo: "/assets/reparts-imgs/part3.webp" },
+  { name: "Kawasaki", logo: "/assets/reparts-imgs/part1.webp" },
+  { name: "Harley", logo: "/assets/reparts-imgs/part2.webp" },
+  { name: "Ducati", logo: "/assets/reparts-imgs/part6.webp" },
+  { name: "Disc", logo: "/assets/reparts-imgs/disc.webp" },
 ];
 
 const displayBrands = [...brands, ...brands, ...brands];

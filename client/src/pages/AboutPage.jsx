@@ -120,7 +120,7 @@ export function AboutPage() {
                         <div className="owner-card group">
                             <div className="relative overflow-hidden mb-6 aspect-square rounded-sm border border-zinc-900 transition-colors duration-500">
                                 <img
-                                    src="/assets/owners/owner1.png"
+                                    src="/assets/owners/owner1.webp"
                                     alt="Founder"
                                     className="w-full h-full object-cover transition-all duration-700 ease-out transform group-hover:scale-110"
                                 />
@@ -141,7 +141,7 @@ export function AboutPage() {
                         <div className="owner-card group mt-8 md:mt-0">
                             <div className="relative overflow-hidden mb-6 aspect-square rounded-sm border border-zinc-900 transition-colors duration-500">
                                 <img
-                                    src="/assets/owners/owner2.png"
+                                    src="/assets/owners/owner2.webp"
                                     alt="Co-Founder"
                                     className="w-full h-full object-cover transition-all duration-700 ease-out transform group-hover:scale-110"
                                 />
@@ -162,7 +162,7 @@ export function AboutPage() {
                         <div className="owner-card group mt-8 md:mt-0">
                             <div className="relative overflow-hidden mb-6 aspect-square rounded-sm border border-zinc-900 transition-colors duration-500">
                                 <img
-                                    src="/assets/owners/owner3.png"
+                                    src="/assets/owners/owner3.webp"
                                     alt="Head Technician"
                                     className="w-full h-full object-cover transition-all duration-700 ease-out transform group-hover:scale-110"
                                 />
@@ -203,7 +203,7 @@ export function AboutPage() {
                             <div className="relative bg-black/50 border border-zinc-800 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-center hover:border-gold/30 transition duration-500 h-full">
                                 <div className="h-80 w-full flex items-center justify-center mb-8">
                                     <img
-                                        src="/nobgfolder/award-nobg.png"
+                                        src="/nobgfolder/award-nobg.webp"
                                         alt="Award Recognition"
                                         className="h-full w-auto object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.2)] group-hover:scale-110 transition-transform duration-700 ease-in-out"
                                     />
@@ -221,7 +221,7 @@ export function AboutPage() {
                             <div className="relative bg-black/50 border border-zinc-800 backdrop-blur-sm p-8 rounded-2xl flex flex-col items-center hover:border-gold/30 transition duration-500 h-full">
                                 <div className="h-80 w-full flex items-center justify-center mb-8">
                                     <img
-                                        src="/nobgfolder/award-2-nobg.png"
+                                        src="/nobgfolder/award-2-nobg.webp"
                                         alt="Achievement Award"
                                         className="h-full w-auto object-contain drop-shadow-[0_20px_50px_rgba(234,179,8,0.2)] group-hover:scale-110 transition-transform duration-700 ease-in-out"
                                     />

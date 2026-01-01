@@ -8,7 +8,7 @@ export function BrandsHero() {
                 id="royal-enfield"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/rebikemain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/rebikemain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -25,7 +25,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/royalenfield2.png"
+                                src="/assets/brand-imgs/royalenfield2.webp"
                                 alt="Royal Enfield"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -69,7 +69,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/rebike-imgs/rebike1.png" alt="Royal Enfield Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/rebike-imgs/rebike1.webp" alt="Royal Enfield Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ export function BrandsHero() {
                 id="honda"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/hondamain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/hondamain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -98,7 +98,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/honda2.png"
+                                src="/assets/brand-imgs/honda2.webp"
                                 alt="Honda"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -120,7 +120,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-red-600/20"
                             >
-                                <img src="/assets/reparts-imgs/part4.png" alt="Honda Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/reparts-imgs/part4.webp" alt="Honda Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -153,7 +153,7 @@ export function BrandsHero() {
                 id="yamaha"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/yamahamain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/yamahamain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -170,7 +170,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/yamaha2.png"
+                                src="/assets/brand-imgs/yamaha2.webp"
                                 alt="Yamaha"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -216,7 +216,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-gold/20"
                             >
-                                <img src="/assets/yamaha-imgs/yamaha_bike_norider.png" alt="Yamaha Bike" className="w-full h-full object-cover" />
+                                <img src="/assets/yamaha-imgs/yamaha_bike_norider.webp" alt="Yamaha Bike" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -228,7 +228,7 @@ export function BrandsHero() {
                 id="ktm"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/ktmmain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/ktmmain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -245,7 +245,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/ktm2.png"
+                                src="/assets/brand-imgs/ktm2.webp"
                                 alt="KTM"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -267,7 +267,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-orange-600/20"
                             >
-                                <img src="/assets/ktm-imgs/ktm_bike_norider.png" alt="KTM Performance" className="w-full h-full object-cover" />
+                                <img src="/assets/ktm-imgs/ktm_bike_norider.webp" alt="KTM Performance" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -300,7 +300,7 @@ export function BrandsHero() {
                 id="kawasaki"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/kawasakimain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/kawasakimain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -317,7 +317,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/kawasaki2.png"
+                                src="/assets/brand-imgs/kawasaki2.webp"
                                 alt="Kawasaki"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -359,7 +359,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
-                                <img src="/assets/kawasaki-imgs/kawasaki_bike_norider.png" alt="Kawasaki Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/kawasaki-imgs/kawasaki_bike_norider.webp" alt="Kawasaki Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -371,7 +371,7 @@ export function BrandsHero() {
                 id="bajaj"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/bajajmain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/bajajmain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -388,7 +388,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/bajaj2.png"
+                                src="/assets/brand-imgs/bajaj2.webp"
                                 alt="Bajaj"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -410,7 +410,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
-                                <img src="/assets/bajaj-imgs/realistic_bajaj.png" alt="Bajaj Spares" className="w-full h-full object-cover" />
+                                <img src="/assets/bajaj-imgs/realistic_bajaj.webp" alt="Bajaj Spares" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -444,7 +444,7 @@ export function BrandsHero() {
                 id="tvs"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/tvsmain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/tvsmain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -461,7 +461,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/tvs2.png"
+                                src="/assets/brand-imgs/tvs2.webp"
                                 alt="TVS"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -503,7 +503,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
-                                <img src="/assets/tvs-imgs/tvs_bike_nature.png" alt="TVS Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/tvs-imgs/tvs_bike_nature.webp" alt="TVS Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>
@@ -515,7 +515,7 @@ export function BrandsHero() {
                 id="hero-moto"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/heromain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/heromain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -532,7 +532,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/hero2.png"
+                                src="/assets/brand-imgs/hero2.webp"
                                 alt="Hero"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -554,7 +554,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-[#004080]/20"
                             >
-                                <img src="/assets/hero-imgs/realistic_hero.png" alt="Hero Bike" className="w-full h-full object-cover" />
+                                <img src="/assets/hero-imgs/realistic_hero.webp" alt="Hero Bike" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                         <motion.div
@@ -587,7 +587,7 @@ export function BrandsHero() {
                 id="mahindra"
                 className="relative overflow-hidden border-b border-gold/10"
                 style={{
-                    backgroundImage: 'url("/assets/rebike-imgs/mahindramain.png")',
+                    backgroundImage: 'url("/assets/rebike-imgs/mahindramain.webp")',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
@@ -604,7 +604,7 @@ export function BrandsHero() {
                     >
                         <div className="mx-4 md:mx-8 flex items-center justify-center min-w-[100px] md:min-w-[120px] mb-4">
                             <img
-                                src="/assets/brand-imgs/mahindra2.png"
+                                src="/assets/brand-imgs/mahindra2.webp"
                                 alt="Mahindra"
                                 className="h-12 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
@@ -646,7 +646,7 @@ export function BrandsHero() {
                                 transition={{ duration: 1 }}
                                 className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-white/20"
                             >
-                                <img src="/assets/mahindra-imgs/realistic_mahindra.png" alt="Mahindra Parts" className="w-full h-full object-cover" />
+                                <img src="/assets/mahindra-imgs/realistic_mahindra.webp" alt="Mahindra Parts" className="w-full h-full object-cover" />
                             </motion.div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@ const Home = () => {
             </section>
 
             {/* Workshop/Service Teaser */}
-            <section className="py-24 bg-[url('/assets/Exhausts/AkrapovicExhaustCollection.jpeg')] bg-cover bg-fixed relative">
+            <section className="py-24 bg-[url('/assets/Exhausts/AkrapovicExhaustCollection.webp')] bg-cover bg-fixed relative">
                 <div className="absolute inset-0 bg-black/80" />
                 <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
                     <h2 className="text-4xl text-white font-oswald uppercase mb-8">Visit Our Workshop</h2>

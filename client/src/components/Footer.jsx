@@ -35,7 +35,7 @@ export function Footer() {
                         <div className="flex items-center gap-3">
                             <div className="w-14 h-14 overflow-hidden">
                                 <img
-                                    src="/assets/logo/final-kazi-logo.png"
+                                    src="/assets/logo/final-kazi-logo.webp"
                                     alt="Kazi Motors Logo"
                                     className="w-full h-full object-contain"
                                 />
@@ -133,7 +133,7 @@ export function Footer() {
                                     <FiMapPin size={18} />
                                 </div>
                                 <p className="text-sm text-white/70 font-roboto leading-relaxed">
-                                   352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
+                                    352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
                                 </p>
                             </div>
                             <div className="flex gap-4 items-center">

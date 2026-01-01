@@ -19,7 +19,7 @@ export function Header() {
             <div className="flex-1 z-50">
                 <a href="/" className="inline-block no-underline">
                     <img
-                        src="/assets/logo/final-kazi-logo.png"
+                        src="/assets/logo/final-kazi-logo.webp"
                         alt="Kazi Motors Logo"
                         className="h-10 md:h-12 w-auto object-contain"
                     />

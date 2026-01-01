@@ -193,14 +193,14 @@ export function ContactPage() {
                         <div ref={addToInfoRefs} className="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-white/10">
                             <div className="relative group overflow-hidden rounded-sm aspect-square border border-white/5 hover:border-gold/30 transition-all duration-500">
                                 <img
-                                    src="/assets/rebike-imgs/rebikemain.png"
+                                    src="/assets/rebike-imgs/rebikemain.webp"
                                     alt="Royal Enfield Custom"
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                             </div>
                             <div className="relative group overflow-hidden rounded-sm aspect-square border border-white/5 hover:border-gold/30 transition-all duration-500">
                                 <img
-                                    src="/assets/rebike-imgs/rebike1.png"
+                                    src="/assets/rebike-imgs/rebike1.webp"
                                     alt="Royal Enfield Modification"
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />

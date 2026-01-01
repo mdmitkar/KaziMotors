@@ -5,22 +5,22 @@ const features = [
     {
         title: "Only the Real Deal",
         description: "We supply 100% genuine Royal Enfield spare parts sourced from trusted and authorized channels. No replicas, no compromises — just original parts that keep your bike performing exactly the way it was meant to.",
-        image: "/assets/reparts-imgs/part6.png"
+        image: "/assets/reparts-imgs/part6.webp"
     },
     {
         title: "Built Around Royal Enfield",
         description: "Royal Enfield isn’t just a category for us, it’s our core identity. Our entire business is structured around understanding Royal Enfield bikes, their distinct engineering, and the specific original parts they truly require.",
-        image: "/assets/reparts-imgs/part5.png"
+        image: "/assets/reparts-imgs/part5.webp"
     },
     {
         title: "Every Model, Every Mile",
         description: "From the legendary Bullet and Classic to Meteor, Himalayan, Interceptor, and Continental GT — we stock premium parts that fully support riders across all different models, terrains, and individual riding styles.",
-        image: "/assets/reparts-imgs/part4.png"
+        image: "/assets/reparts-imgs/part4.webp"
     },
     {
         title: "Performance First",
         description: "Style never compromises speed. We optimize every single aspect for a thrill-inducing driving experience. Our premium components ensure your machine operates at its absolute peak potential, delivering power and reliability on every ride.",
-        image: "/assets/reparts-imgs/part7.png"
+        image: "/assets/reparts-imgs/part7.webp"
     }
 ];
 

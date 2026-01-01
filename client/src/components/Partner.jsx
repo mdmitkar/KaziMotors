@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const brands = [
-    { name: "Honda", logo: "/assets/brand-imgs/honda2.png" },
-    { name: "YAMAHA", logo: "/assets/brand-imgs/yamaha2.png" },
-    { name: "Hero", logo: "/assets/brand-imgs/hero2.png" },
-    { name: "Bajaj", logo: "/assets/brand-imgs/bajaj2.png" },
-    { name: "KTM", logo: "/assets/brand-imgs/ktm2.png" },
-    { name: "tvs", logo: "/assets/brand-imgs/tvs2.png" },
-    { name: "Kawasaki", logo: "/assets/brand-imgs/kawasaki2.png" },
-    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield2.png" },
+    { name: "Honda", logo: "/assets/brand-imgs/honda2.webp" },
+    { name: "YAMAHA", logo: "/assets/brand-imgs/yamaha2.webp" },
+    { name: "Hero", logo: "/assets/brand-imgs/hero2.webp" },
+    { name: "Bajaj", logo: "/assets/brand-imgs/bajaj2.webp" },
+    { name: "KTM", logo: "/assets/brand-imgs/ktm2.webp" },
+    { name: "tvs", logo: "/assets/brand-imgs/tvs2.webp" },
+    { name: "Kawasaki", logo: "/assets/brand-imgs/kawasaki2.webp" },
+    { name: "royalenfield", logo: "/assets/brand-imgs/royalenfield2.webp" },
 ];
 
 export function Partner() {
@@ -28,7 +28,7 @@ export function Partner() {
                         <div className="absolute -inset-4 border border-gold/20 rounded-2xl group-hover:border-gold/40 transition-colors duration-500" />
                         <div className="aspect-square md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden rounded-2xl relative shadow-2xl">
                             <img
-                                src="/assets/reparts-imgs/part6.png"
+                                src="/assets/reparts-imgs/part6.webp"
                                 alt="Multiple Motorcycle Brands"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
