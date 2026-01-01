@@ -152,7 +152,7 @@ export function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-oswald font-bold uppercase mb-1 text-white group-hover:text-gold transition-colors">Call Us</h3>
-                                        <a href="tel:+919822119832" className="text-lg font-bold text-gray-300 hover:text-white transition-colors">+91 98221 19832</a>
+                                        <a href="tel:+918855989211" className="text-lg font-bold text-gray-300 hover:text-white transition-colors">+91 88559 89211</a>
                                     </div>
                                 </div>
                             </div>

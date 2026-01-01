@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaInstagram, FaFacebookF, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { FiMapPin, FiMail, FiPhone } from "react-icons/fi";
 
 export function Footer() {
@@ -76,13 +76,14 @@ export function Footer() {
                         </ul> */}
                         <div className="flex gap-4 mt-6">
                             {[
-                                { name: "Instagram", icon: <FaInstagram size={18} /> },
-                                { name: "Facebook", icon: <FaFacebookF size={18} /> },
-                                { name: "Whatsapp", icon: <FaWhatsapp size={18} /> }
+                                { name: "Instagram", icon: <FaInstagram size={18} />, href: "https://www.instagram.com/kazi_auto_parts/" },
+                                { name: "Whatsapp", icon: <FaWhatsapp size={18} />, href: "https://wa.me/918855989211" }
                             ].map((social) => (
                                 <a
                                     key={social.name}
-                                    href="#"
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-black transition-all duration-300 group cursor-pointer text-white/60 shadow-inner"
                                 >
                                     <span className="sr-only">{social.name}</span>
@@ -132,8 +133,7 @@ export function Footer() {
                                     <FiMapPin size={18} />
                                 </div>
                                 <p className="text-sm text-white/70 font-roboto leading-relaxed">
-                                    123  near Koter gate , Bhiwandi City, <br />
-                                    MC 45678, India
+                                   352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
                                 </p>
                             </div>
                             <div className="flex gap-4 items-center">
@@ -149,7 +149,7 @@ export function Footer() {
                                     <FiPhone size={18} />
                                 </div>
                                 <p className="text-sm text-white/70 font-roboto">
-                                    +91 98765 43210
+                                    +91  88559 89211
                                 </p>
                             </div>
                         </div>

@@ -26,7 +26,7 @@ export function Partner() {
                 >
                     <div className="relative group">
                         <div className="absolute -inset-4 border border-gold/20 rounded-2xl group-hover:border-gold/40 transition-colors duration-500" />
-                        <div className="aspect-[1/5] md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden rounded-2xl relative shadow-2xl">
+                        <div className="aspect-square md:aspect-[16/9] lg:aspect-[4/5] overflow-hidden rounded-2xl relative shadow-2xl">
                             <img
                                 src="/assets/reparts-imgs/part6.png"
                                 alt="Multiple Motorcycle Brands"
