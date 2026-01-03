@@ -153,7 +153,7 @@ export function RoyalEnfield() {
                                 highlight: "ROYAL ENFIELD GENUINE PARTS",
                                 desc: "Discover the power of Royal Enfield engineering. We provide authentic parts designed to keep your machine performing at its absolute peak.",
                                 items: ["Unmatched reliability and durability", "Optimized for peak engine performance", "Factory-certified quality standards"],
-                                image: "/assets/rebike-imgs/rebike1.webp",
+                                image: "/assets/logo/red-bullet.png",
                                 transparent: false
                             },
                             {
@@ -162,7 +162,7 @@ export function RoyalEnfield() {
                                 highlight: "DESIGNED FOR THE ROAD",
                                 desc: "Experience the legacy of a brand that has stood the test of time. Every curve and line is a tribute to motorcycling history.",
                                 items: ["Classic aesthetics with modern reliability", "Hand-painted pinstripes on select models", "Iconic thump that defines the ride"],
-                                image: "/assets/rebike-imgs/rebike2.webp",
+                                image: "/assets/logo/blue-bullet.png",
                                 transparent: true
                             },
                             {
@@ -171,7 +171,7 @@ export function RoyalEnfield() {
                                 highlight: "BUILT TO LAST",
                                 desc: "Royal Enfield motorcycles are built to traverse the toughest terrains, from the Himalayas to city streets, with ease and grace.",
                                 items: ["Torque-heavy engines for mountain roads", "Robust chassis for superior stability", "Advanced braking systems for safety"],
-                                image: "/assets/rebike-imgs/rebike3.webp",
+                                image: "/assets/enfield/Gemini_Generated_Image_hqfkmshqfkmshqfk.png",
                                 transparent: false
                             },
                             {
@@ -180,7 +180,7 @@ export function RoyalEnfield() {
                                 highlight: "CUSTOMIZE YOUR RIDE",
                                 desc: "Make your Royal Enfield truly yours with our wide range of genuine motorcycle accessories, designed for style and functionality.",
                                 items: ["Touring seats for long-distance comfort", "Protective guards for engine and body", "Luggage solutions for every journey"],
-                                image: "/assets/reparts-imgs/royalengine.webp", // Using engine image or fallback
+                                image: "/assets/enfield/nobgbullet-350-removebg-preview.png", // Using engine image or fallback
                                 transparent: true
                             },
                             {
@@ -189,7 +189,7 @@ export function RoyalEnfield() {
                                 highlight: "GEAR UP FOR THE JOURNEY",
                                 desc: "Ride in style and safety with our exclusive collection of Royal Enfield riding gear and apparel.",
                                 items: ["CE-certified protective jackets", "Vintage-inspired helmets", "Durable riding gloves and boots"],
-                                image: "/assets/rebike-imgs/rebikemain.webp",
+                                image: "/assets/enfield/nobggoan_classic-removebg.png",
                                 transparent: false
                             }
                         ].map((section, index) => (
@@ -202,7 +202,7 @@ export function RoyalEnfield() {
                                     className="flex-1 z-10 text-left"
                                 >
                                     <span className={`font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase ${section.transparent ? 'text-gold' : 'text-white'}`}>{section.subtitle}</span>
-                                    <h2 className={`text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide ${section.transparent ? 'text-white' : 'text-[#c10007]'}`}>
+                                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide text-[#c10007]">
                                         {section.title} <br />
                                         <span className="text-white px-0">{section.highlight}</span>
                                     </h2>
@@ -221,9 +221,9 @@ export function RoyalEnfield() {
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 1 }}
-                                        className={`w-full h-full rounded-[2rem] overflow-hidden border-4 ${section.transparent ? 'border-gold/20' : 'border-red-600/20'}`}
+                                        className={`w-full h-full rounded-[2rem] overflow-hidden border-4 ${section.transparent ? 'border-gold/20' : 'border-red-600/20 bg-black'}`}
                                     >
-                                        <img src={section.image} alt={section.highlight} className="w-full h-full object-cover" />
+                                        <img src={section.image} alt={section.highlight} className="w-full h-full object-contain" />
                                     </motion.div>
                                 </div>
                             </div>
