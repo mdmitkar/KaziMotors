@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { GiGears, GiFullMotorcycleHelmet, GiWrench } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -336,6 +337,62 @@ export function RoyalEnfield() {
                             </div>
                         </div>
                     </section> */}
+                    {/* Services / Categories Section */}
+                    <section className="py-20 px-4 md:px-12 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
+                        <div className="container mx-auto relative z-10">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {[
+                                    {
+                                        title: "GENUINE PARTS",
+                                        icon: <GiGears className="w-16 h-16" />,
+                                        desc: "Precision-engineered components to keep your machine's soul alive.",
+                                        color: "text-red-600",
+                                        borderColor: "group-hover:border-red-600/50"
+                                    },
+                                    {
+                                        title: "PREMIUM ACCESSORIES",
+                                        icon: <GiFullMotorcycleHelmet className="w-16 h-16" />,
+                                        desc: "Enhance your ride with style, comfort, and protection.",
+                                        color: "text-gold",
+                                        borderColor: "group-hover:border-gold/50"
+                                    },
+                                    {
+                                        title: "EXPERT MAINTENANCE",
+                                        icon: <GiWrench className="w-16 h-16" />,
+                                        desc: "Dedicated care ensures every ride feels like the first.",
+                                        color: "text-white",
+                                        borderColor: "group-hover:border-white/50"
+                                    }
+                                ].map((service, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.8, delay: index * 0.2 }}
+                                        className={`group relative p-8 md:p-12 rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden transition-all duration-500 ${service.borderColor}`}
+                                    >
+                                        <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-linear-to-br from-transparent to-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'}`} />
+
+                                        <div className={`mb-6 transform group-hover:scale-110 transition-transform duration-500 ${service.color} drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]`}>
+                                            {service.icon}
+                                        </div>
+
+                                        <h3 className="text-2xl font-oswald font-bold text-white uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
+                                            {service.title}
+                                        </h3>
+
+                                        <p className="text-white/60 font-inter leading-relaxed text-lg group-hover:text-white/90 transition-colors">
+                                            {service.desc}
+                                        </p>
+
+                                        <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'} to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700`} />
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
                 </main>
 
                 <Footer />
