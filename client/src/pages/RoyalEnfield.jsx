@@ -112,7 +112,7 @@ export function RoyalEnfield() {
                                                 className="h-16 md:h-40 lg:h-56 object-contain brightness-0 invert sepia saturate-100 hue-rotate-10 mb-0 w-[180px] md:w-[400px] max-w-full"
                                                 style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))' }}
                                             />
-                                            <p className="absolute -bottom-6 md:-bottom-10 left-1/2 -translate-x-1/2 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap">Two wheels one Soul</p>
+                                            <p className="relative -mt-2 md:-mt-4 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap z-10">Two wheels one Soul</p>
                                         </div>
                                         <div className="flex-1 flex flex-col gap-1 md:gap-2 items-start min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
                                             <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
