@@ -127,41 +127,90 @@ export function RoyalEnfield() {
                     </section>
                     <div className="relative mt-10 z-10 flex flex-col justify-center">
 
-                    <div className="section-wrapper">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="flex-1 z-10 text-left"
-                        >
-                            <span className="text-white font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase">Way of Life</span>
-                            <h2 className="text-[#003399] text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide">
-                                PRECISION ENGINEERED, <br />
-                                <span className="text-white px-2">SUZUKI GENUINE PARTS</span>
-                            </h2>
-                            <div className="space-y-6 text-white/90">
-                                <p className="text-lg">Discover the power of Suzuki engineering. We provide authentic Suzuki parts and accessories designed to keep your machine performing at its absolute peak, from the track to the street.</p>
-                                <ul className="space-y-2 list-disc list-inside hover:text-[#003399] transition-colors">
-                                    <li>Unmatched reliability and durability</li>
-                                    <li>Optimized for peak engine performance</li>
-                                    <li>Factory-certified quality standards</li>
-                                </ul>
-                            </div>
-                        </motion.div>
+                        {/* Alternating Sections */}
+                        {[
+                            {
+                                subtitle: "Way of Life",
+                                title: "PRECISION ENGINEERED,",
+                                highlight: "ROYAL ENFIELD GENUINE PARTS",
+                                desc: "Discover the power of Royal Enfield engineering. We provide authentic parts designed to keep your machine performing at its absolute peak.",
+                                items: ["Unmatched reliability and durability", "Optimized for peak engine performance", "Factory-certified quality standards"],
+                                image: "/assets/rebike-imgs/rebike1.webp",
+                                transparent: false
+                            },
+                            {
+                                subtitle: "Heritage",
+                                title: "TIMELESS CLASSIC,",
+                                highlight: "DESIGNED FOR THE ROAD",
+                                desc: "Experience the legacy of a brand that has stood the test of time. Every curve and line is a tribute to motorcycling history.",
+                                items: ["Classic aesthetics with modern reliability", "Hand-painted pinstripes on select models", "Iconic thump that defines the ride"],
+                                image: "/assets/rebike-imgs/rebike2.webp",
+                                transparent: true
+                            },
+                            {
+                                subtitle: "Performance",
+                                title: "UNMATCHED PERFORMANCE,",
+                                highlight: "BUILT TO LAST",
+                                desc: "Royal Enfield motorcycles are built to traverse the toughest terrains, from the Himalayas to city streets, with ease and grace.",
+                                items: ["Torque-heavy engines for mountain roads", "Robust chassis for superior stability", "Advanced braking systems for safety"],
+                                image: "/assets/rebike-imgs/rebike3.webp",
+                                transparent: false
+                            },
+                            {
+                                subtitle: "Customization",
+                                title: "GENUINE ACCESSORIES,",
+                                highlight: "CUSTOMIZE YOUR RIDE",
+                                desc: "Make your Royal Enfield truly yours with our wide range of genuine motorcycle accessories, designed for style and functionality.",
+                                items: ["Touring seats for long-distance comfort", "Protective guards for engine and body", "Luggage solutions for every journey"],
+                                image: "/assets/reparts-imgs/royalengine.webp", // Using engine image or fallback
+                                transparent: true
+                            },
+                            {
+                                subtitle: "Lifestyle",
+                                title: "RIDING APPAREL,",
+                                highlight: "GEAR UP FOR THE JOURNEY",
+                                desc: "Ride in style and safety with our exclusive collection of Royal Enfield riding gear and apparel.",
+                                items: ["CE-certified protective jackets", "Vintage-inspired helmets", "Durable riding gloves and boots"],
+                                image: "/assets/rebike-imgs/rebikemain.webp",
+                                transparent: false
+                            }
+                        ].map((section, index) => (
+                            <div key={index} className={`section-wrapper ${section.transparent ? 'bg-transparent! border-none' : ''}`}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, amount: 0.3 }}
+                                    transition={{ duration: 1, ease: "easeOut" }}
+                                    className="flex-1 z-10 text-left"
+                                >
+                                    <span className={`font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase ${section.transparent ? 'text-gold' : 'text-white'}`}>{section.subtitle}</span>
+                                    <h2 className={`text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide ${section.transparent ? 'text-white' : 'text-[#c10007]'}`}>
+                                        {section.title} <br />
+                                        <span className="text-white px-0">{section.highlight}</span>
+                                    </h2>
+                                    <div className="space-y-6 text-white/90">
+                                        <p className="text-lg">{section.desc}</p>
+                                        <ul className={`space-y-2 list-disc list-inside transition-colors ${section.transparent ? 'hover:text-gold' : 'hover:text-[#c10007]'}`}>
+                                            {section.items.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </motion.div>
 
-                        <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 1 }}
-                                className="w-full h-full rounded-[2rem] overflow-hidden border-4 border-blue-600/20"
-                            >
-                                <img src="/assets/suzuki-imgs/suzuki_bike_norider.png" alt="Suzuki Bike" className="w-full h-full object-cover" />
-                            </motion.div>
-                        </div>
+                                <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 1 }}
+                                        className={`w-full h-full rounded-[2rem] overflow-hidden border-4 ${section.transparent ? 'border-gold/20' : 'border-red-600/20'}`}
+                                    >
+                                        <img src={section.image} alt={section.highlight} className="w-full h-full object-cover" />
+                                    </motion.div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                </div>
 
                     {/* Brand Story Section */}
                     {/* <section className="py-24 px-6 md:px-12">
