@@ -8,7 +8,7 @@ import products from '../data/products';
 import { useCart } from '../context/CartContext';
 
 const videos = [
-    "/assets/videos/bikevid2.mp4",
+    "/assets/videos/bikevid7.mp4",
 ];
 
 const backgroundImages = [
@@ -45,7 +45,7 @@ export function RoyalEnfield() {
         <div className="bg-black min-h-screen relative overflow-x-hidden">
             {/* FIXED BACKGROUND GRID - ATTACHED TO BG, NO MOVE ON SCROLL */}
             <div className="fixed inset-0 z-0 pointer-events-none">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 h-full w-full opacity-[1] brightness-50">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 h-full w-full opacity-[1] brightness-50">
                     {[...Array(12)].map((_, i) => (
                         <div key={i} className="relative aspect-video md:aspect-square overflow-hidden border border-white/5">
                             <img
@@ -66,8 +66,8 @@ export function RoyalEnfield() {
 
                 <main>
                     {/* Hero Section */}
-                    <section className="relative px-6 md:px-12 py-6 mt-20">
-                        <div className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden rounded-4xl shadow-2xl border border-white/5">
+                    <section className="relative mt-20">
+                        <div className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden shadow-2xl border border-white/5">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={currentVideo}
@@ -112,7 +112,7 @@ export function RoyalEnfield() {
                                                 className="h-16 md:h-40 lg:h-56 object-contain brightness-0 invert sepia saturate-100 hue-rotate-10 mb-0 w-[180px] md:w-[400px] max-w-full"
                                                 style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))' }}
                                             />
-                                            <p className="relative -mt-2 md:-mt-4 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap z-10">Two wheels one Soul</p>
+                                            <p className="relative md:-mt-1 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap z-10">Two wheels one Soul</p>
                                         </div>
                                         <div className="flex-1 flex flex-col gap-1 md:gap-2 items-start min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
                                             <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
@@ -143,7 +143,7 @@ export function RoyalEnfield() {
                             </div>
                         </div>
                     </section>
-                    <div className="relative mt-10 z-10 flex flex-col justify-center">
+                    <div className="relative z-10 flex flex-col justify-center">
 
                         {/* Alternating Sections */}
                         {[
@@ -193,7 +193,7 @@ export function RoyalEnfield() {
                                 transparent: false
                             }
                         ].map((section, index) => (
-                            <div key={index} className={`section-wrapper ${section.transparent ? 'bg-transparent! border-none' : ''}`}>
+                            <div key={index} className={`section-wrapper ${section.transparent ? '' : 'bg-transparent! border-none'}`}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
