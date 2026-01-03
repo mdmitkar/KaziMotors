@@ -67,15 +67,15 @@ body {
   }
 
   .fire-text {
-    /* Exact match: White core with intense green glow */
-    color: #fff;
+    /* White core for visibility with intense red glow */
+    color: #f60000;
     text-shadow:
-      0 0 2px #fff,
-      0 0 10px #0f0,
-      0 0 20px #0f0,
-      0 0 30px #0f0,
-      0 0 40px #0f0,
-      0 0 50px #0f0;
+      0 0 1cap #fff,
+      0 0 20px #f00,
+      0 0 30px #f00,
+      0 0 40px #f00,
+      0 0 50px #f00,
+      0 0 60px #f00;
   }
 
 }
