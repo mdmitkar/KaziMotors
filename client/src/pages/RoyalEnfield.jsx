@@ -193,7 +193,7 @@ export function RoyalEnfield() {
                                 transparent: false
                             }
                         ].map((section, index) => (
-                            <div key={index} className={`section-wrapper ${section.transparent ? '' : 'bg-transparent! border-none'}`}>
+                            <div key={index} className={`section-wrapper ${section.transparent ? '' : 'bg-transparent! border-none'} ${index % 2 !== 0 ? 'lg:flex-row-reverse!' : ''}`}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
