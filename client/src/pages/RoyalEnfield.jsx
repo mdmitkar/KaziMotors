@@ -93,31 +93,31 @@ export function RoyalEnfield() {
                             <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                             <div className="absolute inset-0 z-10 bg-black/10" />
 
-                            <div className="container flex flex-col justify-center items-center mx-auto px-10 md:px-20 relative z-20 h-full pb-16 md:pb-24 text-center w-full ">
+                            <div className="container flex flex-col justify-center items-center mx-auto px-4 md:px-20 relative z-20 h-full pb-16 md:pb-24 text-center w-full ">
                                 <motion.h1
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.7, duration: 0.8 }}
                                     className="text-4xl md:text-6xl lg:text-7xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wider"
                                 >
-                                    <div className="flex items-center justify-center gap-4 md:gap-8 w-full px-4 ">
-                                        <div className="flex-1 flex flex-col gap-2 items-end min-w-[150px] md:min-w-[350px]">
-                                            <div className="h-2.5 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
+                                    <div className="flex items-center justify-center gap-2 md:gap-8 w-full px-2 md:px-4">
+                                        <div className="flex-1 flex flex-col gap-1 md:gap-2 items-end min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
+                                            <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
                                             <div className="h-1 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
                                         </div>
-                                        <img
-                                            src="/assets/logo/Royal-Enfield-Font-500x375-removebg-preview.png"
-                                            alt="Royal Enfield"
-                                            className="h-24 md:h-40 lg:h-26 object-contain brightness-0 invert sepia saturate-100 hue-rotate-[10deg] brightness-100 contrast-100 w-[400px]"
-                                            style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))' }}
-                                        />
-                                        <div className="flex-1 flex flex-col gap-2 items-start min-w-[50px] md:min-w-[350px]">
-                                            <div className="h-5 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
-                                            <div className="h-2 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
+                                        <div className="relative flex flex-col items-center justify-center">
+                                            <img
+                                                src="/assets/logo/Royal-Enfield-Font-500x375-removebg-preview.png"
+                                                alt="Royal Enfield"
+                                                className="h-16 md:h-40 lg:h-56 object-contain brightness-0 invert sepia saturate-100 hue-rotate-10 mb-0 w-[180px] md:w-[400px] max-w-full"
+                                                style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))' }}
+                                            />
+                                            <p className="absolute -bottom-6 md:-bottom-10 left-1/2 -translate-x-1/2 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap">Two wheels one Soul</p>
                                         </div>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="text-gold font-serif italic text-xl md:text-3xl tracking-widest uppercase">Two wheels one Soul</p>
+                                        <div className="flex-1 flex flex-col gap-1 md:gap-2 items-start min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
+                                            <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
+                                            <div className="h-1 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
+                                        </div>
                                     </div>
                                 </motion.h1>
 
