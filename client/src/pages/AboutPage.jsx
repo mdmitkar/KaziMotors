@@ -57,7 +57,7 @@ export function AboutPage() {
             <Header />
 
             {/* 1. Hero Section */}
-            <section ref={heroRef} className="relative h-screen flex flex-col justify-start items-start px-6 pt-36 md:pt-48 overflow-hidden">
+            <section ref={heroRef} className="relative h-screen flex flex-col justify-start items-start px-6 pt-16 md:pt-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-black/50 z-10" /> {/* Overlay for readability */}
                     <img
@@ -68,20 +68,21 @@ export function AboutPage() {
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay z-20"></div>
                 </div>
 
-                <div className="relative z-30 text-left max-w-5xl mx-auto md:mx-0 md:pl-12">
+                <div className="relative z-30 text-left max-w-10xl mx-auto md:mx-0 md:pl-12">
                     <div className="overflow-hidden mb-2">
-                        <h1 className="hero-title-line text-6xl md:text-8xl lg:text-9xl font-oswald font-bold text-white uppercase tracking-tighter leading-none">
+                        <h1 className="hero-title-line text-2xl md:text-5xl lg:text-6xl font-oswald font-bold text-white uppercase tracking-tighter leading-none">
                             Crafting
                         </h1>
                     </div>
                     <div className="overflow-hidden mb-6">
-                        <h1 className="hero-title-line text-6xl md:text-8xl lg:text-9xl font-oswald font-bold text-transparent bg-clip-text bg-linear-to-b from-gold to-yellow-600 uppercase tracking-tighter leading-none">
+                        <h1 className="hero-title-line text-6xl md:text-8xl lg:text-7xl font-oswald font-bold text-transparent bg-clip-text bg-linear-to-b from-gold to-yellow-600 uppercase tracking-tighter leading-none">
                             Legends
                         </h1>
                     </div>
                     <p className="hero-subtitle text-zinc-300 font-inter text-lg md:text-xl max-w-2xl tracking-wide text-justify">
-                        We are more than a workshop. We are the architects of automotive perfection, driven by passion and perfected through precision. From subtle refinements to complete transformations, every detail is engineered to reflect excellence, individuality, and performance.
-                        Beyond tools and techniques lies a deeper philosophy. We are more than a workshop, we are the architects of automotive perfection, crafting machines that reflect personality, passion, and purpose through flawless execution.
+                        Founded and led by <span className='text-gold font-bold'>Nisaar Ahemad Kazi</span>, our business is built on trust, experience, and a deep understanding of the motorcycle industry. With over <span>12 years of hands on experience
+                            </span>,the owner has been actively involved in sourcing, supplying, and maintaining high quality two wheeler parts. This long journey has helped us understand customer needs, ensure product authenticity  and deliver reliable solutions every time What started as a small initiative has grown into a trusted name, driven by passion, expertise, and a commitment to quality service.
+                        
                     </p>
                 </div>
 

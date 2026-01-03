@@ -32,7 +32,7 @@ export function About() {
                     </p>
                     <div className="flex items-center space-x-8">
                         <div className="flex flex-col">
-                            <span className="text-3xl font-oswald font-bold text-white">10+</span>
+                            <span className="text-3xl font-oswald font-bold text-white">12+</span>
                             <span className="text-gold text-xs uppercase tracking-widest font-inter">Years Exp</span>
                         </div>
                         <div className="w-px h-12 bg-white/20" />
