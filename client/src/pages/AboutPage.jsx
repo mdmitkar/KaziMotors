@@ -63,7 +63,7 @@ export function AboutPage() {
                     <img
                         src="/assets/owners/owner.png"
                         alt="Background"
-                        className="absolute inset-0 w-full h-full object-cover object-[65%_top] md:object-top opacity-60 translate-y-12"
+                        className="absolute inset-0 w-full h-full object-cover object-[65%_25%] md:object-[50%_1%] opacity-60"
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay z-20"></div>
                 </div>
@@ -81,8 +81,8 @@ export function AboutPage() {
                     </div>
                     <p className="hero-subtitle text-zinc-300 font-inter text-lg md:text-xl max-w-2xl tracking-wide text-justify">
                         Founded and led by <span className='text-gold font-bold'>Nisaar Ahemad Kazi</span>, our business is built on trust, experience, and a deep understanding of the motorcycle industry. With over <span>12 years of hands on experience
-                            </span>,the owner has been actively involved in sourcing, supplying, and maintaining high quality two wheeler parts. This long journey has helped us understand customer needs, ensure product authenticity  and deliver reliable solutions every time What started as a small initiative has grown into a trusted name, driven by passion, expertise, and a commitment to quality service.
-                        
+                        </span>,the owner has been actively involved in sourcing, supplying, and maintaining high quality two wheeler parts. This long journey has helped us understand customer needs, ensure product authenticity  and deliver reliable solutions every time What started as a small initiative has grown into a trusted name, driven by passion, expertise, and a commitment to quality service.
+
                     </p>
                 </div>
 
@@ -126,7 +126,7 @@ export function AboutPage() {
                     <div className="text-center mb-16">
                         <span className="text-gold font-oswald text-sm tracking-[0.3em] uppercase block mb-4">Why Choose Us</span>
                         <h2 className="text-3xl md:text-5xl font-oswald text-white uppercase font-bold">
-                            The Kazi <span className="text-zinc-600">Standard</span>
+                            The Kazi <span className="text-gold">Standard</span>
                         </h2>
                     </div>
 
