@@ -364,32 +364,66 @@ export function RoyalEnfield() {
                                         color: "text-white",
                                         borderColor: "group-hover:border-white/50"
                                     }
-                                ].map((service, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, y: 30 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.8, delay: index * 0.2 }}
-                                        className={`group relative p-8 md:p-12 rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden transition-all duration-500 ${service.borderColor}`}
-                                    >
-                                        <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-linear-to-br from-transparent to-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'}`} />
+                                ].map((service, index) => {
+                                    // Determine link properties based on index
+                                    let link = "/collection";
+                                    let isExternal = false;
 
-                                        <div className={`mb-6 transform group-hover:scale-110 transition-transform duration-500 ${service.color} drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]`}>
-                                            {service.icon}
-                                        </div>
+                                    if (index === 2) {
+                                        link = "https://wa.me/918855989211";
+                                        isExternal = true;
+                                    }
 
-                                        <h3 className="text-2xl font-oswald font-bold text-white uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
-                                            {service.title}
-                                        </h3>
+                                    const CardContent = (
+                                        <>
+                                            <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-linear-to-br from-transparent to-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'}`} />
 
-                                        <p className="text-white/60 font-inter leading-relaxed text-lg group-hover:text-white/90 transition-colors">
-                                            {service.desc}
-                                        </p>
+                                            <div className={`mb-6 transform group-hover:scale-110 transition-transform duration-500 ${service.color} drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]`}>
+                                                {service.icon}
+                                            </div>
 
-                                        <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'} to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700`} />
-                                    </motion.div>
-                                ))}
+                                            <h3 className="text-2xl font-oswald font-bold text-white uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
+                                                {service.title}
+                                            </h3>
+
+                                            <p className="text-white/60 font-inter leading-relaxed text-lg group-hover:text-white/90 transition-colors">
+                                                {service.desc}
+                                            </p>
+
+                                            <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'} to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700`} />
+                                        </>
+                                    );
+
+                                    const className = `group relative p-8 md:p-12 rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden transition-all duration-500 ${service.borderColor} block h-full`;
+                                    const motionProps = {
+                                        initial: { opacity: 0, y: 30 },
+                                        whileInView: { opacity: 1, y: 0 },
+                                        viewport: { once: true },
+                                        transition: { duration: 0.8, delay: index * 0.2 }
+                                    };
+
+                                    return isExternal ? (
+                                        <motion.a
+                                            key={index}
+                                            href={link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={className}
+                                            {...motionProps}
+                                        >
+                                            {CardContent}
+                                        </motion.a>
+                                    ) : (
+                                        <motion.div
+                                            key={index}
+                                            {...motionProps}
+                                        >
+                                            <Link to={link} className={className}>
+                                                {CardContent}
+                                            </Link>
+                                        </motion.div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </section>
