@@ -132,17 +132,23 @@ export function Footer() {
                                 <div className="mt-1 text-gold">
                                     <FiMapPin size={18} />
                                 </div>
-                                <p className="text-sm text-white/70 font-roboto leading-relaxed">
-                                    352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
-                                </p>
+                                <div>
+                                    <span className="text-gold text-xs font-bold uppercase tracking-wider block mb-1">Branch 1:</span>
+                                    <p className="text-sm text-white/70 font-roboto leading-relaxed">
+                                        352, Panjrapool Near Nissan Hotel, 4th Nizampura, Bhiwandi 421302
+                                    </p>
+                                </div>
                             </div>
                             <div className="flex gap-4 items-start">
                                 <div className="mt-1 text-gold">
                                     <FiMapPin size={18} />
                                 </div>
-                                <p className="text-sm text-white/70 font-roboto leading-relaxed">
-                                    Below Ekta Hospital, Near Payal Talkies,Dhamankar Naka, Bhiwandi 421302
-                                </p>
+                                <div>
+                                    <span className="text-gold text-xs font-bold uppercase tracking-wider block mb-1">Branch 2:</span>
+                                    <p className="text-sm text-white/70 font-roboto leading-relaxed">
+                                        Below Ekta Hospital, Near Payal Talkies,Dhamankar Naka, Bhiwandi 421302
+                                    </p>
+                                </div>
                             </div>
                             <div className="flex gap-4 items-center">
                                 <div className="text-gold">
@@ -177,11 +183,8 @@ export function Footer() {
                             rel="noopener noreferrer"
                             className="text-red-400 hover:underline font-bold"
                         >
-                            Datamatex
+                            Datamatex Technologies
                         </a>
-                    </p>
-                    <p className="text-xs text-white/40 flex items-center gap-1 group font-roboto">
-                        Driven by <span className="text-gold group-hover:scale-110 transition-transform duration-300">Passion</span> & Performance
                     </p>
                 </div>
             </div>
