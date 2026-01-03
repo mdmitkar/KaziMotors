@@ -12,11 +12,13 @@ const videos = [
 ];
 
 const backgroundImages = [
-    "/assets/rebike-imgs/rebike1.webp",
-    "/assets/rebike-imgs/rebike2.webp",
-    "/assets/rebike-imgs/rebike3.webp",
-    "/assets/rebike-imgs/rebike4.webp",
-    "/assets/rebike-imgs/rebikemain.webp"
+    "/assets/rebg-imgs/img1.png",
+    "/assets/rebg-imgs/img2.png",
+    "/assets/rebg-imgs/img3.png",
+    "/assets/rebg-imgs/img4.png",
+    "/assets/rebg-imgs/img5.png",
+    "/assets/rebg-imgs/img6.png",
+    
 ];
 
 const featuredPartItems = [
@@ -45,8 +47,8 @@ export function RoyalEnfield() {
         <div className="bg-black min-h-screen relative overflow-x-hidden">
             {/* FIXED BACKGROUND GRID - ATTACHED TO BG, NO MOVE ON SCROLL */}
             <div className="fixed inset-0 z-0 pointer-events-none">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 h-full w-full opacity-[1] brightness-50">
-                    {[...Array(12)].map((_, i) => (
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 h-full w-full opacity-[1] brightness-50">
+                    {[...Array(8)].map((_, i) => (
                         <div key={i} className="relative aspect-video md:aspect-square overflow-hidden border border-white/5">
                             <img
                                 src={backgroundImages[i % backgroundImages.length]}
@@ -221,7 +223,7 @@ export function RoyalEnfield() {
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 1 }}
-                                        className={`w-full h-full rounded-[2rem] overflow-hidden border-4 ${section.transparent ? 'border-gold/20' : 'border-red-600/20 bg-black'}`}
+                                        className={`w-full h-full rounded-[2rem] overflow-hidden ${section.transparent ? 'border-gold/20' : 'border-red-600/20 bg-black'}`}
                                     >
                                         <img src={section.image} alt={section.highlight} className="w-full h-full object-contain" />
                                     </motion.div>
