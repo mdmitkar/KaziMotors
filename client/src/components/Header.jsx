@@ -49,10 +49,10 @@ export function Header() {
 
                     if (isBrands) {
                         return (
-                            <div key={item} className="relative group">
+                            <div key={item} className="relative group text-center">
                                 <a
                                     href={linkPath}
-                                    className={`text-sm font-inter font-semibold transition-colors relative flex items-center gap-1 no-underline pb- cursor-pointer ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
+                                    className={`text-sm font-inter font-semibold transition-colors relative flex items-center justify-center gap-1 no-underline pb- cursor-pointer ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                                 >
                                     {item}
                                     <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
@@ -82,7 +82,7 @@ export function Header() {
                                             <a
                                                 key={brand.id}
                                                 href={`/brands#${brand.id}`}
-                                                className="block px-4 py-2 text-sm text-white/80 hover:text-gold hover:bg-gold/10 rounded-lg transition-all duration-200 no-underline"
+                                                className="block px-4 py-2 text-sm text-white/80 hover:text-gold hover:bg-gold/10 rounded-lg transition-all duration-200 no-underline text-left"
                                             >
                                                 {brand.name}
                                             </a>
@@ -97,12 +97,18 @@ export function Header() {
                         <a
                             key={item}
                             href={linkPath}
-                            className={`text-sm font-inter font-semibold transition-colors relative group no-underline 
+                            className={`text-sm font-inter font-semibold transition-colors relative group no-underline text-center
                                 ${isRoyalEnfield
                                     ? 'fire-text font-bold text-base tracking-wider hover:opacity-80'
                                     : isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                         >
-                            {item}
+                            {isRoyalEnfield || item === 'About Us' ? (
+                                <span className="block leading-tight lg:max-w-[60px] lg:whitespace-normal xl:max-w-none xl:whitespace-nowrap mx-auto">
+                                    {item}
+                                </span>
+                            ) : (
+                                item
+                            )}
                             <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'} ${isRoyalEnfield ? 'hidden' : ''}`} />
                         </a>
                     );
@@ -162,7 +168,10 @@ export function Header() {
                                     key={item}
                                     href={linkPath}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className={`text-2xl font-oswald font-medium transition-colors ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
+                                    className={`text-2xl font-oswald font-medium transition-colors 
+                                        ${isRoyalEnfield
+                                            ? 'fire-text font-bold tracking-wider'
+                                            : isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                                 >
                                     {item}
                                 </a>

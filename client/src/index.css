@@ -66,6 +66,18 @@ body {
     -webkit-text-fill-color: transparent;
   }
 
+  .fire-text {
+    /* Exact match: White core with intense green glow */
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 10px #0f0,
+      0 0 20px #0f0,
+      0 0 30px #0f0,
+      0 0 40px #0f0,
+      0 0 50px #0f0;
+  }
+
 }
 
 @layer utilities {
