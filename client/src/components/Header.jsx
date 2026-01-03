@@ -9,6 +9,7 @@ export function Header() {
     const { cartItems } = useCart();
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileBrandsOpen, setIsMobileBrandsOpen] = useState(false);
     const location = useLocation();
 
     const navItems = ['Home', 'Royal Enfield', 'Collection', 'Brands', 'About Us', 'Contact'];
@@ -162,6 +163,61 @@ export function Header() {
                             else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                             const isActive = location.pathname === linkPath;
+
+                            if (isBrands) {
+                                return (
+                                    <div key={item} className="w-full flex flex-col items-center">
+                                        <button
+                                            onClick={() => setIsMobileBrandsOpen(!isMobileBrandsOpen)}
+                                            className={`text-2xl font-oswald font-medium transition-colors flex items-center gap-2 ${isActive || isMobileBrandsOpen ? 'text-gold' : 'text-white hover:text-gold'}`}
+                                        >
+                                            {item}
+                                            <svg
+                                                className={`w-5 h-5 transition-transform duration-300 ${isMobileBrandsOpen ? 'rotate-180' : ''}`}
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+
+                                        <AnimatePresence>
+                                            {isMobileBrandsOpen && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: 'auto', opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    transition={{ duration: 0.3 }}
+                                                    className="overflow-hidden flex flex-col items-center w-full"
+                                                >
+                                                    <div className="flex flex-col items-center gap-3 pt-4 pb-2 w-full">
+                                                        {[
+                                                            { name: 'Royal Enfield', id: 'royal-enfield' },
+                                                            { name: 'Honda', id: 'honda' },
+                                                            { name: 'Yamaha', id: 'yamaha' },
+                                                            { name: 'Hero', id: 'hero-moto' },
+                                                            { name: 'Bajaj', id: 'bajaj' },
+                                                            { name: 'KTM', id: 'ktm' },
+                                                            { name: 'TVS', id: 'tvs' },
+                                                            { name: 'Suzuki', id: 'suzuki' },
+                                                        ].map((brand) => (
+                                                            <a
+                                                                key={brand.id}
+                                                                href={`/brands#${brand.id}`}
+                                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                                className="text-lg text-white/50 hover:text-gold font-oswald transition-colors tracking-wide"
+                                                            >
+                                                                {brand.name}
+                                                            </a>
+                                                        ))}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+                                );
+                            }
 
                             return (
                                 <a
