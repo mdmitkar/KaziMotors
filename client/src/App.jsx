@@ -8,6 +8,7 @@ import { ContactPage } from './pages/ContactPage';
 import { CartPage } from './pages/CartPage';
 import { AboutPage } from './pages/AboutPage';
 import { CartProvider } from './context/CartContext';
+import { RoyalEnfield } from './pages/RoyalEnfield';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/collection" element={<CollectionPage />} />
+            <Route path="/royalenfield" element={<RoyalEnfield />} />
             <Route path="/brands" element={<BrandsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />

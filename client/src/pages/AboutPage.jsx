@@ -82,7 +82,6 @@ export function AboutPage() {
                     <p className="hero-subtitle text-zinc-300 font-inter text-lg md:text-xl max-w-2xl tracking-wide text-justify">
                         Founded and led by <span className='text-gold font-bold'>Nisaar Ahemad Kazi</span>, our business is built on trust, experience, and a deep understanding of the motorcycle industry. With over <span>12 years of hands on experience
                         </span>,the owner has been actively involved in sourcing, supplying, and maintaining high quality two wheeler parts. This long journey has helped us understand customer needs, ensure product authenticity  and deliver reliable solutions every time What started as a small initiative has grown into a trusted name, driven by passion, expertise, and a commitment to quality service.
-
                     </p>
                 </div>
 
