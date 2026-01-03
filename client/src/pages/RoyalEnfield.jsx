@@ -18,7 +18,7 @@ const backgroundImages = [
     "/assets/rebg-imgs/img4.png",
     "/assets/rebg-imgs/img5.png",
     "/assets/rebg-imgs/img6.png",
-    
+
 ];
 
 const featuredPartItems = [
@@ -150,86 +150,87 @@ export function RoyalEnfield() {
                         {/* Alternating Sections */}
                         {[
                             {
-                                subtitle: "Way of Life",
-                                title: "PRECISION ENGINEERED,",
-                                highlight: "ROYAL ENFIELD GENUINE PARTS",
-                                desc: "Discover the power of Royal Enfield engineering. We provide authentic parts designed to keep your machine performing at its absolute peak.",
+                                subtitle: "Adventure",
+                                title: "BUILT FOR EXPLORATION,",
+                                highlight: "ADVENTURE MOTORCYCLES",
+                                desc: "Designed to conquer mountains, highways, and unknown trails. Adventure bikes offer power, comfort, and control for riders who chase the horizon.",
                                 items: ["Unmatched reliability and durability", "Optimized for peak engine performance", "Factory-certified quality standards"],
                                 image: "/assets/logo/red-bullet.png",
                                 transparent: false
                             },
                             {
-                                subtitle: "Heritage",
-                                title: "TIMELESS CLASSIC,",
-                                highlight: "DESIGNED FOR THE ROAD",
-                                desc: "Experience the legacy of a brand that has stood the test of time. Every curve and line is a tribute to motorcycling history.",
+                                subtitle: "Cruiser",
+                                title: "COMFORT MEETS STYLE,",
+                                highlight: "CRUISER MOTORCYCLES",
+                                desc: "Cruisers are built for relaxed rides and commanding road presence. Smooth power delivery and ergonomic design make every journey effortless.",
                                 items: ["Classic aesthetics with modern reliability", "Hand-painted pinstripes on select models", "Iconic thump that defines the ride"],
                                 image: "/assets/logo/blue-bullet.png",
                                 transparent: true
                             },
                             {
-                                subtitle: "Performance",
-                                title: "UNMATCHED PERFORMANCE,",
-                                highlight: "BUILT TO LAST",
-                                desc: "Royal Enfield motorcycles are built to traverse the toughest terrains, from the Himalayas to city streets, with ease and grace.",
+                                subtitle: "Pure Sport",
+                                title: "SPEED REDEFINED,",
+                                highlight: "PURE SPORT MACHINES",
+                                desc: "Pure sport bikes deliver adrenaline, agility, and razor-sharp performance. Engineered for riders who live for speed and precision.",
                                 items: ["Torque-heavy engines for mountain roads", "Robust chassis for superior stability", "Advanced braking systems for safety"],
                                 image: "/assets/enfield/Gemini_Generated_Image_hqfkmshqfkmshqfk.png",
                                 transparent: false
                             },
                             {
-                                subtitle: "Customization",
-                                title: "GENUINE ACCESSORIES,",
-                                highlight: "CUSTOMIZE YOUR RIDE",
-                                desc: "Make your Royal Enfield truly yours with our wide range of genuine motorcycle accessories, designed for style and functionality.",
+                                subtitle: "Roadster",
+                                title: "URBAN POWER,",
+                                highlight: "ROADSTER PERFORMANCE",
+                                desc: "Roadsters blend everyday usability with aggressive styling. Perfect for city streets and open roads, offering balance, control, and attitude.",
                                 items: ["Touring seats for long-distance comfort", "Protective guards for engine and body", "Luggage solutions for every journey"],
-                                image: "/assets/enfield/nobgbullet-350-removebg-preview.png", // Using engine image or fallback
+                                image: "/assets/enfield/nobgbullet-350-removebg-preview.png",
                                 transparent: true
                             },
                             {
-                                subtitle: "Lifestyle",
-                                title: "RIDING APPAREL,",
-                                highlight: "GEAR UP FOR THE JOURNEY",
-                                desc: "Ride in style and safety with our exclusive collection of Royal Enfield riding gear and apparel.",
+                                subtitle: "Heritage",
+                                title: "TIMELESS LEGACY,",
+                                highlight: "HERITAGE MOTORCYCLES",
+                                desc: "Heritage bikes celebrate classic design and timeless craftsmanship, carrying forward a legacy that connects generations of riders.",
                                 items: ["CE-certified protective jackets", "Vintage-inspired helmets", "Durable riding gloves and boots"],
                                 image: "/assets/enfield/nobggoan_classic-removebg.png",
                                 transparent: false
                             }
-                        ].map((section, index) => (
-                            <div key={index} className={`section-wrapper ${section.transparent ? '' : 'bg-transparent! border-none'} ${index % 2 !== 0 ? 'lg:flex-row-reverse!' : ''}`}>
-                                <motion.div
-                                    initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 1, ease: "easeOut" }}
-                                    className="flex-1 z-10 text-left"
-                                >
-                                    <span className={`font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase ${section.transparent ? 'text-gold' : 'text-white'}`}>{section.subtitle}</span>
-                                    <h2 className="text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide text-[#c10007]">
-                                        {section.title} <br />
-                                        <span className="text-white px-0">{section.highlight}</span>
-                                    </h2>
-                                    <div className="space-y-6 text-white/90">
-                                        <p className="text-lg">{section.desc}</p>
-                                        <ul className={`space-y-2 list-disc list-inside transition-colors ${section.transparent ? 'hover:text-gold' : 'hover:text-[#c10007]'}`}>
+                        ]
+                            .map((section, index) => (
+                                <div key={index} className={`section-wrapper ${section.transparent ? '' : 'bg-transparent! border-none'} ${index % 2 !== 0 ? 'lg:flex-row-reverse!' : ''}`}>
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true, amount: 0.3 }}
+                                        transition={{ duration: 1, ease: "easeOut" }}
+                                        className="flex-1 z-10 text-left"
+                                    >
+                                        <span className={`font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase ${section.transparent ? 'text-gold' : 'text-white'}`}>{section.subtitle}</span>
+                                        <h2 className="text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide text-[#c10007]">
+                                            {section.title} <br />
+                                            <span className="text-white px-0">{section.highlight}</span>
+                                        </h2>
+                                        <div className="space-y-6 text-white/90">
+                                            <p className="text-lg">{section.desc}</p>
+                                            {/* <ul className={`space-y-2 list-disc list-inside transition-colors ${section.transparent ? 'hover:text-gold' : 'hover:text-[#c10007]'}`}>
                                             {section.items.map((item, i) => (
                                                 <li key={i}>{item}</li>
                                             ))}
-                                        </ul>
-                                    </div>
-                                </motion.div>
-
-                                <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
-                                        transition={{ duration: 1 }}
-                                        className={`w-full h-full rounded-[2rem] overflow-hidden ${section.transparent ? 'border-gold/20' : 'border-red-600/20 bg-black'}`}
-                                    >
-                                        <img src={section.image} alt={section.highlight} className="w-full h-full object-contain" />
+                                        </ul> */}
+                                        </div>
                                     </motion.div>
+
+                                    <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 1 }}
+                                            className={`w-full h-full rounded-[2rem] overflow-hidden ${section.transparent ? 'border-gold/20' : 'border-red-600/20 bg-black'}`}
+                                        >
+                                            <img src={section.image} alt={section.highlight} className="w-full h-full object-contain" />
+                                        </motion.div>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
                     </div>
 
                     {/* Brand Story Section */}
