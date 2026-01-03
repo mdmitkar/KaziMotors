@@ -33,13 +33,13 @@ export function Footer() {
                         className="space-y-6"
                     >
                         <div className="flex items-center gap-3">
-                            <div className="w-14 h-14 overflow-hidden">
+                            {/* <div className="w-14 h-14 overflow-hidden">
                                 <img
                                     src="/assets/logo/final-kazi-logo.webp"
                                     alt="Kazi Motors Logo"
                                     className="w-full h-full object-contain"
                                 />
-                            </div>
+                            </div> */}
                             <div>
                                 <h3 className="text-xl font-oswald font-bold tracking-tight uppercase leading-none text-white">
                                     Kazi <span className="text-gold">Motors</span>
@@ -62,7 +62,7 @@ export function Footer() {
                         className="space-y-6"
                     >
                         <h4 className="text-lg font-oswald font-bold text-gold border-b border-gold/50 pb-2 inline-block uppercase tracking-wider">
-                            Support & Legal
+                            Our Socials
                         </h4>
                         {/* <ul className="space-y-3">
                             {footerLinks.policies.map((link) => (
