@@ -11,7 +11,7 @@ export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
 
-    const navItems = ['Home', 'Collection', 'Brands', 'About Us', 'Contact'];
+    const navItems = ['Home', 'Royal Enfield', 'Collection', 'Brands', 'About Us', 'Contact'];
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-[#eabd56] py-3 px-6 md:px-12 flex justify-between items-center transition-all duration-300 shadow-sm">
@@ -30,6 +30,7 @@ export function Header() {
             <nav className="hidden lg:flex items-center space-x-10 flex-1 justify-center">
                 {navItems.map((item) => {
                     const isHome = item === 'Home';
+                    const isRoyalEnfield = item === 'Royal Enfield';
                     const isCollection = item === 'Collection';
                     const isBrands = item === 'Brands';
                     const isContact = item === 'Contact';
@@ -41,6 +42,7 @@ export function Header() {
                     else if (isBrands) linkPath = '/brands';
                     else if (isContact) linkPath = '/contact';
                     else if (isAbout) linkPath = '/about';
+                    else if (isRoyalEnfield) linkPath = '/royalenfield';
                     else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                     const isActive = location.pathname === linkPath;
@@ -95,10 +97,13 @@ export function Header() {
                         <a
                             key={item}
                             href={linkPath}
-                            className={`text-sm font-inter font-semibold transition-colors relative group no-underline ${isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
+                            className={`text-sm font-inter font-semibold transition-colors relative group no-underline 
+                                ${isRoyalEnfield
+                                    ? 'fire-text font-bold text-base tracking-wider hover:opacity-80'
+                                    : isActive ? 'text-gold' : 'text-white hover:text-gold'}`}
                         >
                             {item}
-                            <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                            <span className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'} ${isRoyalEnfield ? 'hidden' : ''}`} />
                         </a>
                     );
                 })}
@@ -136,6 +141,7 @@ export function Header() {
                     >
                         {navItems.map((item) => {
                             const isHome = item === 'Home';
+                            const isRoyalEnfield = item === 'Royal Enfield';
                             const isCollection = item === 'Collection';
                             const isBrands = item === 'Brands';
                             const isContact = item === 'Contact';
@@ -146,6 +152,7 @@ export function Header() {
                             else if (isBrands) linkPath = '/brands';
                             else if (isContact) linkPath = '/contact';
                             else if (isAbout) linkPath = '/about';
+                            else if (isRoyalEnfield) linkPath = '/royalenfield';
                             else if (!isHome) linkPath = `/#${item.toLowerCase().replace(' ', '-')}`;
 
                             const isActive = location.pathname === linkPath;
