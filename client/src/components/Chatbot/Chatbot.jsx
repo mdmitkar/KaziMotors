@@ -119,12 +119,12 @@ const Chatbot = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center group border border-yellow-400/50"
+          className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black p-1 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center group border border-yellow-400/50"
         >
           <img
             src="/assets/datamatex-ai-bot.png"
             alt="Chat"
-            className="w-12 h-12 object-cover rounded-full group-hover:rotate-12 transition-transform"
+            className="w-14 h-14 object-cover rounded-full group-hover:rotate-12 transition-transform"
           />
         </button>
       )}
