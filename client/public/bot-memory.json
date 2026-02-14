@@ -1,0 +1,70 @@
+[
+  {
+    "source": "AboutPage.jsx",
+    "text": "Founded and led by Nisaar Ahemad Kazi, our business is built on trust, experience, and a deep understanding of the motorcycle industry. With over 12 years of hands on experience ,the owner has been actively involved in sourcing, supplying, and maintaining high quality two wheeler parts. This long journey has helped us understand customer needs, ensure product authenticity and deliver reliable solutions every time What started as a small initiative has grown into a trusted name, driven by passion, expertise, and a commitment to quality service."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "What started as a small garage driven by a sheer love for engines has evolved into the region's premier destination for superbike maintenance. Kazi Motors wasn't built overnight; it was forged through years of grease, grit, and an unyielding commitment to excellence."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "We believe that every bike tells a story, and our job is to keep that story running smooth. Whether it's a vintage classic or a modern beast, we treat every machine with the respect it deserves, ensuring that when you ride out, you ride with confidence."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "We don't just fix bikes; we engineer solutions. Every bolt, every tune is executed with surgical precision to ensure peak performance."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "Transparency is key. We provide honest diagnostics and genuine parts, building a relationship of trust with every rider."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "With decades of combined experience, our team brings a depth of knowledge that stands unrivaled in the industry."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "Honored by the industry, trusted by riders. Click to enlarge."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "Highest Honor Excellence Award This prestigious accolade recognizes our unwavering commitment to quality. It is a testament to the countless hours spent perfecting every tune and the dedication that goes into every service. A symbol of trust and superior craftsmanship."
+  },
+  {
+    "source": "AboutPage.jsx",
+    "text": "setSelectedImage('/nobgfolder/award-2-nobg.webp')} > Customer Choice Best Performance Awarded for consistently delivering the highest customer satisfaction and mechanical performance. This award reflects our promise: when we touch a bike, it leaves better than new. The true gold standard of service."
+  },
+  {
+    "source": "CartPage.jsx",
+    "text": "Secure Checkout via WhatsApp. We will confirm your order details instantly."
+  },
+  {
+    "source": "ContactPage.jsx",
+    "text": "Have a vision for your ride? Let's discuss your transformation. Our team is ready to turn your automotive dreams into reality."
+  },
+  {
+    "source": "ContactPage.jsx",
+    "text": "352, Panjrapool, Near Nissan Hotel, 4th Nizampura, Bhiwandi, 421302"
+  },
+  {
+    "source": "RoyalEnfield.jsx",
+    "text": "Two wheels one Soul"
+  },
+  {
+    "source": "RoyalEnfield.jsx",
+    "text": "The oldest motorcycle brand in continuous production, Royal Enfield has made bullets for over a century. From the battlefields of World War I to the highest motorable passes in the Himalayas."
+  },
+  {
+    "source": "RoyalEnfield.jsx",
+    "text": "At Kazi Motors, we honor this 120-year legacy by providing components that maintain the classic soul of your machine while delivering performance that exceeds modern expectations."
+  },
+  {
+    "source": "RoyalEnfield.jsx",
+    "text": "We combine a century of motorcycling heritage with modern engineering precision."
+  },
+  {
+    "source": "RoyalEnfield.jsx",
+    "text": "View Collection className=`} /> ))} , , , , ] .map((section, index) => ("
+  }
+]

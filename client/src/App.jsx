@@ -9,6 +9,7 @@ import { CartPage } from './pages/CartPage';
 import { AboutPage } from './pages/AboutPage';
 import { CartProvider } from './context/CartContext';
 import { RoyalEnfield } from './pages/RoyalEnfield';
+import Chatbot from './components/Chatbot/Chatbot';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Helmet>
       <Router>
         <div className="min-h-screen bg-black text-white selection:bg-gold selection:text-black">
+          <Chatbot />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/collection" element={<CollectionPage />} />
