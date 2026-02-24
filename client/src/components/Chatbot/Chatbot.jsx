@@ -48,11 +48,25 @@ const Chatbot = () => {
   const findAnswer = (query) => {
     const normalizedQuery = normalizeText(query);
 
-    // 1. Check Manual Intents (Exact Match on Keywords)
-    for (const intent of chatData) {
-      if (intent.keywords.some((k) => normalizedQuery.includes(k))) {
-        return intent.content;
-      }
+    // 1. Fuzzy Match Manual Intents
+    // Flatten intents for fuzzy searching
+    const intentList = chatData.flatMap((intent) =>
+      intent.keywords.map((keyword) => ({
+        topic: intent.topic,
+        keyword,
+        content: intent.content,
+      })),
+    );
+
+    const intentFuse = new Fuse(intentList, {
+      keys: ["keyword"],
+      threshold: 0.3, // Allow minor typos (like hiii -> hi)
+      distance: 10,
+    });
+
+    const intentResults = intentFuse.search(normalizedQuery);
+    if (intentResults.length > 0) {
+      return intentResults[0].item.content;
     }
 
     // 2. Fuzzy Search in Scanned Content
@@ -178,7 +192,7 @@ const Chatbot = () => {
                 )}
 
                 <div
-                  className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${
+                  className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
                     msg.type === "user"
                       ? "bg-zinc-800 text-white rounded-br-none border border-zinc-700"
                       : "bg-zinc-900 text-zinc-100 rounded-bl-none border border-zinc-800"

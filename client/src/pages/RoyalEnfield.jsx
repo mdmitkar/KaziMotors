@@ -1,241 +1,301 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { GiGears, GiFullMotorcycleHelmet, GiWrench } from 'react-icons/gi';
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { useState, useEffect } from 'react';
-import products from '../data/products';
-import { useCart } from '../context/CartContext';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { motion, AnimatePresence } from "framer-motion";
+import { GiGears, GiFullMotorcycleHelmet, GiWrench } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { useState, useEffect } from "react";
+import products from "../data/products";
+import { useCart } from "../context/CartContext";
 
-const videos = [
-    "/assets/videos/bikevid7.mp4",
-];
+const videos = ["/assets/videos/bikevid7.mp4"];
 
 const backgroundImages = [
-    "/assets/rebg-imgs/img1.png",
-    "/assets/rebg-imgs/img2.png",
-    "/assets/rebg-imgs/img3.png",
-    "/assets/rebg-imgs/img4.png",
-    "/assets/rebg-imgs/img5.png",
-    "/assets/rebg-imgs/img6.png",
-
+  "/assets/rebg-imgs/img1.png",
+  "/assets/rebg-imgs/img2.png",
+  "/assets/rebg-imgs/img3.png",
+  "/assets/rebg-imgs/img4.png",
+  "/assets/rebg-imgs/img5.png",
+  "/assets/rebg-imgs/img6.png",
 ];
 
 const featuredPartItems = [
-    products.find(p => p.id === 54), // Brown Seat Cover
-    products.find(p => p.id === 2),  // 5CD Classic Wheel
-    products.find(p => p.id === 10), // Akrapovic Exhaust
-    products.find(p => p.id === 61), // Handlebar Mirrors
+  products.find((p) => p.id === 54), // Brown Seat Cover
+  products.find((p) => p.id === 2), // 5CD Classic Wheel
+  products.find((p) => p.id === 10), // Akrapovic Exhaust
+  products.find((p) => p.id === 61), // Handlebar Mirrors
 ].filter(Boolean);
 
 export function RoyalEnfield() {
-    const [currentVideo, setCurrentVideo] = useState(0);
-    const { addToCart } = useCart();
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const { addToCart } = useCart();
 
-    const handleAddToCart = (product) => {
-        addToCart(product);
-    };
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentVideo((prev) => (prev + 1) % videos.length);
-        }, 6000);
-        return () => clearInterval(timer);
-    }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % videos.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
-    return (
-        <div className="bg-black min-h-screen relative overflow-x-hidden">
-            {/* FIXED BACKGROUND GRID - ATTACHED TO BG, NO MOVE ON SCROLL */}
-            <div className="fixed inset-0 z-0 pointer-events-none">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 h-full w-full opacity-[1] brightness-50">
-                    {[...Array(8)].map((_, i) => (
-                        <div key={i} className="relative aspect-video md:aspect-square overflow-hidden border border-white/5">
-                            <img
-                                src={backgroundImages[i % backgroundImages.length]}
-                                className="w-full h-full object-cover"
-                                alt=""
-                            />
-                        </div>
-                    ))}
-                </div>
-                {/* Global Vignette for better readability */}
-                <div className="absolute inset-0 bg-radial-to-c from-transparent via-black/40 to-black" />
+  return (
+    <div className="bg-black min-h-screen relative overflow-x-hidden">
+      <Helmet>
+        <title>
+          Royal Enfield Modifications & Accessories | Kazi Motors Bhiwandi
+        </title>
+        <meta
+          name="description"
+          content="Discover premium Royal Enfield modifications, accessories, and expert mechanic services at Kazi Motors. We specialize in Classic 350, Bullet, Interceptor 650, and Himalayan."
+        />
+        <meta
+          name="keywords"
+          content="royal enfield modification bhiwandi, bullet accessories mumbai, classic 350 custom parts, interceptor 650 mods, himalayan accessories, royal enfield service center alternatives, premium bike mechanic"
+        />
+        <meta
+          property="og:title"
+          content="Premium Royal Enfield Mods & Parts | Kazi Motors"
+        />
+        <meta
+          property="og:description"
+          content="Shop exclusive Royal Enfield accessories and custom parts."
+        />
+        <link rel="canonical" href="https://kazimotors.com/royal-enfield" />
+      </Helmet>
+      {/* FIXED BACKGROUND GRID - ATTACHED TO BG, NO MOVE ON SCROLL */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 h-full w-full opacity-[1] brightness-50">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="relative aspect-video md:aspect-square overflow-hidden border border-white/5"
+            >
+              <img
+                src={backgroundImages[i % backgroundImages.length]}
+                className="w-full h-full object-cover"
+                alt=""
+              />
             </div>
+          ))}
+        </div>
+        {/* Global Vignette for better readability */}
+        <div className="absolute inset-0 bg-radial-to-c from-transparent via-black/40 to-black" />
+      </div>
 
-            {/* SCROLLABLE CONTENT WRAPPER */}
-            <div className="relative z-10 flex flex-col">
-                <Header />
+      {/* SCROLLABLE CONTENT WRAPPER */}
+      <div className="relative z-10 flex flex-col">
+        <Header />
 
-                <main>
-                    {/* Hero Section */}
-                    <section className="relative mt-20">
-                        <div className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden shadow-2xl border border-white/5">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={currentVideo}
-                                    initial={{ opacity: 0, scale: 1.1 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 1.2, ease: "easeOut" }}
-                                    className="absolute inset-0"
-                                >
-                                    <video
-                                        key={videos[currentVideo]}
-                                        autoPlay
-                                        muted
-                                        loop
-                                        playsInline
-                                        className="h-full w-full object-cover"
-                                    >
-                                        <source src={videos[currentVideo]} type="video/mp4" />
-                                    </video>
-                                </motion.div>
-                            </AnimatePresence>
+        <main>
+          {/* Hero Section */}
+          <section className="relative mt-20">
+            <div className="relative h-[60vh] md:h-[75vh] w-full overflow-hidden shadow-2xl border border-white/5">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentVideo}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  className="absolute inset-0"
+                >
+                  <video
+                    key={videos[currentVideo]}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                  >
+                    <source src={videos[currentVideo]} type="video/mp4" />
+                  </video>
+                </motion.div>
+              </AnimatePresence>
 
-                            <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
-                            <div className="absolute inset-0 z-10 bg-black/10" />
+              <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 z-10 bg-black/10" />
 
-                            <div className="container flex flex-col justify-center items-center mx-auto px-4 md:px-20 relative z-20 h-full pb-16 md:pb-24 text-center w-full ">
-                                <motion.h1
-                                    initial={{ opacity: 0, y: 30 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.7, duration: 0.8 }}
-                                    className="text-4xl md:text-6xl lg:text-7xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wider"
-                                >
-                                    <div className="flex items-center justify-center gap-2 md:gap-8 w-full px-2 md:px-4">
-                                        <div className="flex-1 flex flex-col gap-1 md:gap-2 items-end min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
-                                            <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
-                                            <div className="h-1 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
-                                        </div>
-                                        <div className="relative flex flex-col items-center justify-center">
-                                            <img
-                                                src="/assets/logo/Royal-Enfield-Font-500x375-removebg-preview.png"
-                                                alt="Royal Enfield"
-                                                className="h-16 md:h-40 lg:h-56 object-contain brightness-0 invert sepia saturate-100 hue-rotate-10 mb-0 w-[180px] md:w-[400px] max-w-full"
-                                                style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))' }}
-                                            />
-                                            <p className="relative md:-mt-1 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap z-10">Two wheels one Soul</p>
-                                        </div>
-                                        <div className="flex-1 flex flex-col gap-1 md:gap-2 items-start min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
-                                            <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
-                                            <div className="h-1 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
-                                        </div>
-                                    </div>
-                                </motion.h1>
+              <div className="container flex flex-col justify-center items-center mx-auto px-4 md:px-20 relative z-20 h-full pb-16 md:pb-24 text-center w-full ">
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 0.8 }}
+                  className="text-4xl md:text-6xl lg:text-7xl font-oswald font-bold text-white leading-tight mb-8 uppercase tracking-wider"
+                >
+                  <div className="flex items-center justify-center gap-2 md:gap-8 w-full px-2 md:px-4">
+                    <div className="flex-1 flex flex-col gap-1 md:gap-2 items-end min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
+                      <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
+                      <div className="h-1 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
+                    </div>
+                    <div className="relative flex flex-col items-center justify-center">
+                      <img
+                        src="/assets/logo/Royal-Enfield-Font-500x375-removebg-preview.png"
+                        alt="Royal Enfield"
+                        className="h-16 md:h-40 lg:h-56 object-contain brightness-0 invert sepia saturate-100 hue-rotate-10 mb-0 w-[180px] md:w-[400px] max-w-full"
+                        style={{
+                          filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.5))",
+                        }}
+                      />
+                      <p className="relative md:-mt-1 text-gold font-serif italic text-base md:text-2xl tracking-widest uppercase whitespace-nowrap z-10">
+                        Two wheels one Soul
+                      </p>
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1 md:gap-2 items-start min-w-[20px] md:min-w-[150px] lg:min-w-[350px]">
+                      <div className="h-2 md:h-4 w-full bg-[#c10007] rounded-sm"></div>
+                      <div className="h-1 md:h-2 w-[80%] bg-[#c10007] rounded-sm"></div>
+                    </div>
+                  </div>
+                </motion.h1>
 
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 1.1 }}
-                                >
-                                    <Link to="/collection" className="px-10 py-4 bg-[#c10007] text-white font-oswald font-bold text-sm hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-[0.2em] rounded-full cursor-pointer inline-block shadow-2xl shadow-red-900/20">
-                                        View Collection
-                                    </Link>
-                                </motion.div>
-                            </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.1 }}
+                >
+                  <Link
+                    to="/collection"
+                    className="px-10 py-4 bg-[#c10007] text-white font-oswald font-bold text-sm hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-[0.2em] rounded-full cursor-pointer inline-block shadow-2xl shadow-red-900/20"
+                  >
+                    View Collection
+                  </Link>
+                </motion.div>
+              </div>
 
-                            <div className="absolute bottom-10 right-10 z-30 flex flex-col space-y-3">
-                                {videos.map((_, index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => setCurrentVideo(index)}
-                                        className={`w-1.5 transition-all duration-500 rounded-full cursor-pointer ${currentVideo === index ? 'h-8 bg-gold' : 'h-3 bg-white/20 hover:bg-white/40'}`}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                    <div className="relative z-10 flex flex-col justify-center">
-
-                        {/* Alternating Sections */}
-                        {[
-                            {
-                                subtitle: "Adventure",
-                                title: "BUILT FOR EXPLORATION,",
-                                highlight: "ADVENTURE MOTORCYCLES",
-                                desc: "Designed to conquer mountains, highways, and unknown trails. Adventure bikes offer power, comfort, and control for riders who chase the horizon.",
-                                items: ["Unmatched reliability and durability", "Optimized for peak engine performance", "Factory-certified quality standards"],
-                                image: "/assets/logo/red-bullet.png",
-                                transparent: false
-                            },
-                            {
-                                subtitle: "Cruiser",
-                                title: "COMFORT MEETS STYLE,",
-                                highlight: "CRUISER MOTORCYCLES",
-                                desc: "Cruisers are built for relaxed rides and commanding road presence. Smooth power delivery and ergonomic design make every journey effortless.",
-                                items: ["Classic aesthetics with modern reliability", "Hand-painted pinstripes on select models", "Iconic thump that defines the ride"],
-                                image: "/assets/logo/blue-bullet.png",
-                                transparent: true
-                            },
-                            {
-                                subtitle: "Pure Sport",
-                                title: "SPEED REDEFINED,",
-                                highlight: "PURE SPORT MACHINES",
-                                desc: "Pure sport bikes deliver adrenaline, agility, and razor-sharp performance. Engineered for riders who live for speed and precision.",
-                                items: ["Torque-heavy engines for mountain roads", "Robust chassis for superior stability", "Advanced braking systems for safety"],
-                                image: "/assets/enfield/Gemini_Generated_Image_hqfkmshqfkmshqfk.png",
-                                transparent: false
-                            },
-                            {
-                                subtitle: "Roadster",
-                                title: "URBAN POWER,",
-                                highlight: "ROADSTER PERFORMANCE",
-                                desc: "Roadsters blend everyday usability with aggressive styling. Perfect for city streets and open roads, offering balance, control, and attitude.",
-                                items: ["Touring seats for long-distance comfort", "Protective guards for engine and body", "Luggage solutions for every journey"],
-                                image: "/assets/enfield/nobgbullet-350-removebg-preview.png",
-                                transparent: true
-                            },
-                            {
-                                subtitle: "Heritage",
-                                title: "TIMELESS LEGACY,",
-                                highlight: "HERITAGE MOTORCYCLES",
-                                desc: "Heritage bikes celebrate classic design and timeless craftsmanship, carrying forward a legacy that connects generations of riders.",
-                                items: ["CE-certified protective jackets", "Vintage-inspired helmets", "Durable riding gloves and boots"],
-                                image: "/assets/enfield/nobggoan_classic-removebg.png",
-                                transparent: false
-                            }
-                        ]
-                            .map((section, index) => (
-                                <div key={index} className={`section-wrapper ${section.transparent ? '' : 'bg-transparent! border-none'} ${index % 2 !== 0 ? 'lg:flex-row-reverse!' : ''}`}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true, amount: 0.3 }}
-                                        transition={{ duration: 1, ease: "easeOut" }}
-                                        className="flex-1 z-10 text-left"
-                                    >
-                                        <span className={`font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase ${section.transparent ? 'text-gold' : 'text-white'}`}>{section.subtitle}</span>
-                                        <h2 className="text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide text-[#c10007]">
-                                            {section.title} <br />
-                                            <span className="text-white px-0">{section.highlight}</span>
-                                        </h2>
-                                        <div className="space-y-6 text-white/90">
-                                            <p className="text-lg">{section.desc}</p>
-                                            {/* <ul className={`space-y-2 list-disc list-inside transition-colors ${section.transparent ? 'hover:text-gold' : 'hover:text-[#c10007]'}`}>
+              <div className="absolute bottom-10 right-10 z-30 flex flex-col space-y-3">
+                {videos.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentVideo(index)}
+                    className={`w-1.5 transition-all duration-500 rounded-full cursor-pointer ${currentVideo === index ? "h-8 bg-gold" : "h-3 bg-white/20 hover:bg-white/40"}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+          <div className="relative z-10 flex flex-col justify-center">
+            {/* Alternating Sections */}
+            {[
+              {
+                subtitle: "Adventure",
+                title: "BUILT FOR EXPLORATION,",
+                highlight: "ADVENTURE MOTORCYCLES",
+                desc: "Designed to conquer mountains, highways, and unknown trails. Adventure bikes offer power, comfort, and control for riders who chase the horizon.",
+                items: [
+                  "Unmatched reliability and durability",
+                  "Optimized for peak engine performance",
+                  "Factory-certified quality standards",
+                ],
+                image: "/assets/logo/red-bullet.png",
+                transparent: false,
+              },
+              {
+                subtitle: "Cruiser",
+                title: "COMFORT MEETS STYLE,",
+                highlight: "CRUISER MOTORCYCLES",
+                desc: "Cruisers are built for relaxed rides and commanding road presence. Smooth power delivery and ergonomic design make every journey effortless.",
+                items: [
+                  "Classic aesthetics with modern reliability",
+                  "Hand-painted pinstripes on select models",
+                  "Iconic thump that defines the ride",
+                ],
+                image: "/assets/logo/blue-bullet.png",
+                transparent: true,
+              },
+              {
+                subtitle: "Pure Sport",
+                title: "SPEED REDEFINED,",
+                highlight: "PURE SPORT MACHINES",
+                desc: "Pure sport bikes deliver adrenaline, agility, and razor-sharp performance. Engineered for riders who live for speed and precision.",
+                items: [
+                  "Torque-heavy engines for mountain roads",
+                  "Robust chassis for superior stability",
+                  "Advanced braking systems for safety",
+                ],
+                image:
+                  "/assets/enfield/Gemini_Generated_Image_hqfkmshqfkmshqfk.png",
+                transparent: false,
+              },
+              {
+                subtitle: "Roadster",
+                title: "URBAN POWER,",
+                highlight: "ROADSTER PERFORMANCE",
+                desc: "Roadsters blend everyday usability with aggressive styling. Perfect for city streets and open roads, offering balance, control, and attitude.",
+                items: [
+                  "Touring seats for long-distance comfort",
+                  "Protective guards for engine and body",
+                  "Luggage solutions for every journey",
+                ],
+                image: "/assets/enfield/nobgbullet-350-removebg-preview.png",
+                transparent: true,
+              },
+              {
+                subtitle: "Heritage",
+                title: "TIMELESS LEGACY,",
+                highlight: "HERITAGE MOTORCYCLES",
+                desc: "Heritage bikes celebrate classic design and timeless craftsmanship, carrying forward a legacy that connects generations of riders.",
+                items: [
+                  "CE-certified protective jackets",
+                  "Vintage-inspired helmets",
+                  "Durable riding gloves and boots",
+                ],
+                image: "/assets/enfield/nobggoan_classic-removebg.png",
+                transparent: false,
+              },
+            ].map((section, index) => (
+              <div
+                key={index}
+                className={`section-wrapper ${section.transparent ? "" : "bg-transparent! border-none"} ${index % 2 !== 0 ? "lg:flex-row-reverse!" : ""}`}
+              >
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="flex-1 z-10 text-left"
+                >
+                  <span
+                    className={`font-oswald text-sm md:text-base font-medium tracking-[0.5em] mb-4 block uppercase ${section.transparent ? "text-gold" : "text-white"}`}
+                  >
+                    {section.subtitle}
+                  </span>
+                  <h2 className="text-2xl md:text-3xl lg:text-5xl font-oswald font-bold leading-tight mb-8 uppercase tracking-wide text-[#c10007]">
+                    {section.title} <br />
+                    <span className="text-white px-0">{section.highlight}</span>
+                  </h2>
+                  <div className="space-y-6 text-white/90">
+                    <p className="text-lg">{section.desc}</p>
+                    {/* <ul className={`space-y-2 list-disc list-inside transition-colors ${section.transparent ? 'hover:text-gold' : 'hover:text-[#c10007]'}`}>
                                             {section.items.map((item, i) => (
                                                 <li key={i}>{item}</li>
                                             ))}
                                         </ul> */}
-                                        </div>
-                                    </motion.div>
+                  </div>
+                </motion.div>
 
-                                    <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
-                                        <motion.div
-                                            initial={{ opacity: 0, scale: 0.8 }}
-                                            whileInView={{ opacity: 1, scale: 1 }}
-                                            transition={{ duration: 1 }}
-                                            className={`w-full h-full rounded-[2rem] overflow-hidden ${section.transparent ? 'border-gold/20' : 'border-red-600/20 bg-black'}`}
-                                        >
-                                            <img src={section.image} alt={section.highlight} className="w-full h-full object-contain" />
-                                        </motion.div>
-                                    </div>
-                                </div>
-                            ))}
-                    </div>
+                <div className="flex-1 relative h-[400px] md:h-[500px] w-full">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1 }}
+                    className={`w-full h-full rounded-[2rem] overflow-hidden ${section.transparent ? "border-gold/20" : "border-red-600/20 bg-black"}`}
+                  >
+                    <img
+                      src={section.image}
+                      alt={section.highlight}
+                      className="w-full h-full object-contain"
+                    />
+                  </motion.div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                    {/* Brand Story Section */}
-                    {/* <section className="py-24 px-6 md:px-12">
+          {/* Brand Story Section */}
+          {/* <section className="py-24 px-6 md:px-12">
                         <div className="container mx-auto">
                             <div className="flex flex-col lg:flex-row items-center gap-16">
                                 <motion.div
@@ -285,8 +345,8 @@ export function RoyalEnfield() {
                         </div>
                     </section> */}
 
-                    {/* Featured Parts Collection */}
-                    {/* <section className="py-24 px-6 md:px-12 bg-white/5 backdrop-blur-md border-y border-white/5">
+          {/* Featured Parts Collection */}
+          {/* <section className="py-24 px-6 md:px-12 bg-white/5 backdrop-blur-md border-y border-white/5">
                         <div className="container mx-auto">
                             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                                 <div className="space-y-4">
@@ -314,8 +374,8 @@ export function RoyalEnfield() {
                         </div>
                     </section> */}
 
-                    {/* Why Choose Kazi Motors Section */}
-                    {/* <section className="py-24 px-6 md:px-12">
+          {/* Why Choose Kazi Motors Section */}
+          {/* <section className="py-24 px-6 md:px-12">
                         <div className="container mx-auto">
                             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                                 <span className="text-gold font-oswald text-sm md:text-base font-medium tracking-[0.5em] block uppercase">Our Promise</span>
@@ -337,101 +397,103 @@ export function RoyalEnfield() {
                             </div>
                         </div>
                     </section> */}
-                    {/* Services / Categories Section */}
-                    <section className="py-20 px-4 md:px-12 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
-                        <div className="container mx-auto relative z-10">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {[
-                                    {
-                                        title: "GENUINE PARTS",
-                                        icon: <GiGears className="w-16 h-16" />,
-                                        desc: "Precision-engineered components to keep your machine's soul alive.",
-                                        color: "text-red-600",
-                                        borderColor: "group-hover:border-red-600/50"
-                                    },
-                                    {
-                                        title: "PREMIUM ACCESSORIES",
-                                        icon: <GiFullMotorcycleHelmet className="w-16 h-16" />,
-                                        desc: "Enhance your ride with style, comfort, and protection.",
-                                        color: "text-gold",
-                                        borderColor: "group-hover:border-gold/50"
-                                    },
-                                    {
-                                        title: "EXPERT MAINTENANCE",
-                                        icon: <GiWrench className="w-16 h-16" />,
-                                        desc: "Dedicated care ensures every ride feels like the first.",
-                                        color: "text-white",
-                                        borderColor: "group-hover:border-white/50"
-                                    }
-                                ].map((service, index) => {
-                                    // Determine link properties based on index
-                                    let link = "/collection";
-                                    let isExternal = false;
+          {/* Services / Categories Section */}
+          <section className="py-20 px-4 md:px-12 relative overflow-hidden">
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
+            <div className="container mx-auto relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: "GENUINE PARTS",
+                    icon: <GiGears className="w-16 h-16" />,
+                    desc: "Precision-engineered components to keep your machine's soul alive.",
+                    color: "text-red-600",
+                    borderColor: "group-hover:border-red-600/50",
+                  },
+                  {
+                    title: "PREMIUM ACCESSORIES",
+                    icon: <GiFullMotorcycleHelmet className="w-16 h-16" />,
+                    desc: "Enhance your ride with style, comfort, and protection.",
+                    color: "text-gold",
+                    borderColor: "group-hover:border-gold/50",
+                  },
+                  {
+                    title: "EXPERT MAINTENANCE",
+                    icon: <GiWrench className="w-16 h-16" />,
+                    desc: "Dedicated care ensures every ride feels like the first.",
+                    color: "text-white",
+                    borderColor: "group-hover:border-white/50",
+                  },
+                ].map((service, index) => {
+                  // Determine link properties based on index
+                  let link = "/collection";
+                  let isExternal = false;
 
-                                    if (index === 2) {
-                                        link = "https://wa.me/918855989211";
-                                        isExternal = true;
-                                    }
+                  if (index === 2) {
+                    link = "https://wa.me/918855989211";
+                    isExternal = true;
+                  }
 
-                                    const CardContent = (
-                                        <>
-                                            <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-linear-to-br from-transparent to-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'}`} />
+                  const CardContent = (
+                    <>
+                      <div
+                        className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-linear-to-br from-transparent to-${service.color === "text-red-600" ? "red-600" : service.color === "text-gold" ? "yellow-500" : "white"}`}
+                      />
 
-                                            <div className={`mb-6 transform group-hover:scale-110 transition-transform duration-500 ${service.color} drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]`}>
-                                                {service.icon}
-                                            </div>
+                      <div
+                        className={`mb-6 transform group-hover:scale-110 transition-transform duration-500 ${service.color} drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]`}
+                      >
+                        {service.icon}
+                      </div>
 
-                                            <h3 className="text-2xl font-oswald font-bold text-white uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
-                                                {service.title}
-                                            </h3>
+                      <h3 className="text-2xl font-oswald font-bold text-white uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
+                        {service.title}
+                      </h3>
 
-                                            <p className="text-white/60 font-inter leading-relaxed text-lg group-hover:text-white/90 transition-colors">
-                                                {service.desc}
-                                            </p>
+                      <p className="text-white/60 font-inter leading-relaxed text-lg group-hover:text-white/90 transition-colors">
+                        {service.desc}
+                      </p>
 
-                                            <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${service.color === 'text-red-600' ? 'red-600' : service.color === 'text-gold' ? 'yellow-500' : 'white'} to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700`} />
-                                        </>
-                                    );
+                      <div
+                        className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${service.color === "text-red-600" ? "red-600" : service.color === "text-gold" ? "yellow-500" : "white"} to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700`}
+                      />
+                    </>
+                  );
 
-                                    const className = `group relative p-8 md:p-12 rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden transition-all duration-500 ${service.borderColor} block h-full`;
-                                    const motionProps = {
-                                        initial: { opacity: 0, y: 30 },
-                                        whileInView: { opacity: 1, y: 0 },
-                                        viewport: { once: true },
-                                        transition: { duration: 0.8, delay: index * 0.2 }
-                                    };
+                  const className = `group relative p-8 md:p-12 rounded-[2rem] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden transition-all duration-500 ${service.borderColor} block h-full`;
+                  const motionProps = {
+                    initial: { opacity: 0, y: 30 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true },
+                    transition: { duration: 0.8, delay: index * 0.2 },
+                  };
 
-                                    return isExternal ? (
-                                        <motion.a
-                                            key={index}
-                                            href={link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={className}
-                                            {...motionProps}
-                                        >
-                                            {CardContent}
-                                        </motion.a>
-                                    ) : (
-                                        <motion.div
-                                            key={index}
-                                            {...motionProps}
-                                        >
-                                            <Link to={link} className={className}>
-                                                {CardContent}
-                                            </Link>
-                                        </motion.div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    </section>
-                </main>
-
-                <Footer />
+                  return isExternal ? (
+                    <motion.a
+                      key={index}
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={className}
+                      {...motionProps}
+                    >
+                      {CardContent}
+                    </motion.a>
+                  ) : (
+                    <motion.div key={index} {...motionProps}>
+                      <Link to={link} className={className}>
+                        {CardContent}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
-        </div>
-    );
-}
+          </section>
+        </main>
 
+        <Footer />
+      </div>
+    </div>
+  );
+}
