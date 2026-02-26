@@ -49,19 +49,34 @@ const Chatbot = () => {
     const normalizedQuery = normalizeText(query);
 
     // 1. Fuzzy Match Manual Intents
-    // Flatten intents for fuzzy searching
+    // Flatten intents for searching
     const intentList = chatData.flatMap((intent) =>
       intent.keywords.map((keyword) => ({
         topic: intent.topic,
-        keyword,
+        keyword: keyword.toLowerCase(),
         content: intent.content,
       })),
     );
 
+    // 1a. Exact Substring Match: check if the normalized query contains any keyword
+    // We sort keywords by length descending so that longer, specific phrases match first
+    const sortedIntents = [...intentList].sort(
+      (a, b) => b.keyword.length - a.keyword.length,
+    );
+    const substringMatch = sortedIntents.find((intent) =>
+      normalizedQuery.includes(intent.keyword),
+    );
+
+    if (substringMatch) {
+      return substringMatch.content;
+    }
+
+    // 1b. Fallback to Fuse.js for minor typos
     const intentFuse = new Fuse(intentList, {
       keys: ["keyword"],
-      threshold: 0.3, // Allow minor typos (like hiii -> hi)
-      distance: 10,
+      threshold: 0.4, // Allow minor typos
+      distance: 50,
+      ignoreLocation: true,
     });
 
     const intentResults = intentFuse.search(normalizedQuery);
@@ -85,7 +100,7 @@ const Chatbot = () => {
     }
 
     // 3. Fallback
-    return "I'm not sure about that, but you can browse our [Services](/services) or [Contact Us](/contact) for more help.";
+    return "Please browse our [Services](/services) or [Contact Us](/contact) page for more details. We are happy to help!";
   };
 
   const handleSend = async (text = input) => {
